@@ -10,6 +10,8 @@
 
 \subsection{Internet of Things} % TODO better title
 
+Das Internet der Dinge hat direkt zunächst nichts mit Heimautomatisierung zu tun.
+
 % Abgrenzung iot / smart home
 
 \subsection{Systembeschreibung}
@@ -68,15 +70,52 @@ Ausgaben werden etwa über digitale Dashboards auf diversen Displays angezeigt.
 
 \subsection{Home Assistant}
 
-% not easy to use
+Home Assistant ist eine Open-Source-Software für Heimautomatisierung.
+Durch den modularen Aufbau der Software können Entwickler einfach neue Smart Home Produkte implementieren.
+So sind aktuell 1187 Smart Home Produkte über 46 Kategorien mit Home Assistant nutzbar.\myfootcite[Vgl.][]{hass_components}
+
+\begin{figure}[ht]
+	\centering
+	\caption{Home Assistant Core Architektur}
+	\includegraphics[width=0.9\textwidth]{hass_architecture}
+	\caption*{\footnotesize{Quelle: \mycite{hass_architecture_figure}}}
+	\label{fig:hasscorearch}
+\end{figure}
+
+\autoref{fig:hasscorearch} zeigt die Architektur, welche Home Assistant die Modularität verleiht.
+Smart Home Produkte werden als Komponenten implementiert, welche mit dem Home Assistant Core interagieren.
+Der Home Assistant Core besteht aus vier Modulen:
+
+Das \textit{State Machine} Modul bildet den Status der verschiedenen Komponenten ab.
+Bemerkt ein Fenstersensor z.B. dass ein Fenster geöffnet wurde, aktualisiert die Komponente \textit{Fenstersensor} ihren Status im \textit{State Machine} Modul, indem sie eine Nachricht an das Modul schickt.
+
+Für zeitbasierende Automatisierungen existiert das Modul \textit{Timer}, welches sekündlich ein Event emittiert.
+Ein Event ist eine Nachricht, welche beim Auftreten von definierten Bedingungen automatsich verschickt wird.
+
+Über das \textit{Event Bus} Modul werden Events von den beiden bereits genannten Modulen empfangen von diesen ausgehend wiederum Events ausgelöst.
+
+Das \textit{Service Registry} Modul bietet Komponenten die Möglichkeit beim Gesamtsystem einen Service zu registrieren.
+Das Gesamtsystem wiederum kann über das selbe Modul den Service einer Komponente in Anspruch nehmen.
+So kann eine Glühbirne z.B. den Service \textit{Glühbirne anschalten} registrieren, welcher dann von einer anderen Komponente, z.B. einem Lichtschalter, indirekt, über ein Event, aufgerufen werden kann.
+
+Mit dieser Architektur kann eine neue Komponente implementiert werden, ohne dass der Home Assistant Core berührt wird.
+Eine neue Komponente muss lediglich einen Service registrieren, auf ein Event reagieren oder ein Event auslösen können.\myfootcite[Vgl.][]{hass_architecture}
+Die Implementierung einer neuen Komponente ist ausführlich in der Home Assistant Dokumentation beschrieben.\myfootcite[Vgl.][]{hass_implement_component}
+
+Veröffentlicht wird Home Assistant unter der Apache 2.0 Lizenz.\myfootcite[Vgl.][]{hass_license}
+Die Software ist also kommerziell und privat kostenlos nutzbar.
+Lediglich die Marke \textit{Home Assistant} wird geschützt, sowie die Haftung und die Garantie ausgeschlossen.
+
+% Add something about the vision of hass
+
+\myfootcite[Vgl.][]{hass_vision}
+
+\subsubsection{Vorteile}
+
 % great compatibility with A LOT iot products
 % open source
 % internet not required
 % data is stored local
-
-
-
-\subsubsection{Vorteile}
 
 \begin{wrapfigure}{r}{0.4\textwidth}
 	\centering
@@ -88,7 +127,11 @@ Ausgaben werden etwa über digitale Dashboards auf diversen Displays angezeigt.
 
 \subsubsection{Nachteile}
 
-\myfootcite[Vgl.][]{hass_vision}
+% not easy to use
+
+\subsection{Integerierte Lösungen} % so far we only have consumer-implemented solutions mentioned :/
+
+
 % beispiel vorteile nachteile
 
 \subsection{Monetarisierung}

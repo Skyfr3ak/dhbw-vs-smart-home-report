@@ -34,4 +34,7 @@
     "editor.wordWrap": "on",
     "cSpell.language": "de,en",
     "cSpell.enabled": true,
+    "cSpell.words": [
+        "schoutsen"
+    ],
 }
