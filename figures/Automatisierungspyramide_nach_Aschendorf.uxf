@@ -2,6 +2,6 @@
 halign=center
 Feldbusebene</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>50</x><y>50</y><w>240</w><h>40</h></coordinates><panel_attributes>valign=center
 halign=center
-Automationsebene</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>90</x><y>10</y><w>160</w><h>40</h></coordinates><panel_attributes>valign=center
+Automatisierungssebene</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>90</x><y>10</y><w>160</w><h>40</h></coordinates><panel_attributes>valign=center
 halign=center
 Leitebene</panel_attributes><additional_attributes></additional_attributes></element></diagram>

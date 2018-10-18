@@ -1,6 +1,21 @@
 \section{Einleitung}
 
-\subsection{Definition Smart Home}
+\subsection{Definition: Smart Home} % TODO redo this section
+
+Wörtlich übersetzt, bedeutet der englische Begriff Smart Home so viel wie \textit{intelligentes Zuhause}. Intelligent meint hierbei die digitale und automatische Steuerung der Haustechnik.
+
+Im Allgemeinen steht Smart Home dafür, für eine intelligente Vernetzung von elektrischen Verbrauchern in privaten Haushalten mit dem Ziel, den Wohnkomfort, die Sicherheit und die Energieeffizienz des Gebäudes zu steigern.\myfootcite[Vgl.][]{definition_smart_home}
+
+Durch die Smart Home Technologie werden einerseits Alltagsvorgänge automatisiert, andererseits können die Geräte-Einstellungen, z.B. von Heizung, Licht und Lautsprechern, per Computer oder Smartphone schnell an die persönlichen Bedürfnisse angepasst werden ob zuhause oder unterwegs.
+
+\begin{figure}[ht] % TODO this picture has nothing to do with smart home. it displays IOT!
+	\centering
+	\caption{Smart Home Mobiltelefonsteuerung}
+	\includegraphics[width=0.8\textwidth]{smart_home_handy}
+	\caption*{\footnotesize{Quelle: \mycite{figure_smart_home_handy}}}
+	\label{fig:smarthomehandy}
+\end{figure}
+
 \subsection{Fragestellungen} % TODO better title
 
 % monetarisierung von smart home produkten
@@ -10,13 +25,15 @@
 
 \subsection{Internet of Things} % TODO better title
 
+Das Internet der Dinge hat direkt zunächst nichts mit Heimautomatisierung zu tun.
+
 % Abgrenzung iot / smart home
 
 \subsection{Systembeschreibung}
 
 Aschendorf beschreibt den Aufbau von Smart Home Systemen als hierarchisches System.
 \autoref{fig:automatisierungspygramide} zeigt die drei Ebenen der Automatisierungspyramide nach Aschendorf:
-Die \textit{Feldbusebene}, die \textit{Automationsebene} und die \textit{Leitebene}. \myfootcite[Vgl.][59]{aschendorf14}
+Die \textit{Feldbusebene}, die \textit{Automatisierungsebene} und die \textit{Leitebene}. \myfootcite[Vgl.][59]{aschendorf14}
 
 \begin{figure}[ht]
 	\centering
@@ -28,22 +45,14 @@ Die \textit{Feldbusebene}, die \textit{Automationsebene} und die \textit{Leitebe
 
 \subsubsection{Feldbusebene}
 
-% \begin{wrapfigure}{r}{0.4\textwidth}
-% 	\centering
-% 	\caption{ESP8266 Board}
-% 	\includegraphics[scale=.1]{esp8266}
-% 	\caption*{\footnotesize{Quelle: \mycite{esp8266}}}
-% 	\label{fig:esp8266}
-% \end{wrapfigure}
-
-Die Feldbusebene besteht aus sämtlichen eingebauten Systemkomponenten, also Gateways, welche verschiedene Systeme verbinden, Sensoren, welche z.B. Temperatur und Luftfeuchtigkeit überwachen und Aktoren, welche u.a. z.B. Glühbirnen sein können.
+Die Feldbusebene besteht aus sämtlichen eingebauten Systemkomponenten, also Gateways, welche verschiedene Systeme verbinden, Sensoren, welche z.B. Temperatur und Luftfeuchtigkeit überwachen, und Aktoren, wie z.B. Glühbirnen.
 In der selben Ebene finden sich auch die Verbindungen der oben genannten Geräte wieder.
 So ist die Feldbusebene in sich bereits funktional und direkt nutzbar.
 Es kann z.B. der Sensor \textit{Lichtschalter 3} ausgelöst werden, welcher den Aktor \textit{Deckenlampe Wohnzimmer} aktiviert.\myfootcite[Vgl.][66-67]{aschendorf14}
 
-\subsubsection{Automationsebene}
+\subsubsection{Automatisierungsebene}
 
-Automatisierungen, welche nicht bereits in Geräten, die sowohl Sensoren, als auch Aktoren beinhalten, werden in der Automationsebene implementiert.
+Geräte übergreifende Automatisierungen werden in der Automatisierungsebene implementiert.
 Dies wird durch einfache Controller oder programmierbare Mikrocomputer realisiert.
 Nach der Änderung von Zuständen, wie z.B. der aktuellen Zeit, die Anwesenheit eines Bewohners oder die Temperatur eines Raumes, passt sich das Smart Home System mit dieser zusätzlichen Ebene nun nach vorgegebenen Regeln autonom an.\myfootcite[Vgl.][67-68]{aschendorf14}
 
@@ -58,6 +67,12 @@ Ausgaben werden etwa über digitale Dashboards auf diversen Displays angezeigt.
 % system beschreiben: aus welchen komponenten besteht ein smart home (automation, iot, ...)
 % here we can use one of the required methods! (e.g. SSA)
 
+\subsection{Verbindungstypen} % (auswahl)
+
+\subsubsection{LAN und WLAN}
+\subsubsection{ZigBee}
+\subsubsection{Z-Wave}
+
 \subsection{Amazon Alexa}
 
 % easy to use
@@ -70,16 +85,92 @@ Ausgaben werden etwa über digitale Dashboards auf diversen Displays angezeigt.
 
 \subsection{Home Assistant}
 
-% not easy to use
-% great compatibility with A LOT iot products
-% open source
-% internet not required
-% data is stored local
+Home Assistant ist eine Open-Source-Software für Heimautomatisierung.
+Durch den modularen Aufbau der Software können Entwickler einfach neue Smart Home Produkte implementieren.
+So sind aktuell 1187 Smart Home Produkte über 46 Kategorien mit Home Assistant nutzbar.\myfootcite[Vgl.][]{hass_components}
+
+\begin{figure}[ht]
+	\centering
+	\caption{Home Assistant Core Architektur}
+	\includegraphics[width=0.9\textwidth]{hass_architecture}
+	\caption*{\footnotesize{Quelle: \mycite{hass_architecture_figure}}}
+	\label{fig:hasscorearch}
+\end{figure}
+
+\autoref{fig:hasscorearch} zeigt die Architektur, welche Home Assistant die Modularität verleiht.
+Smart Home Produkte werden als Komponenten implementiert, welche mit dem Home Assistant Core interagieren.
+Der Home Assistant Core besteht aus vier Modulen:
+
+Das \textit{State Machine} Modul bildet den Status der verschiedenen Komponenten ab.
+Bemerkt ein Fenstersensor z.B. dass ein Fenster geöffnet wurde, aktualisiert die Komponente \textit{Fenstersensor} ihren Status im \textit{State Machine} Modul, indem sie eine Nachricht an das Modul schickt.
+
+Für zeitbasierende Automatisierungen existiert das Modul \textit{Timer}, welches sekündlich ein Event emittiert.
+Ein Event ist eine Nachricht, welche beim Auftreten von definierten Bedingungen automatsich verschickt wird.
+
+Über das \textit{Event Bus} Modul werden Events von den beiden bereits genannten Modulen empfangen von diesen ausgehend wiederum Events ausgelöst.
+
+Das \textit{Service Registry} Modul bietet Komponenten die Möglichkeit beim Gesamtsystem einen Service zu registrieren.
+Das Gesamtsystem wiederum kann über das selbe Modul den Service einer Komponente in Anspruch nehmen.
+So kann eine Glühbirne z.B. den Service \textit{Glühbirne anschalten} registrieren, welcher dann von einer anderen Komponente, z.B. einem Lichtschalter, indirekt, über ein Event, aufgerufen werden kann.
+
+Mit dieser Architektur kann eine neue Komponente implementiert werden, ohne dass der Home Assistant Core berührt wird.
+Eine neue Komponente muss lediglich einen Service registrieren, auf ein Event reagieren oder ein Event auslösen können.\myfootcite[Vgl.][]{hass_architecture}
+Die Implementierung einer neuen Komponente ist ausführlich in der Home Assistant Dokumentation beschrieben.\myfootcite[Vgl.][]{hass_implement_component}
+
+Veröffentlicht wird Home Assistant unter der Apache 2.0 Lizenz.\myfootcite[Vgl.][]{hass_license}
+Die Software ist also kommerziell und privat kostenlos nutzbar.
+Lediglich die Marke \textit{Home Assistant} wird geschützt, sowie die Haftung und die Garantie ausgeschlossen.
+
+Für die Weiterentwicklung von Home Assistant wurden im September 2018 vier Grundsätze definiert\myfootcite[Vgl.][]{hass_vision}:
+
+\begin{itemize}
+	\item Privatsphäre - alle Daten werden lokal verarbeitet und gespeichert.
+	\item Lokale Kontrolle - es ist kein Internetanschluss notwendig.
+	\item Offener Quelltext - die Funktionsweise kann jederzeit nachvollzogen werden.
+	\item Interoperabilität - es soll einfach sein Apps mit Home Assistant zu verbinden
+\end{itemize}
+
+Ebenso wurde Nabu Casa Inc., als Modell für die Finanzierung der Entwicklung von Home Assistant, vorgestellt.
+Home Assistant Nutzer können ihre private Instanz mit Nabu Casa um die Home Assistant Cloud Komponente für 5 USD pro Monat erweitern, was Home Assistant \ac{IoT}-Charakter verleiht.
+Nabu Casa setzt dazu Software mit offenem Quelltext ein, verspricht keine Daten zu speichern und stellt dem Projekt Home Assistant Entwicklungkapazitäten zur Verfügung.\myfootcite[Vgl.][]{nabucasa}
 
 \subsubsection{Vorteile}
+
+Mit Home Assistant lassen sich hohe Kosten für zertifizierte Geräte sparen.
+Während andere Smart Home System Anbieter, wie z.B. Amazon Alexa, Geräteherstellern die Implementierung von geeigneten Schnittstellen vorschreiben, damit die Geräte mit der jeweiligen Plattform genutzt werden können\myfootcite[Vgl.][]{workswithalexa}, bietet Home Assistant viele verschiedene Wege ein Geräte zu verbinden.
+So sind über 1000 Schnittstellen bereits in Home Assistant implementiert\myfootcite[Vgl.][]{hass_components} und zusätzlich können neue oder eigen gebaute Geräte mit neuen Schnittstellen mit etwas Programmierkenntnissen selbst implementiert werden.\myfootcite[Vgl.][]{hass_implement_component}
+
+\begin{wrapfigure}{r}{0.4\textwidth}
+	\centering
+	\caption{ESP8266 Board}
+	\includegraphics[scale=.1]{esp8266}
+	\caption*{\footnotesize{Quelle: \mycite{esp8266}}}
+	\label{fig:esp8266}
+\end{wrapfigure}
+
+\autoref{fig:esp8266} zeigt einen ESP8266 WLAN Mikrocomputer.
+In Kombination mit einem Netzteil und Sensoren für Temperatur, Licht und Bewegung kann so eine \ac{DIY}-Wetterstation für weniger als zehn Euro gebaut werden.\myfootcite[Vgl.][]{bruhautomation_esp_sensor}
+
+Der offene Quelltext von Home Assistant ermöglicht zudem, dass jederzeit nachvollzogen werden kann, was mit den eigenen Daten passiert.
+Außerdem funktioniert Home Assistant vollständig offline.
+Bei einem Internetausfall bleibt das Smart Home also weiter nutzbar.
+Gleichzeitig bedeutet das auch, dass Dritte sich erst Zugriff zum eigenen Heimnetzwerk verschaffen müssen, damit ein Versuch unternommen werden kann Daten zu kompromittieren.
+
+Zusammenfassend bietet Home Assistant Privatsphäre, Unabhängigkeit gegenüber des Internets, sowie eine hohe Bandbreite an verfügbaren Geräten und nutzbaren Schnittstellen.
+
 \subsubsection{Nachteile}
 
-\myfootcite[Vgl.][]{hass_vision}
+Home Assistant wird von einer \glqq worldwide community of tinkerers and DIY enthusiasts.\grqq{}\myfootcite{hass_github_organization} entwickelt.
+Gleichermaßen richtet sich Home Assistant als Produkt auch an Bastler und Tüftler.
+So müssen Englischkenntnisse und Erfahrung im Umgang mit Linux und Computernetzwerken für die Einrichtung von Home Assistant vorhanden sein.\myfootcite[Vgl.][]{hass_getting_started}
+
+Zudem befindet sich Home Assistant noch in aktiver Entwicklung und so fordern manche Änderungen der Software aktive Maßnahmen des Benutzers, wie etwa das Aktualisieren einer Konfigurationsdatei.\myfootcite[Vgl.][]{hass_breaking_change_example}
+
+Home Assistant kann im jetzigen Zustand nur von technisch Versierten genutzt werden.
+
+\subsection{Integerierte Lösungen} % so far we only have consumer-implemented solutions mentioned :/
+
+
 % beispiel vorteile nachteile
 
 \subsection{Monetarisierung}
