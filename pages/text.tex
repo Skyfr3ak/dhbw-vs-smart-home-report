@@ -136,10 +136,9 @@ Nabu Casa setzt dazu Software mit offenem Quelltext ein, verspricht keine Daten 
 
 \subsubsection{Vorteile}
 
-% great compatibility with A LOT iot products
-% open source
-% internet not required
-% data is stored local
+Mit Home Assistant lassen sich hohe Kosten für zertifizierte Geräte sparen.
+Während andere Smart Home System Anbieter, wie z.B. Amazon Alexa, Geräteherstellern die Implementierung von geeigneten Schnittstellen vorschreiben, damit die Geräte mit der jeweiligen Plattform genutzt werden können\myfootcite[Vgl.][]{workswithalexa}, bietet Home Assistant viele verschiedene Wege ein Geräte zu verbinden.
+So sind über 1000 Schnittstellen bereits in Home Assistant implementiert und zusätzlich können neue oder eigen gebaute Geräte mit neuen Schnittstellen mit etwas Programmierkenntnissen selbst implementiert werden.\myfootcite[Vgl.][]{hass_components,hass_implement_component}
 
 \begin{wrapfigure}{r}{0.4\textwidth}
 	\centering
@@ -148,6 +147,16 @@ Nabu Casa setzt dazu Software mit offenem Quelltext ein, verspricht keine Daten 
 	\caption*{\footnotesize{Quelle: \mycite{esp8266}}}
 	\label{fig:esp8266}
 \end{wrapfigure}
+
+\autoref{fig:esp8266} zeigt einen ESP8266 WLAN Mikrocomputer.
+In Kombination mit einem Netzteil und Sensoren für Temperatur, Licht und Bewegung kann so eine \ac{DIY}-Wetterstation für weniger als zehn Euro gebaut werden.\myfootcite[Vgl.][]{bruhautomation_esp_sensor}
+
+Der offene Quelltext von Home Assistant ermöglicht zudem, dass jederzeit nachvollzogen werden kann, was mit den eigenen Daten passiert.
+Außerdem funktioniert Home Assistant vollständig offline.
+Bei einem Internetausfall bleibt das Smart Home also weiter nutzbar.
+Gleichzeitig bedeutet das auch, dass Dritte sich erst Zugriff zum eigenen Heimnetzwerk verschaffen müssen, damit ein Versuch unternommen werden kann Daten zu kompromittieren.
+
+Zusammenfassend bietet Home Assistant Privatsphäre, Unabhängigkeit gegenüber des Internets, sowie eine hohe Bandbreite an verfügbaren Geräten und nutzbaren Schnittstellen.
 
 \subsubsection{Nachteile}
 
