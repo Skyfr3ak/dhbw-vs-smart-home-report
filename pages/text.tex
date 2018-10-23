@@ -23,15 +23,21 @@ Durch die Smart Home Technologie werden einerseits Alltagsvorgänge automatisier
 
 \section{Evaluation}
 
-\subsection{Internet of Things} % TODO better title
+\subsection{Internet of Things}
 
-Das Internet der Dinge hat direkt zunächst nichts mit Heimautomatisierung zu tun.
+Das \ac{IoT} hat zunächst nichts mit Heimautomatisierung zu tun.
+Unter dem Internet der Dinge versteht man grundlegend die Verbindung von Geräten untereinander, sowie mit dem Internet.\myfootcite[Vgl.][]{ibm_iot}
+Durch die Verbindung verschiedener Geräte, wie etwa einer Lichtschranke und einer Glühbirne, kann Mehrwert für den Benutzer der Geräte geschaffen werden, indem z.B. die Glühbirne automatisch bei Aktivierung der Lichtschranke aktiviert wird.
+Zu einer Anwendung des \acp{IoT} wird das Beispiel, wenn das Internet noch mit involviert wird.
+So wären hier Benachrichtigungen zu Bewegungsmeldungen oder Steuerung der Glühbirne über das Internet denkbar.
 
-% Abgrenzung iot / smart home
+Ein Smart Home System kann also zum \ac{IoT}-System werden, wenn die Steuerung oder Automatisierung über eine Instanz im Internet abgewickelt wird.
+Dies muss jedoch nicht der Fall sein.
+So stellt die Software Home Assistant z.B. die Möglichkeit ein Smart Home System komplett offline zu betreiben.\myfootcite[Vgl.][]{hass_vision}
 
 \subsection{Systembeschreibung}
 
-Aschendorf beschreibt den Aufbau von Smart Home Systemen als hierarchisches System.
+Aschendorf beschreibt den Aufbau von Smart Home Systemen als stufenförmige Hierarchie.
 \autoref{fig:automatisierungspygramide} zeigt die drei Ebenen der Automatisierungspyramide nach Aschendorf:
 Die \textit{Feldbusebene}, die \textit{Automatisierungsebene} und die \textit{Leitebene}. \myfootcite[Vgl.][59]{aschendorf14}
 
