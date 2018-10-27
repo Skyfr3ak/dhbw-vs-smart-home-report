@@ -92,6 +92,18 @@ Ausgaben werden etwa über digitale Dashboards auf diversen Displays angezeigt.
 
 \subsection{Amazon Alexa}
 
+Amazon Alexa ist ein intelligenter Sprachassistent, bestehend aus einem Lautsprecher, einem Mikrofon sowie einer Internetanbindung.
+Über die Internetanbindung wird auf ein Amazon Rechenzentrum zugegriffen, in welchem Ressourcen für die Verarbeitung von Spracheingaben mit \ac{ASR} und \ac{NLU} bereitgestellt werden.
+
+Unter \ac{ASR} versteht man die Umwandlung von menschlicher Sprache in Text.
+Die Auslagerung der Rechenleistung in die Cloud sorgt für eine Beschleunigung der \ac{ASR},sodass nahezu keine Latenz zu bemerken ist.\myfootcite[Vgl.][]{alexa_asr}
+
+Zusätzlich ist eine lokale \ac{ASR} Einheit verbaut, welche im Betrieb nach dem Stichwort \glqq Alexa \grqq lauscht.
+Bei Erkennung des Stichworts werden nachfolgende Spracheingaben in Echtzeit an die Amazon Cloud gesendet.
+Dort wird zunächst durch \ac{ASR} die Spracheingabe in Text konvertiert.
+Anschließend wird durch \ac{NLU} über Mustererkennung die Bedeutung der Worte identifiziert. \myfootcite[Vgl.][]{alexa_nlu}
+
+
 % asr nlu
 \myfootcite[Vgl.][]{alexa_skills_kit}
 
