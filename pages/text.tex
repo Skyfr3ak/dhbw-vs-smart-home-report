@@ -92,32 +92,45 @@ Ausgaben werden etwa über digitale Dashboards auf diversen Displays angezeigt.
 
 \subsection{Amazon Alexa}
 
-Amazon Alexa ist ein intelligenter Sprachassistent, bestehend aus einem Lautsprecher, einem Mikrofon sowie einer Internetanbindung.
+Amazon Alexa ist die Software für einen intelligenten Sprachassistenten, bestehend aus einem Lautsprecher, einem Mikrofon sowie einer Internetanbindung, welche seit 2014 in Alexa Geräten, wie in \autoref{fig:alexa_devices}, verbaut wird.\myfootcite[Vgl.][]{alexa_release}
 Über die Internetanbindung wird auf ein Amazon Rechenzentrum zugegriffen, in welchem Ressourcen für die Verarbeitung von Spracheingaben mit \ac{ASR} und \ac{NLU} bereitgestellt werden.
+
+\begin{figure}[ht]
+	\centering
+	\caption{Alexa Devices}
+	\includegraphics[scale=.8]{alexa_devices}
+	\caption*{\footnotesize{Quelle: \mycite{figure_alexa_devices}}}
+	\label{fig:alexa_devices}
+\end{figure}
 
 Unter \ac{ASR} versteht man die Umwandlung von menschlicher Sprache in Text.
 Die Auslagerung der Rechenleistung in die Cloud sorgt für eine Beschleunigung der \ac{ASR},sodass nahezu keine Latenz zu bemerken ist.\myfootcite[Vgl.][]{alexa_asr}
 
-Zusätzlich ist eine lokale \ac{ASR} Einheit verbaut, welche im Betrieb nach dem Stichwort \glqq Alexa \grqq lauscht.
+Lokal ist eine weitere \ac{ASR} Einheit verbaut, welche im Betrieb nach dem Stichwort \glqq Alexa\grqq \ lauscht.
 Bei Erkennung des Stichworts werden nachfolgende Spracheingaben in Echtzeit an die Amazon Cloud gesendet.
 Dort wird zunächst durch \ac{ASR} die Spracheingabe in Text konvertiert.
 Anschließend wird durch \ac{NLU} über Mustererkennung die Bedeutung der Worte identifiziert. \myfootcite[Vgl.][]{alexa_nlu}
 
+So können Befehle an ein Alexa Gerät weitergeben werden, welche über \ac{AWS}, Amazons Cloud, mit beliebigen Aktion verknüpft werden können.
+Bspw. kann der Befehl \glqq Alexa, mach mir einen Kaffee.\grqq \ über \ac{AWS} mit der \ac{IoT}-Steuerung einer Kaffeemaschine so verknüpft werden, dass diese dann einen Kaffee produziert.
+Die Verknüpfung von Befehl und Aktion über Alexa wird als \glqq Alexa Skill\grqq bezeichnet.
+Zusätzlich gibt es \glqq Alexa Routines\grqq, welche keine Benutzereingaben entgegennehmen, also Automatisierungen darstellen können.
 
-% asr nlu
-\myfootcite[Vgl.][]{alexa_skills_kit}
+Mit Alexa Skills und Routines können Steuerungsebene, aber auch Automatisierungsebene eines Smart Home Systems realisiert werden.\myfootcite[Vgl.][]{alexa_skills_kit}
 
-Im November 2014 stellte das E-Commerce Unternehmen Amazon das erste Produkt der Amazon Alexa Familie vor, den Amazon Echo.\myfootcite[Vgl.][]{alexa_release}
+\begin{wrapfigure}{r}{0.35\textwidth}
+	\centering
+	\caption{Works with Alexa Siegel}
+	\includegraphics[scale=.5]{works-with-alexa}
+	\caption*{\footnotesize{Quelle: \mycite{figure_works_with_alexa}}}
+	\label{fig:works_with_alexa}
+\end{wrapfigure}
 
-% alexa skills
-% home automation
-
-\myfootcite[Vgl.][]{alexa_skills_kit}
-
-% workswithalexa
-
-\myfootcite[Vgl.][]{workswithalexa}
-
+Smart Home Produkte werden über das Internet mit Alexa verbunden.
+Über Skills oder manuelle Programmierung kann ein Gerät, sofern es über ein öffentliches \ac{API} verfügt, angebunden werden.
+Um diesen Prozess noch weiter zu vereinfachen können Hersteller die Zertifizierung \glqq Works with Alexa\grqq \ für ihre Produkte erlangen, wenn Spezifikationen bzgl. Installation des Produkts, sowie dessen Schnittstelle erfüllt werden.
+\autoref{fig:works_with_alexa} zeigt das Works with Alexa Siegel, welches bei erfolgreicher Zertifizierung benutzt werden darf.
+Für Besitzer von zertifizierten Geräten gibt es meist nur noch ein kurzen standardisierten Einrichtungsprozess zu überwinden.\myfootcite[Vgl.][]{workswithalexa}
 
 % easy to use
 % internet required
@@ -130,14 +143,6 @@ Im November 2014 stellte das E-Commerce Unternehmen Amazon das erste Produkt der
 % 	\includegraphics[scale=1]{echo_dot}
 % 	\caption*{\footnotesize{Quelle: \mycite{figure_alexa_echo_dot}}}
 % 	\label{fig:echo_dot}
-% \end{figure}
-
-% \begin{figure}[ht]
-% 	\centering
-% 	\caption{Alexa Devices}
-% 	\includegraphics[scale=.8]{alexa_devices}
-% 	\caption*{\footnotesize{Quelle: \mycite{figure_alexa_devices}}}
-% 	\label{fig:alexa_devices}
 % \end{figure}
 
 \subsubsection{Vorteile}
