@@ -38,6 +38,10 @@ Ein Smart Home System kann also zum \ac{IoT}-System werden, wenn die Steuerung o
 Dies muss jedoch nicht der Fall sein.
 So stellt die Software Home Assistant z.B. die Möglichkeit ein Smart Home System komplett offline zu betreiben.\myfootcite[Vgl.][]{hass_vision}
 
+\subsection{Geschichte}
+
+% idk -> wikipedia?
+
 \subsection{Aufbau eines Smart Home Systems}
 
 Aschendorf beschreibt den Aufbau von Smart Home Systemen als stufenförmige Hierarchie.
@@ -75,7 +79,11 @@ Ausgaben werden etwa über digitale Dashboards auf diversen Displays angezeigt.
 
 % here we can use one of the required methods! (e.g. SSA)
 
-\subsection{Kommunikationssysteme} % (auswahl)
+\subsection{Verbindungssysteme}
+
+In einem Smart Home System kommen Produkte verschiedener Art zum Einsatz.
+Vom digitalen Kühlschrank, zum Türschloss hin zu Lichtschalter und Glühbirne.
+Aufgrund der verschiedenenartigen Anwendungen der Produkte, den verschiedenen Herstellern, aber auch fehlender Standardisierung werden im Smart Home Bereich verschiedene Kommunikationssysteme und Protokolle verwendet.
 
 % foreach:
 % how does it work?
@@ -146,7 +154,6 @@ Amazon Alexa zeichnet sich primär durch die einfache Handhabung aus.
 Für die Nutzung und Einrichtung eines Amazon Alexa Systems sind lediglich technische Grundverständnisse bzgl. Smartphones und Computer notwendig.
 Dies wird vorallem durch ansprechende Benutzeroberflächen, die direkte sprachliche Kommunikation und zertifizierten Smart Home Produkten ermöglicht.
 Auch die Anschaffung eines Alexa Systems ist durch Amazons E-Commerce Plattform einfach.
-% easy to use
 
 \subsubsection{Nachteile}
 
@@ -156,8 +163,6 @@ Ebenso werden sämtliche Daten durch \ac{AWS} geleitet und nicht lokal gespeiche
 So setzt man die eigenen Daten dem Internet aus.
 Ein lokales Speichern und Verarbeiten würde einem Angreifer zunächst die Herausforderung stellen das lokale Heimnetzwerk zu penetrieren.
 Dazu wird der Quelltext von Amazon Alexa nicht veröffentlicht und es kann somit nicht nachvollzogen werden, wie die eigenen Daten verarbeitet werden und welche Sicherheitslücken evtl. bestehen.
-% data compromised
-% closed source
 
 \subsection{Home Assistant}
 
@@ -258,10 +263,6 @@ Home Assistant kann im jetzigen Zustand nur von technisch Versierten genutzt wer
 % if used in combination with IoT: data breaches and loss of control
 % power loss = no function
 % smart home device with security flaw can be used to break into the local network
-
-\subsection{Geschichte}
-
-% idk -> wikipedia?
 
 \subsection{Geschäftsmodelle}
 
