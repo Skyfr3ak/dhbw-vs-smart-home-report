@@ -116,6 +116,29 @@ So sollte bedacht werden, dass die Integration eines beliebigen Smart Home Produ
 Bspw. könnte über das \textit{Ethernet}-Kabel zu einer außen am Haus montierten Überwachungskamera auf das gesamte Heimnetzwerk zugegriffen und mitgelauscht werden.
 
 \subsubsection{MQTT}
+
+\ac{MQTT} ist ein, speziell auf das \ac{IoT} ausgerichtetes, Netzwerk-Protokoll.
+
+\begin{figure}[ht]
+	\centering
+	\caption{MQTT Beispiel}
+	\includegraphics[scale=.4]{mqtt-example}
+	\caption*{\footnotesize{Quelle: \mycite{figure_mqtt_architecture}}}
+	\label{fig:mqtt_example}
+\end{figure}
+
+Anhand \autoref{fig:mqtt_example} lässt sich die Funktionsweise von \ac{MQTT} erklären.
+Es gibt einen zentralen Server, den sog. \textit{Broker}, über welchen diverse Geräte, die \textit{Clients} kommunizieren.
+Dabei gibt es zwei Methoden:
+Ein Client kann Daten zu dem Broker zu einem angegeben Thema senden und ein Client kann einem Broker mitteilen zu einem Thema informiert werden zu wollen.
+Trifft eine Nachricht bei einem Broker ein schaut dieser nach, ob ihm zu dem entsprechenden Thema Abonennten bekannt sind und leitet ggf. die Nachricht weiter.
+So findet Kommunikation in \ac{MQTT} also nach dem Push-Prinzip statt, d.h. ein Client sendet keine Anfragen sondern erhält bei einem Ereignis eine Benachrichtigung.
+Gegenteilig verfährt z.B. das \ac{HTTP}.
+
+
+
+\myfootcite[Vgl.][1337]{mqtt_docs}
+
 \subsubsection{ZigBee}
 \subsubsection{Z-Wave}
 \subsubsection{RFID}
