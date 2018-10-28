@@ -128,16 +128,19 @@ Bspw. könnte über das \textit{Ethernet}-Kabel zu einer außen am Haus montiert
 \end{figure}
 
 Anhand \autoref{fig:mqtt_example} lässt sich die Funktionsweise von \ac{MQTT} erklären.
-Es gibt einen zentralen Server, den sog. \textit{Broker}, über welchen diverse Geräte, die \textit{Clients} kommunizieren.
+Es gibt einen zentralen Server, den sog. \textit{Broker}, über welchen diverse Geräte (die \textit{Clients}) kommunizieren.
 Dabei gibt es zwei Methoden:
-Ein Client kann Daten zu dem Broker zu einem angegeben Thema senden und ein Client kann einem Broker mitteilen zu einem Thema informiert werden zu wollen.
+Ein Client kann Daten zum Broker zu einem angegeben Thema senden und ein Client kann einem Broker mitteilen zu einem Thema informiert werden zu wollen.
 Trifft eine Nachricht bei einem Broker ein schaut dieser nach, ob ihm zu dem entsprechenden Thema Abonennten bekannt sind und leitet ggf. die Nachricht weiter.
-So findet Kommunikation in \ac{MQTT} also nach dem Push-Prinzip statt, d.h. ein Client sendet keine Anfragen sondern erhält bei einem Ereignis eine Benachrichtigung.
-Gegenteilig verfährt z.B. das \ac{HTTP}.
+Kommunikation in \ac{MQTT} also nach dem Push-Prinzip statt, d.h. ein Client sendet keine Anfragen sondern erhält bei einem Ereignis eine Benachrichtigung.
+Umgekehrt verfährt z.B. das \ac{HTTP}.
+Zusätzlich garantiert \ac{MQTT} die Übermittlung einer Nachricht.
+Bei Verbindungsabbruch oder Beschädigung der Nachricht wird die Nachricht weiter gesendet, bis das Senden erfolgreich verläuft.
+Ebenso kann garantiert werden, dass eine Nachricht nur ein einziges Mal den Empfänger erreicht.\myfootcite[Vgl.][1]{mqtt_docs}
 
+% example
 
-
-\myfootcite[Vgl.][1337]{mqtt_docs}
+% pros and cons
 
 \subsubsection{ZigBee}
 \subsubsection{Z-Wave}
