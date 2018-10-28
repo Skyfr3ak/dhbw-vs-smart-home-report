@@ -8,6 +8,8 @@ Im Allgemeinen steht Smart Home dafür, für eine intelligente Vernetzung von el
 
 Durch die Smart Home Technologie werden einerseits Alltagsvorgänge automatisiert, andererseits können die Geräte-Einstellungen, z.B. von Heizung, Licht und Lautsprechern, per Computer oder Smartphone schnell an die persönlichen Bedürfnisse angepasst werden ob zuhause oder unterwegs.
 
+% is smart home only for private people or for business as well?
+
 \begin{figure}[ht] % TODO this picture has nothing to do with smart home. it displays IOT!
 	\centering
 	\caption{Smart Home Mobiltelefonsteuerung}
@@ -18,20 +20,31 @@ Durch die Smart Home Technologie werden einerseits Alltagsvorgänge automatisier
 
 \subsection{Fragestellungen} % TODO better title
 
-% monetarisierung von smart home produkten
-% beispiele zu existierenden systemen
+% folgende fragen ausformulieren:
+% wie funktioniert ein smart home?
+% wie kann man ein smart home system monetarisieren?
 
 \section{Evaluation}
 
-\subsection{Internet of Things} % TODO better title
+\subsection{Internet of Things}
 
-Das Internet der Dinge hat direkt zunächst nichts mit Heimautomatisierung zu tun.
+Das \ac{IoT} hat zunächst nichts mit Heimautomatisierung zu tun.
+Unter dem Internet der Dinge versteht man grundlegend die Verbindung von Geräten untereinander, sowie mit dem Internet.\myfootcite[Vgl.][]{ibm_iot}
+Durch die Verbindung verschiedener Geräte, wie etwa einer Lichtschranke und einer Glühbirne, kann Mehrwert für den Benutzer der Geräte geschaffen werden, indem z.B. die Glühbirne automatisch bei Aktivierung der Lichtschranke aktiviert wird.
+Zu einer Anwendung des \acp{IoT} wird das Beispiel, wenn das Internet noch mit involviert wird.
+So wären hier Benachrichtigungen zu Bewegungsmeldungen oder Steuerung der Glühbirne über das Internet denkbar.
 
-% Abgrenzung iot / smart home
+Ein Smart Home System kann also zum \ac{IoT}-System werden, wenn die Steuerung oder Automatisierung über eine Instanz im Internet abgewickelt wird.
+Dies muss jedoch nicht der Fall sein.
+So stellt die Software Home Assistant z.B. die Möglichkeit ein Smart Home System komplett offline zu betreiben.\myfootcite[Vgl.][]{hass_vision}
 
-\subsection{Systembeschreibung}
+\subsection{Geschichte}
 
-Aschendorf beschreibt den Aufbau von Smart Home Systemen als hierarchisches System.
+% idk -> wikipedia?
+
+\subsection{Aufbau eines Smart Home Systems}
+
+Aschendorf beschreibt den Aufbau von Smart Home Systemen als stufenförmige Hierarchie.
 \autoref{fig:automatisierungspygramide} zeigt die drei Ebenen der Automatisierungspyramide nach Aschendorf:
 Die \textit{Feldbusebene}, die \textit{Automatisierungsebene} und die \textit{Leitebene}. \myfootcite[Vgl.][59]{aschendorf14}
 
@@ -64,24 +77,147 @@ Zu den Eingaben zählen Befehle, die z.B. über Steuerungs-Apps gesendet werden 
 Ausgaben werden etwa über digitale Dashboards auf diversen Displays angezeigt.
 Über dieselben werden meist auch Fehlerdiagnosemeldungen angezeigt.\myfootcite[Vgl.][68-70]{aschendorf14}
 
-% system beschreiben: aus welchen komponenten besteht ein smart home (automation, iot, ...)
 % here we can use one of the required methods! (e.g. SSA)
 
-\subsection{Verbindungstypen} % (auswahl)
+\subsection{Verbindungssysteme}
+
+In einem Smart Home System kommen Produkte verschiedener Art zum Einsatz.
+Vom digitalen Kühlschrank, zum Türschloss hin zu Lichtschalter und Glühbirne.
+Aufgrund der verschiedenenartigen Anwendungen der Produkte, den verschiedenen Herstellern, aber auch fehlender Standardisierung werden im Smart Home Bereich verschiedene Kommunikationssysteme und Protokolle verwendet.
+
+% foreach:
+% how does it work?
+% use cases?
+% pros and cons?
 
 \subsubsection{LAN und WLAN}
+
+2017 verfügten nach dem Statistischen Bundeamt 85,9\% aller deutschen Haushalte über einen stationären Internetzugang und damit einhergehend ein privates \ac{LAN} oder \ac{WLAN}.\myfootcite[Vgl.][]{haushalte}
+Deshalb wird bei der nachträglichen Installation eines Smart Home Systems häufig auf \ac{LAN} oder \ac{WLAN} zurückgegriffen um Kosten und Installationsaufwand einzusparen.
+
+Ein \ac{LAN} wird durch einen oder mehrere sog. \textit{Switches} über \textit{Ethernet}-Kabel verbunden.
+Alternativ kann auch ein \textit{Router} anstelle der \textit{Switches} verwendet werden.
+Dieser kann das \ac{LAN} sogar zusätzlich mit anderen \acp{LAN} verbinden, bspw. mit dem Internet.
+Beim \ac{WLAN} wird an Stelle der \textit{Ethernet}-Kabel über das 2,4 oder 5 GHz Band gefunkt.\myfootcite[Vgl.][]{local_area_network}
+
+\begin{wrapfigure}{r}{0.35\textwidth}
+	\centering
+	\caption{Yeelight Glühbirne}
+	\includegraphics[scale=.5]{yeelight-bulb}
+	\caption*{\footnotesize{Quelle: \mycite{figure_yeelight}}}
+	\label{fig:yeelight}
+\end{wrapfigure}
+
+\autoref{fig:yeelight} zeigt die LED-Lampe \glqq Yeelight LED Bulb\grqq \ von Xiaomi, ein für Smart Home System Nachrüstungen gut geeignetes Produkt.
+Die LED-Lampe nutzt das \ac{WLAN} zur Kommunikation mit der Steuerungskomponente und die vorhandene E27 Fassung zur Stromversorgung.\myfootcite[Vgl.][]{yeelight_wifi_bulb}
+
+Der Einsatz von einem \ac{LAN} als Kommunikationssystem für Smart Home Anwendungen ist jedoch nicht uneingeschränkt zu empfehlen.
+So sollte bedacht werden, dass die Integration eines beliebigen Smart Home Produkts Sicherheitslücken mit in das private \ac{LAN} reißen kann.
+Bspw. könnte über das \textit{Ethernet}-Kabel zu einer außen am Haus montierten Überwachungskamera auf das gesamte Heimnetzwerk zugegriffen und mitgelauscht werden.
+
+\subsubsection{MQTT}
+
+\ac{MQTT} ist ein, speziell auf das \ac{IoT} ausgerichtetes, Netzwerk-Protokoll.
+
+\begin{figure}[ht]
+	\centering
+	\caption{MQTT Beispiel}
+	\includegraphics[scale=.4]{mqtt-example}
+	\caption*{\footnotesize{Quelle: \mycite{figure_mqtt_architecture}}}
+	\label{fig:mqtt_example}
+\end{figure}
+
+Anhand \autoref{fig:mqtt_example} lässt sich die Funktionsweise von \ac{MQTT} erklären.
+Es gibt einen zentralen Server, den sog. \textit{Broker}, über welchen diverse Geräte (die \textit{Clients}) kommunizieren.
+Dabei gibt es zwei Methoden:
+Ein Client kann Daten zum Broker zu einem angegeben Thema senden und ein Client kann einem Broker mitteilen zu einem Thema informiert werden zu wollen.
+Trifft eine Nachricht bei einem Broker ein schaut dieser nach, ob ihm zu dem entsprechenden Thema Abonennten bekannt sind und leitet ggf. die Nachricht weiter.
+Kommunikation in \ac{MQTT} also nach dem Push-Prinzip statt, d.h. ein Client sendet keine Anfragen sondern erhält bei einem Ereignis eine Benachrichtigung.
+Umgekehrt verfährt z.B. das \ac{HTTP}.
+Zusätzlich garantiert \ac{MQTT} die Übermittlung einer Nachricht.
+Bei Verbindungsabbruch oder Beschädigung der Nachricht wird die Nachricht weiter gesendet, bis das Senden erfolgreich verläuft.
+Ebenso kann garantiert werden, dass eine Nachricht nur ein einziges Mal den Empfänger erreicht.\myfootcite[Vgl.][1]{mqtt_docs}
+
+Anwendung findet das \ac{MQTT} Protokoll vorallem bei Sensoren für Raumtemperatur, Lichteinfall oder Bewegung, da hier eine lediglich eine eindimensionale Kommunikation abgebildet werden muss.
+Da \ac{MQTT} ein offener und frei verfügbarer Standard ist, findet sich das Protokoll auch vermehrt in \ac{DIY}-Projekten wieder.\myfootcite[Vgl.][]{bruhautomation_esp_sensor}
+
+% The major advantages of MQTT are the publish-subscribe message queue and the many-to-many broadcast capabilities. Using a long-lived outgoing TCP connection to the MQTT broker, sending messages of limited bandwidth back and forth is simple and straightforward.
+
+% The downside of having an always-on connection is that it limits the amount of time the devices can be put to sleep. If the device mostly sleeps, then another MQTT protocol can be used: MQTT-S, which works with UDP instead of TCP.
+
+% Another disadvantage of MQTT is the lack of encryption in the base protocol. MQTT was designed to be a lightweight protocol, and incorporating encryption would add a significant amount of overhead to the connection. You can add custom security at the application level, but that may require a significant amount of work.
+
+\myfootcite[Vgl.][]{mqtt_pros_cons}
+
 \subsubsection{ZigBee}
 \subsubsection{Z-Wave}
+\subsubsection{RFID}
 
 \subsection{Amazon Alexa}
 
-% easy to use
-% internet required
-% data compromised
-% closed source
+Amazon Alexa ist die Software für einen intelligenten Sprachassistenten, bestehend aus einem Lautsprecher, einem Mikrofon sowie einer Internetanbindung, welche seit 2014 in Alexa Geräten, wie in \autoref{fig:alexa_devices}, verbaut wird.\myfootcite[Vgl.][]{alexa_release}
+Über die Internetanbindung wird auf ein Amazon Rechenzentrum zugegriffen, in welchem Ressourcen für die Verarbeitung von Spracheingaben mit \ac{ASR} und \ac{NLU} bereitgestellt werden.
+
+\begin{figure}[ht]
+	\centering
+	\caption{Alexa Devices}
+	\includegraphics[scale=.8]{alexa_devices}
+	\caption*{\footnotesize{Quelle: \mycite{figure_alexa_devices}}}
+	\label{fig:alexa_devices}
+\end{figure}
+
+Unter \ac{ASR} versteht man die Umwandlung von menschlicher Sprache in Text.
+Die Auslagerung der Rechenleistung in die Cloud sorgt für eine Beschleunigung der \ac{ASR}, sodass nahezu keine Latenz zu bemerken ist.\myfootcite[Vgl.][]{alexa_asr}
+
+Lokal ist eine weitere \ac{ASR} Einheit verbaut, welche im Betrieb nach dem Stichwort \glqq Alexa\grqq \ lauscht.
+Bei Erkennung des Stichworts werden nachfolgende Spracheingaben in Echtzeit an die Amazon Cloud gesendet.
+Dort wird zunächst durch \ac{ASR} die Spracheingabe in Text konvertiert.
+Anschließend wird durch \ac{NLU} über Mustererkennung die Bedeutung der Worte identifiziert. \myfootcite[Vgl.][]{alexa_nlu}
+
+So können Befehle an ein Alexa Gerät weitergeben werden, welche über \ac{AWS}, Amazons Cloud, mit beliebigen Aktion verknüpft werden können.
+Bspw. kann der Befehl \glqq Alexa, mach mir einen Kaffee.\grqq \ über \ac{AWS} mit der \ac{IoT}-Steuerung einer Kaffeemaschine so verknüpft werden, dass diese dann einen Kaffee produziert.
+Die Verknüpfung von Befehl und Aktion über Alexa wird als \glqq Alexa Skill\grqq bezeichnet.
+Zusätzlich gibt es \glqq Alexa Routines\grqq, welche keine Benutzereingaben entgegennehmen, also Automatisierungen darstellen können.
+
+Mit Alexa Skills und Routines können Steuerungsebene, aber auch Automatisierungsebene eines Smart Home Systems realisiert werden.\myfootcite[Vgl.][]{alexa_skills_kit}
+
+\begin{wrapfigure}{r}{0.35\textwidth}
+	\centering
+	\caption{Works with Alexa Siegel}
+	\includegraphics[scale=.5]{works-with-alexa}
+	\caption*{\footnotesize{Quelle: \mycite{figure_works_with_alexa}}}
+	\label{fig:works_with_alexa}
+\end{wrapfigure}
+
+Smart Home Produkte werden über das Internet mit Alexa verbunden.
+Über Skills oder manuelle Programmierung kann ein Gerät, sofern es über ein öffentliches \ac{API} verfügt, angebunden werden.
+Um diesen Prozess noch weiter zu vereinfachen können Hersteller die Zertifizierung \glqq Works with Alexa\grqq \ für ihre Produkte erlangen, wenn Spezifikationen bzgl. Installation des Produkts, sowie dessen Schnittstelle erfüllt werden.
+\autoref{fig:works_with_alexa} zeigt das Works with Alexa Siegel, welches bei erfolgreicher Zertifizierung benutzt werden darf.
+Für Besitzer von zertifizierten Geräten gibt es meist nur noch ein kurzen standardisierten Einrichtungsprozess zu überwinden.\myfootcite[Vgl.][]{workswithalexa}
+
+% \begin{figure}[ht]
+% 	\centering
+% 	\caption{Amazon Alexa Voice Control}
+% 	\includegraphics[scale=1]{echo_dot}
+% 	\caption*{\footnotesize{Quelle: \mycite{figure_alexa_echo_dot}}}
+% 	\label{fig:echo_dot}
+% \end{figure}
 
 \subsubsection{Vorteile}
+
+Amazon Alexa zeichnet sich primär durch die einfache Handhabung aus.
+Für die Nutzung und Einrichtung eines Amazon Alexa Systems sind lediglich technische Grundverständnisse bzgl. Smartphones und Computer notwendig.
+Dies wird vorallem durch ansprechende Benutzeroberflächen, die direkte sprachliche Kommunikation und zertifizierten Smart Home Produkten ermöglicht.
+Auch die Anschaffung eines Alexa Systems ist durch Amazons E-Commerce Plattform einfach.
+
 \subsubsection{Nachteile}
+
+Aufgrund der zentralen Architektur des Amazon Alexa Systems ergeben sich jedoch auch Probleme.
+Wird etwa die Verbindung zum Internet, miteinhergehend die Verbindung zu Amazons Rechenzentrum, unterbrochen kann das Smart Home nicht mehr gesteuert werden, Automatisierungen fallen aus und selbst die Verbindung der einzelnen Smart Home Produkte untereinander sind nicht mehr vorhanden.
+Ebenso werden sämtliche Daten durch \ac{AWS} geleitet und nicht lokal gespeichert.
+So setzt man die eigenen Daten dem Internet aus.
+Ein lokales Speichern und Verarbeiten würde einem Angreifer zunächst die Herausforderung stellen das lokale Heimnetzwerk zu penetrieren.
+Dazu wird der Quelltext von Amazon Alexa nicht veröffentlicht und es kann somit nicht nachvollzogen werden, wie die eigenen Daten verarbeitet werden und welche Sicherheitslücken evtl. bestehen.
 
 \subsection{Home Assistant}
 
@@ -168,21 +304,49 @@ Zudem befindet sich Home Assistant noch in aktiver Entwicklung und so fordern ma
 
 Home Assistant kann im jetzigen Zustand nur von technisch Versierten genutzt werden.
 
-\subsection{Integerierte Lösungen} % so far we only have consumer-implemented solutions mentioned :/
+\subsection{Integrierte Lösung} % change title to actual product
 
+% ein system, welches beim bau eines haus integriert wird.
+% also ein gesamtsystem aus einer hand von einem unternehmen.
 
-% beispiel vorteile nachteile
+\subsubsection{Vorteile}
 
-\subsection{Monetarisierung}
+\subsubsection{Nachteile}
+
+\subsection{Risiken}
+
+% if used in combination with IoT: data breaches and loss of control
+% power loss = no function
+% smart home device with security flaw can be used to break into the local network
+
+\subsection{Geschäftsmodelle}
+
+% foreach:
+% how does the business model work?
+% example product?
+% potential market?
 
 \subsubsection{Geräte verkaufen} % TODO better title
 
-\subsubsection{Cloud anbieten für IoT Verwaltung} % TODO better title
+% sell products like: philips lightning bulb
 
-\subsubsection{Daten verkaufen}% TODO better title
+\subsubsection{Cloud Erweiterung} % TODO better title
+
+% see: home assistant cloud by nabu casa
+
+\subsubsection{Gesamtsystem} % TODO better title
+
+% install a smart home integration in peoples homes who don't know how to do so themselves
+
+\subsubsection{Alexa Skills} % TODO better title
+
+% sell alexa skills
+% create a skill with payment option
+
+% https://developer.amazon.com/blogs/alexa/post/b8101123-f1b9-494c-8bbb-53e3850a1123/in-skill-purchasing-offers-jeff-bolton-s-voice-business-a-new-level-of-monetization
 
 \section{Fazit}
 
 % trends --> closed source, iot :/, automations! :D
-% best business cases
+% best business models
 % home assistant empfehlung :)
