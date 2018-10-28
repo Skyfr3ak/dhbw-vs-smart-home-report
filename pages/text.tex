@@ -141,7 +141,13 @@ Ebenso kann garantiert werden, dass eine Nachricht nur ein einziges Mal den Empf
 Anwendung findet das \ac{MQTT} Protokoll vorallem bei Sensoren für Raumtemperatur, Lichteinfall oder Bewegung, da hier eine lediglich eine eindimensionale Kommunikation abgebildet werden muss.
 Da \ac{MQTT} ein offener und frei verfügbarer Standard ist, findet sich das Protokoll auch vermehrt in \ac{DIY}-Projekten wieder.\myfootcite[Vgl.][]{bruhautomation_esp_sensor}
 
-% pros and cons
+% The major advantages of MQTT are the publish-subscribe message queue and the many-to-many broadcast capabilities. Using a long-lived outgoing TCP connection to the MQTT broker, sending messages of limited bandwidth back and forth is simple and straightforward.
+
+% The downside of having an always-on connection is that it limits the amount of time the devices can be put to sleep. If the device mostly sleeps, then another MQTT protocol can be used: MQTT-S, which works with UDP instead of TCP.
+
+% Another disadvantage of MQTT is the lack of encryption in the base protocol. MQTT was designed to be a lightweight protocol, and incorporating encryption would add a significant amount of overhead to the connection. You can add custom security at the application level, but that may require a significant amount of work.
+
+\myfootcite[Vgl.][]{mqtt_pros_cons}
 
 \subsubsection{ZigBee}
 \subsubsection{Z-Wave}
