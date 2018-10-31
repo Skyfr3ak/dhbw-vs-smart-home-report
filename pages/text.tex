@@ -146,6 +146,22 @@ Andererseits muss abgewägt werden, dass \ac{MQTT} auf Protokollebene keine Vers
 Es können zwar auf höherer Ebene Sicherheitsfunktionen implementiert werden, jedoch würden diese die Geschwindigkeit des \ac{MQTT}-Protokolls signifikant verringern.\myfootcite[Vgl.][]{mqtt_pros_cons}
 
 \subsubsection{ZigBee}
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+	\centering
+	\caption{Zigbee Stack}
+	\includegraphics[width=0.5\textwidth]{zigbee-stack}
+	\caption*{\footnotesize{Quelle: \mycite[Vgl.][]{figure_zigbee_stack}}}
+	\label{fig:zigbee_stack}
+\end{wrapfigure}
+
+Zigbee ist eine Komplettlösung für das \ac{IoT}.
+\autoref{fig:zigbee_stack} zeigt Zigbees Aufbau.
+Die unterste Ebene stellt den Standard IEEE 802.15.4 dar - ein Übertragungsprotokoll für die untersten Ebenen eines \ac{WPAN}.
+Auf dieser Ebene basiert die niedrigste Ebene Zigbees - Zigbee PRO.
+
+\myfootcite[Vgl.][]{zigbee_faq}
+
 \subsubsection{Z-Wave}
 \subsubsection{RFID}
 
