@@ -85,11 +85,6 @@ In einem Smart Home System kommen Produkte verschiedener Art zum Einsatz.
 Vom digitalen Kühlschrank, zum Türschloss hin zu Lichtschalter und Glühbirne.
 Aufgrund der verschiedenenartigen Anwendungen der Produkte, den verschiedenen Herstellern, aber auch fehlender Standardisierung werden im Smart Home Bereich verschiedene Kommunikationssysteme und Protokolle verwendet.
 
-% foreach:
-% how does it work?
-% use cases?
-% pros and cons?
-
 \subsubsection{LAN und WLAN}
 
 2017 verfügten nach dem Statistischen Bundeamt 85,9\% aller deutschen Haushalte über einen stationären Internetzugang und damit einhergehend ein privates \ac{LAN} oder \ac{WLAN}.\myfootcite[Vgl.][]{haushalte}
@@ -147,23 +142,38 @@ Es können zwar auf höherer Ebene Sicherheitsfunktionen implementiert werden, j
 
 \subsubsection{ZigBee}
 
-\begin{wrapfigure}{r}{0.5\textwidth}
+\begin{wrapfigure}{r}{0.4\textwidth}
 	\centering
-	\caption{Zigbee Stack}
-	\includegraphics[width=0.5\textwidth]{zigbee-stack}
+	\caption{ZigBee Stack}
+	\includegraphics[width=0.4\textwidth]{zigbee-stack}
 	\caption*{\footnotesize{Quelle: \mycite[Vgl.][]{figure_zigbee_stack}}}
 	\label{fig:zigbee_stack}
 \end{wrapfigure}
 
-Zigbee ist eine Komplettlösung für das \ac{IoT}.
-\autoref{fig:zigbee_stack} zeigt Zigbees Aufbau.
+ZigBee ist eine Komplettlösung für das \ac{IoT}.
+\autoref{fig:zigbee_stack} zeigt ZigBees Aufbau.
 Die unterste Ebene stellt den Standard IEEE 802.15.4 dar - ein Übertragungsprotokoll für die untersten Ebenen eines \ac{WPAN}.
-Auf dieser Ebene basiert die niedrigste Ebene Zigbees - Zigbee PRO.
+Auf dieser Ebene basiert die niedrigste Ebene ZigBees, die Netzwerkebene ZigBee PRO.
+Diese ist global nutzbar, da das 2,4Ghz Band nach IEEE 802.15.4 definiert genutzt wird.
+Darüber hinaus implementiert ZigBee PRO Energiesparmechanismen, welche im Smart Home Sektor mit vielen Batterie betriebenen Geräten nützlich sind.
+Ebenso liefert ZigBee PRO \ac{MQTT}-ähnliche Übertragungsarten, sowie eine Verschlüsselung der Kommunikation nach \ac{AES}.
+Schließlich bietet die \ac{ZCL}, welche auf ZigBee PRO basiert, Entwicklern die Möglichkeit ZigBee einfach in eine beliebige Anwendung zu integrieren.
+Die ZigBee-Zertifizierung eines Geräts stellt abschließend sicher, dass weitere Geräte nach ZigBee Spezifikation mit dem Gerät interagieren können.\myfootcite[Vgl.][]{zigbee_faq}
 
-\myfootcite[Vgl.][]{zigbee_faq}
+% use cases?
+% pros and cons?
 
 \subsubsection{Z-Wave}
+
+% how does it work?
+% use cases?
+% pros and cons?
+
 \subsubsection{RFID}
+
+% how does it work?
+% use cases?
+% pros and cons?
 
 \subsection{Amazon Alexa}
 
