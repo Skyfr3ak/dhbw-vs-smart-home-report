@@ -162,9 +162,21 @@ Ebenso liefert ZigBee PRO \ac{MQTT}-ähnliche Übertragungsarten, sowie eine Ver
 Schließlich bietet die \ac{ZCL}, welche auf ZigBee PRO basiert, Entwicklern die Möglichkeit ZigBee einfach in eine beliebige Anwendung zu integrieren.
 Die ZigBee-Zertifizierung eines Geräts stellt abschließend sicher, dass weitere Geräte nach ZigBee Spezifikation mit dem Gerät interagieren können.\myfootcite[Vgl.][]{zigbee_faq}
 
-% use cases?
-% pro: interop, ez to use, global, proven, mesh, low power usage
-% cons: membership, hub, data rate , not useable with the gpl https://www.theregister.co.uk/2015/05/21/its_vhs_versus_betamax_and_were_vhs_say_zwaves_top_bods/
+Der Beleuchtungssystemanbieter Signify nutzt ZigBee um Philips Hue Beleuchtungssyteme zuverlässig und kabellos zu installieren.
+Gerade bei Gebäuden mit vielen massiven Wänden kann es von Vorteil sein ein \ac{P2P} System zu verwenden um ein Netzwerk aufzubauen, da zentrale Router nicht unbedingt alle Ecken eines Gebäudes abdecken können.\myfootcite[Vgl.][]{how_hue_works}
+
+Für die Nutzung von ZigBee spricht vor allem die Interoperabilität zwischen verschiedenen ZigBee Geräten, welche durch die Zertifizierung und das global nutzbare 2,4Ghz Band sichergestellt werden.
+Damit werden ZigBee Systeme nicht nur einfach zu programmieren, sondern für Konsumenten auch einfacher zu installieren.
+Die Möglichkeit \ac{P2P}-Netzwerke mit ZigBee Geräten zu bilden sorgt zudem für eine bessere Verbindung der einzelnen Geräte.
+Schließlich können zusätzlich Batterie betriebene Geräte von ZigBees geringem Stromverbrauch profitieren.\myfootcite[Vgl.][]{zigbee_faq}
+
+Es ist jedoch keine uneingeschränkte Empfehlung für ZigBee auszusprechen.
+ZigBee ist zwar ein offener Standard, jedoch nicht kompatibel mit u.a. der \ac{GPL}.
+Dies hat zur Folge, dass ZigBee nicht in freie Software implementiert werden kann.\myfootcite[Vgl.][]{iot_standard_war}
+Außerdem besteht die Hürde eines jährlich zu entrichtenden Mitgliedsbeitrags um Zugang zu den ZigBee Spezifikationen und Standards zu erhalten, was Hobby-Programmierer und Bastler fern von ZigBee hält.\myfootcite[Vgl.][]{zigbee_membership}
+Des Weiteren können herkömmliche Smartphones und Tablets nicht mit in ein ZigBee Netzwerk integriert werden, da diese nicht über den benötigten ZigBee Stack verfügen.
+So muss immer ein ZigBee Hub installiert werden, welches die Schnittstelle zu herkömmlichen Systemen wie \ac{LAN} und \ac{WLAN} bildet.
+Abschließend bleibt anzumerken, dass aufgrund der \ac{P2P}-Architektur ZigBees maximal Datenübertragungsraten von bis zu 250 kbit/s erreicht werden.\myfootcite[Vgl.][]{zigbee_faq}
 
 \subsubsection{Z-Wave}
 
