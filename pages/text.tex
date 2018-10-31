@@ -155,13 +155,16 @@ ZigBee ist eine Komplettlösung für das \ac{IoT}.
 Die unterste Ebene stellt den Standard IEEE 802.15.4 dar - ein Übertragungsprotokoll für die untersten Ebenen eines \ac{WPAN}.
 Auf dieser Ebene basiert die niedrigste Ebene ZigBees, die Netzwerkebene ZigBee PRO.
 Diese ist global nutzbar, da das 2,4Ghz Band nach IEEE 802.15.4 definiert genutzt wird.
+Die kennzeichnende Eigenschaft von ZigBee PRO ist jedoch die Vernetzung von Geräten, welche nicht nur schnell, sondern auch dezentral erfolgt.
+So wird eine Nachricht etwa von einer Glühbirne, zu einer Steckdose, über einen Kühlschrank hin zu dem sog. ZigBee Hub gesendet, welches die Schnittstelle zur Interaktion mit ZigBee Geräten darstellt und somit die Reichweite und Signalstärke des ZigBee Netzwerkes erhöht.
 Darüber hinaus implementiert ZigBee PRO Energiesparmechanismen, welche im Smart Home Sektor mit vielen Batterie betriebenen Geräten nützlich sind.
 Ebenso liefert ZigBee PRO \ac{MQTT}-ähnliche Übertragungsarten, sowie eine Verschlüsselung der Kommunikation nach \ac{AES}.
 Schließlich bietet die \ac{ZCL}, welche auf ZigBee PRO basiert, Entwicklern die Möglichkeit ZigBee einfach in eine beliebige Anwendung zu integrieren.
 Die ZigBee-Zertifizierung eines Geräts stellt abschließend sicher, dass weitere Geräte nach ZigBee Spezifikation mit dem Gerät interagieren können.\myfootcite[Vgl.][]{zigbee_faq}
 
 % use cases?
-% pros and cons?
+% pro: interop, ez to use, global, proven, mesh, low power usage
+% cons: membership, hub, data rate , not useable with the gpl https://www.theregister.co.uk/2015/05/21/its_vhs_versus_betamax_and_were_vhs_say_zwaves_top_bods/
 
 \subsubsection{Z-Wave}
 
