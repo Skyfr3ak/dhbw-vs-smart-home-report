@@ -180,7 +180,28 @@ Abschließend bleibt anzumerken, dass aufgrund der \ac{P2P}-Architektur ZigBees 
 
 \subsubsection{Z-Wave}
 
-% auch mesh, 
+% auch mesh, auch low energy, auch sicher
+% zwave: geringere frequenz -> signal geht weiter, aber geringere bandbreit; nicht überall die selbe frequenz
+% zigbee: 2,4ghz noise? höhere bandbreite aber kürzeres signal
+% zwave ist kein offener standard -> eigener radio chip
+
+Z-Wave lässt sich nahezu identisch, wie ZigBee beschreiben.
+So wird auch eine Mesh Netzwerk-Topologie genutzt.
+
+\begin{figure}[ht]
+	\centering
+	\caption{Star- vs. Mesh-Netzwerk}
+	\includegraphics[scale=0.9]{star-vs-mesh-network}
+	\caption*{\footnotesize{Quelle: \mycite{figure_star_vs_mesh_network}}}
+	\label{fig:star_vs_mesh_network}
+\end{figure}
+
+\autoref{fig:star_vs_mesh_network} vergleicht die Mesh-Topologie mit der klassischen Stern-Topologie, wie sie z.B. bei einem \ac{WLAN} zu finden ist.
+Bei einer Stern-Topologie sind alle Geräte im Netzwerk mit einem zentralen sog. Router verbunden, welcher die Nachrichten der Geräte einander entsprechend weiterleitet.
+Bei einer Mesh-Topologie hingegen verbinden sich die Geräte mit allen Geräten in ihrer Reichweite.
+Eine Nachricht an ein bestimmtes Gerät wird nun von Gerät zu Gerät geschickt, bis das empfangende Geräte das Empfänger-Gerät ist.
+Hier müssen jedoch im Vergleich zur Stern-Topologie Abstriche bzgl. der Latzenz einer Nachricht gemacht werden, da eine Nachricht selten über eine direkte Verbindung gesendet werden kann.
+Andererseits kann ein Mesh-Netzwerk einfacher expandiert werden, da jedes Gerät im Netzwerk Teil des Netzwerks ist.
 
 \begin{table}[ht]
 	\caption{Z-Wave und ZigBee im Vergleich}
@@ -195,17 +216,9 @@ Abschließend bleibt anzumerken, dass aufgrund der \ac{P2P}-Architektur ZigBees 
 		Max. Anzahl an Geräten im Mesh & 232 & 65000 \\ \hline
 		Genutzte Frequenzen & u.a. 868,4 MHz (EU); 908,4 MHz (US) & 2,4 Ghz \\ \hline
 	\end{tabular}
-	\caption*{\footnotesize{Quelle: \mycite[Vgl.][]{zwave_product_count,zigbee_faq,zwave_member_count,safewise_zwave_vs_zigbee,zwave_faq,smartcave_zwave_vs_zigbee,zwave_frequencies,zigbee_member_count}}}
+	\caption*{\footnotesize{Quellen: \mycite[Vgl.][]{zwave_product_count,zigbee_faq,zwave_member_count,safewise_zwave_vs_zigbee,zwave_faq,smartcave_zwave_vs_zigbee,zwave_frequencies,zigbee_member_count}}}
 	\label{tab:zwave_vs_zigbee}
 \end{table}
-
-\begin{figure}[ht]
-	\centering
-	\caption{Star- vs. Mesh-Netzwerk}
-	\includegraphics[scale=0.9]{star-vs-mesh-network}
-	\caption*{\footnotesize{Quelle: \mycite{figure_star_vs_mesh_network}}}
-	\label{fig:star_vs_mesh_network}
-\end{figure}
 
 \myfootcite[Vgl.][]{zwave_faq}
 \myfootcite[Vgl.][]{zwave_alliance_overview}
