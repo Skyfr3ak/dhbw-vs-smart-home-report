@@ -154,7 +154,7 @@ ZigBee ist eine Komplettlösung für das \ac{IoT}.
 \autoref{fig:zigbee_stack} zeigt ZigBees Aufbau.
 Die unterste Ebene stellt den Standard IEEE 802.15.4 dar - ein Übertragungsprotokoll für die untersten Ebenen eines \ac{WPAN}.
 Auf dieser Ebene basiert die niedrigste Ebene ZigBees, die Netzwerkebene ZigBee PRO.
-Diese ist global nutzbar, da das 2,4Ghz Band nach IEEE 802.15.4 definiert genutzt wird.
+Diese ist global nutzbar, da das 2,4 Ghz Band nach IEEE 802.15.4 definiert genutzt wird.
 Die kennzeichnende Eigenschaft von ZigBee PRO ist jedoch die Vernetzung von Geräten, welche nicht nur schnell, sondern auch dezentral erfolgt.
 So wird eine Nachricht etwa von einer Glühbirne, zu einer Steckdose, über einen Kühlschrank hin zu dem sog. ZigBee Hub gesendet, welches die Schnittstelle zur Interaktion mit ZigBee Geräten darstellt und somit die Reichweite und Signalstärke des ZigBee Netzwerkes erhöht.
 Darüber hinaus implementiert ZigBee PRO Energiesparmechanismen, welche im Smart Home Sektor mit vielen Batterie betriebenen Geräten nützlich sind.
@@ -183,6 +183,23 @@ Abschließend bleibt anzumerken, dass aufgrund der \ac{P2P}-Architektur ZigBees 
 % how does it work?
 % use cases?
 % pros and cons?
+
+
+\begin{table}[ht]
+	\caption{Z-Wave und ZigBee im Vergleich}
+	\centering
+	\begin{tabular}{| p{0.4\textwidth} | p{0.3\textwidth} | p{0.2\textwidth} |}
+		\hline
+		\textbf{Merkmal} 	& \textbf{Z-Wave} & \textbf{ZigBee} \\ \hline
+		Kompatible Geräte & 2400+\myfootcite[Vgl.][]{zwave_product_count} & 2500+\myfootcite[Vgl.][]{zigbee_faq} \\ \hline
+		Verschlüsselung & \ac{AES}-128\myfootcite[Vgl.][]{safewise_zwave_vs_zigbee} & \ac{AES}-128\myfootcite[Vgl.][]{safewise_zwave_vs_zigbee} \\ \hline
+		Netzwerk-Topologie & Mesh\myfootcite[Vgl.][]{zwave_faq} & Mesh\myfootcite[Vgl.][]{zigbee_faq} \\ \hline
+		Max. Anzahl an Geräten im Mesh & 232\myfootcite[Vgl.][]{zwave_faq} & 65000\myfootcite[Vgl.][]{smartcave_zwave_vs_zigbee} \\ \hline
+		Genutzte Frequenzen & u.a. 868,4 MHz (EU); 908,4 MHz (US)\myfootcite[Vgl.][]{zwave_frequencies} & 2,4 Ghz\myfootcite[Vgl.][]{zigbee_faq} \\ \hline
+	\end{tabular}
+	\caption*{\footnotesize{Quelle: Eigene Darstellung}}
+	\label{tab:zwave_vs_zigbee}
+\end{table}
 
 \begin{figure}[ht]
 	\centering
