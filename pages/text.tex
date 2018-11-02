@@ -43,7 +43,7 @@ So stellt die Software Home Assistant z.B. die Möglichkeit ein Smart Home Syste
 
 Aschendorf beschreibt den Aufbau von Smart Home Systemen als stufenförmige Hierarchie.
 \autoref{fig:automatisierungspygramide} zeigt die drei Ebenen der Automatisierungspyramide nach Aschendorf:
-Die \textit{Feldbusebene}, die \textit{Automatisierungsebene} und die \textit{Leitebene}. \myfootcite[Vgl.][59]{aschendorf14}
+Die Feldbusebene, die Automatisierungsebene und die Leitebene. \myfootcite[Vgl.][59]{aschendorf14}
 
 \begin{figure}[ht]
 	\centering
@@ -88,10 +88,10 @@ Nachfolgend wird eine Auswahl der geläufigsten Systeme vorgestellt.
 2017 verfügten nach dem Statistischen Bundeamt 85,9\% aller deutschen Haushalte über einen stationären Internetzugang und damit einhergehend ein privates \ac{LAN} oder \ac{WLAN}.\myfootcite[Vgl.][]{haushalte}
 Deshalb wird bei der nachträglichen Installation eines Smart Home Systems häufig auf \ac{LAN} oder \ac{WLAN} zurückgegriffen um Kosten und Installationsaufwand einzusparen.
 
-Ein \ac{LAN} wird durch einen oder mehrere sog. \textit{Switches} über \textit{Ethernet}-Kabel verbunden.
-Alternativ kann auch ein \textit{Router} anstelle der \textit{Switches} verwendet werden.
+Ein \ac{LAN} wird durch einen oder mehrere sog. Switches über Ethernet-Kabel verbunden.
+Alternativ kann auch ein Router anstelle der Switches verwendet werden.
 Dieser kann das \ac{LAN} sogar zusätzlich mit anderen \acp{LAN} verbinden, bspw. mit dem Internet.
-Beim \ac{WLAN} wird an Stelle der \textit{Ethernet}-Kabel über das 2,4 oder 5 GHz Band gefunkt.\myfootcite[Vgl.][]{local_area_network}
+Beim \ac{WLAN} wird an Stelle der Ethernet-Kabel über das 2,4 oder 5 GHz Band gefunkt.\myfootcite[Vgl.][]{local_area_network}
 
 \begin{wrapfigure}{r}{0.35\textwidth}
 	\centering
@@ -106,7 +106,7 @@ Die LED-Lampe nutzt das \ac{WLAN} zur Kommunikation mit der Steuerungskomponente
 
 Der Einsatz von einem \ac{LAN} als Kommunikationssystem für Smart Home Anwendungen ist jedoch nicht uneingeschränkt zu empfehlen.
 So sollte bedacht werden, dass die Integration eines beliebigen Smart Home Produkts Sicherheitslücken mit in das private \ac{LAN} reißen kann.
-Bspw. könnte über das \textit{Ethernet}-Kabel zu einer außen am Haus montierten Überwachungskamera auf das gesamte Heimnetzwerk zugegriffen und mitgelauscht werden.
+Bspw. könnte über das Ethernet-Kabel zu einer außen am Haus montierten Überwachungskamera auf das gesamte Heimnetzwerk zugegriffen und mitgelauscht werden.
 
 \subsubsection{MQTT}
 
@@ -121,7 +121,7 @@ Bspw. könnte über das \textit{Ethernet}-Kabel zu einer außen am Haus montiert
 \end{figure}
 
 Anhand \autoref{fig:mqtt_example} lässt sich die Funktionsweise von \ac{MQTT} erklären.
-Es gibt einen zentralen Server, den sog. \textit{Broker}, über welchen diverse Geräte (die \textit{Clients}) kommunizieren.
+Es gibt einen zentralen Server, den sog. Broker, über welchen diverse Geräte (die Clients) kommunizieren.
 Dabei gibt es zwei Methoden:
 Ein Client kann Daten zum Broker zu einem angegeben Thema senden und ein Client kann einem Broker mitteilen zu einem Thema informiert werden zu wollen.
 Trifft eine Nachricht bei einem Broker ein schaut dieser nach, ob ihm zu dem entsprechenden Thema Abonennten bekannt sind und leitet ggf. die Nachricht weiter.
@@ -316,15 +316,15 @@ So sind aktuell 1187 Smart Home Produkte über 46 Kategorien mit Home Assistant 
 Smart Home Produkte werden als Komponenten implementiert, welche mit dem Home Assistant Core interagieren.
 Der Home Assistant Core besteht aus vier Modulen:
 
-Das \textit{State Machine} Modul bildet den Status der verschiedenen Komponenten ab.
-Bemerkt ein Fenstersensor z.B. dass ein Fenster geöffnet wurde, aktualisiert die Komponente \textit{Fenstersensor} ihren Status im \textit{State Machine} Modul, indem sie eine Nachricht an das Modul schickt.
+Das State Machine Modul bildet den Status der verschiedenen Komponenten ab.
+Bemerkt ein Fenstersensor z.B. dass ein Fenster geöffnet wurde, aktualisiert die Komponente \textit{Fenstersensor} ihren Status im State Machine Modul, indem sie eine Nachricht an das Modul schickt.
 
-Für zeitbasierende Automatisierungen existiert das Modul \textit{Timer}, welches sekündlich ein Event emittiert.
+Für zeitbasierende Automatisierungen existiert das Modul Timer, welches sekündlich ein Event emittiert.
 Ein Event ist eine Nachricht, welche beim Auftreten von definierten Bedingungen automatsich verschickt wird.
 
-Über das \textit{Event Bus} Modul werden Events von den beiden bereits genannten Modulen empfangen von diesen ausgehend wiederum Events ausgelöst.
+Über das Event Bus Modul werden Events von den beiden bereits genannten Modulen empfangen von diesen ausgehend wiederum Events ausgelöst.
 
-Das \textit{Service Registry} Modul bietet Komponenten die Möglichkeit beim Gesamtsystem einen Service zu registrieren.
+Das Service Registry Modul bietet Komponenten die Möglichkeit beim Gesamtsystem einen Service zu registrieren.
 Das Gesamtsystem wiederum kann über das selbe Modul den Service einer Komponente in Anspruch nehmen.
 So kann eine Glühbirne z.B. den Service \textit{Glühbirne anschalten} registrieren, welcher dann von einer anderen Komponente, z.B. einem Lichtschalter, indirekt, über ein Event, aufgerufen werden kann.
 
@@ -334,7 +334,7 @@ Die Implementierung einer neuen Komponente ist ausführlich in der Home Assistan
 
 Veröffentlicht wird Home Assistant unter der Apache 2.0 Lizenz.\myfootcite[Vgl.][]{hass_license}
 Die Software ist also kommerziell und privat kostenlos nutzbar.
-Lediglich die Marke \textit{Home Assistant} wird geschützt, sowie die Haftung und die Garantie ausgeschlossen.
+Lediglich die Marke Home Assistant wird geschützt, sowie die Haftung und die Garantie ausgeschlossen.
 
 Für die Weiterentwicklung von Home Assistant wurden im September 2018 vier Grundsätze definiert\myfootcite[Vgl.][]{hass_vision}:
 
