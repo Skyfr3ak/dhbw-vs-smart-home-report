@@ -1,30 +1,30 @@
 \section{Einleitung}
 
-\subsection{Definition: Smart Home} % TODO redo this section
+Diese Arbeit befasst sich mit der Evaluation der Theorie, den Standards und Protokollen, ausgewählten Produkten, den Risiken und den Geschäftsmodellen, welche sich hinter dem Schlagwort \glqq Smart Home\grqq \ einreihen.
+Ziel ist es, auch mit Hilfe der Methoden der Systemanalyse, mit falschen Vorstellungen aufzuräumen, den aktuellen Stand der Dinge darzulegen und einen Blick in die Zukunft der intelligenten Gebäude zu werfen.
 
-Wörtlich übersetzt, bedeutet der englische Begriff Smart Home so viel wie \textit{intelligentes Zuhause}. Intelligent meint hierbei die digitale und automatische Steuerung der Haustechnik.
+\subsection{Definition: Smart Home}
 
-Im Allgemeinen steht Smart Home dafür, für eine intelligente Vernetzung von elektrischen Verbrauchern in privaten Haushalten mit dem Ziel, den Wohnkomfort, die Sicherheit und die Energieeffizienz des Gebäudes zu steigern.\myfootcite[Vgl.][]{definition_smart_home}
+Es existiert keine eindeutige Definition für Smart Homes.
+Häufig wird unter Smart Home ein System verstanden, welches die Fähigkeit besitzt Beleuchtung, Temperatur, Zugang zum Gebäude und Unterhaltungsgeräte, wie z.B. ein Fernseher, über eine Schnittstelle zu kontrollieren.
+\autoref{fig:smart_home_devices} zeigt eine Reihe möglicher Komponenten eines Smart Home Systems.
 
-Durch die Smart Home Technologie werden einerseits Alltagsvorgänge automatisiert, andererseits können die Geräte-Einstellungen, z.B. von Heizung, Licht und Lautsprechern, per Computer oder Smartphone schnell an die persönlichen Bedürfnisse angepasst werden ob zuhause oder unterwegs.
-
-% is smart home only for private people or for business as well?
-
-\begin{figure}[ht] % TODO this picture has nothing to do with smart home. it displays IOT!
+\begin{wrapfigure}{r}{0.5\textwidth}
 	\centering
-	\caption{Smart Home Mobiltelefonsteuerung}
-	\includegraphics[width=0.8\textwidth]{smart_home_handy}
-	\caption*{\footnotesize{Quelle: \mycite{figure_smart_home_handy}}}
-	\label{fig:smarthomehandy}
-\end{figure}
+	\caption{Smart Home Komponenten}
+	\includegraphics[width=0.5\textwidth]{smart-home}
+	\caption*{\footnotesize{Quelle: \mycite[Vgl.][]{figure_smart_home}}}
+	\label{fig:smart_home_devices}
+\end{wrapfigure}
 
-\subsection{Fragestellungen} % TODO better title
+Oft werden bei Smart Home Systemen auch alle Geräte mit einem zentralen sog. \glqq Hub\grqq \ verbunden, welcher die Nutzung verschiedener Komponenten auf Ressourcenschonung optimiert und automatisiert.
+So werden Smart Home Systeme oft mit Energieeinsparungen beworben, welche sich daraus ergeben, dass z.B. nur geheizt wird, wenn auch Menschen anwesend sind.
+Auch Komfortfunktionen, welche auf Automatisierungen, wie etwa dem automatischen Anschalten einer Zimmerlampe, wenn das Zimmer nicht mehr hell genug ausgeleuchtet ist und ein Mensch anwesend ist, werden oft zur Schau gestellt.\myfootcite[Vgl.][]{smart_home_def_usa,smart_home_def_cnbc}
 
-% folgende fragen ausformulieren:
-% wie funktioniert ein smart home?
-% wie kann man ein smart home system monetarisieren?
+Aschendorf erkennt in jedem Smart Home verallgemeinernd die Verbindung von Geräten, Automatisierungen und die Kontrolle über die verbundenen Geräte als elementare Bestandteile eines Smart Homes.\myfootcite[Vgl.][59ff]{aschendorf14}
 
-\section{Evaluation}
+Des Weiteren ist sogar der Begriff \glqq Smart Home\grqq \ nicht überall in Gebrauch. Im englischsprachigen Raum ist der Begriff \glqq Home automation\grqq \ (zu Deutsch \glqq Heimautomatisierung\grqq ) geläufig.
+Auch \glqq Domotics\grqq \ (vom lateinischen Wort \glqq domus\grqq \ für \glqq Haus\grqq ) kann synonym genutzt werden.\myfootcite[Vgl.][]{smart_home_def_hill}
 
 \subsection{Internet of Things}
 
@@ -38,7 +38,13 @@ Ein Smart Home System kann also zum \ac{IoT}-System werden, wenn die Steuerung o
 Dies muss jedoch nicht der Fall sein.
 So stellt die Software Home Assistant z.B. die Möglichkeit ein Smart Home System komplett offline zu betreiben.\myfootcite[Vgl.][]{hass_vision}
 
-\subsection{Geschichte}
+\section{Evaluation}
+
+Folgend wird das Smart Home von Grund auf durchdacht, die zugehörigen technischen Elemente vorgestellt und schließlich Beispiele betrachtet.
+Anhand dieser werden dann auch die Risiken beim Betreiben eines Smart Home Systems greifbar.
+Anschließend werden Auswahl an Geschäftsmodellen vorgestellt, welche vorhergehende Erläuterungen monetarisieren.
+
+\subsection{\textbf{TODO} Geschichte}
 
 % idk -> wikipedia?
 
@@ -46,7 +52,7 @@ So stellt die Software Home Assistant z.B. die Möglichkeit ein Smart Home Syste
 
 Aschendorf beschreibt den Aufbau von Smart Home Systemen als stufenförmige Hierarchie.
 \autoref{fig:automatisierungspygramide} zeigt die drei Ebenen der Automatisierungspyramide nach Aschendorf:
-Die \textit{Feldbusebene}, die \textit{Automatisierungsebene} und die \textit{Leitebene}. \myfootcite[Vgl.][59]{aschendorf14}
+Die Feldbusebene, die Automatisierungsebene und die Leitebene. \myfootcite[Vgl.][59]{aschendorf14}
 
 \begin{figure}[ht]
 	\centering
@@ -83,22 +89,18 @@ Ausgaben werden etwa über digitale Dashboards auf diversen Displays angezeigt.
 
 In einem Smart Home System kommen Produkte verschiedener Art zum Einsatz.
 Vom digitalen Kühlschrank, zum Türschloss hin zu Lichtschalter und Glühbirne.
-Aufgrund der verschiedenenartigen Anwendungen der Produkte, den verschiedenen Herstellern, aber auch fehlender Standardisierung werden im Smart Home Bereich verschiedene Kommunikationssysteme und Protokolle verwendet.
-
-% foreach:
-% how does it work?
-% use cases?
-% pros and cons?
+Aufgrund der verschiedenenartigen Anwendungen der Produkte und den verschiedenen Herstellern werden im Smart Home Bereich verschiedene Verbindungssysteme und Protokolle verwendet.
+Nachfolgend wird eine Auswahl der geläufigsten Systeme vorgestellt.
 
 \subsubsection{LAN und WLAN}
 
 2017 verfügten nach dem Statistischen Bundeamt 85,9\% aller deutschen Haushalte über einen stationären Internetzugang und damit einhergehend ein privates \ac{LAN} oder \ac{WLAN}.\myfootcite[Vgl.][]{haushalte}
 Deshalb wird bei der nachträglichen Installation eines Smart Home Systems häufig auf \ac{LAN} oder \ac{WLAN} zurückgegriffen um Kosten und Installationsaufwand einzusparen.
 
-Ein \ac{LAN} wird durch einen oder mehrere sog. \textit{Switches} über \textit{Ethernet}-Kabel verbunden.
-Alternativ kann auch ein \textit{Router} anstelle der \textit{Switches} verwendet werden.
+Ein \ac{LAN} wird durch einen oder mehrere sog. Switches über Ethernet-Kabel verbunden.
+Alternativ kann auch ein Router anstelle der Switches verwendet werden.
 Dieser kann das \ac{LAN} sogar zusätzlich mit anderen \acp{LAN} verbinden, bspw. mit dem Internet.
-Beim \ac{WLAN} wird an Stelle der \textit{Ethernet}-Kabel über das 2,4 oder 5 GHz Band gefunkt.\myfootcite[Vgl.][]{local_area_network}
+Beim \ac{WLAN} wird an Stelle der Ethernet-Kabel über das 2,4 oder 5 GHz Band gefunkt.\myfootcite[Vgl.][]{local_area_network}
 
 \begin{wrapfigure}{r}{0.35\textwidth}
 	\centering
@@ -113,11 +115,11 @@ Die LED-Lampe nutzt das \ac{WLAN} zur Kommunikation mit der Steuerungskomponente
 
 Der Einsatz von einem \ac{LAN} als Kommunikationssystem für Smart Home Anwendungen ist jedoch nicht uneingeschränkt zu empfehlen.
 So sollte bedacht werden, dass die Integration eines beliebigen Smart Home Produkts Sicherheitslücken mit in das private \ac{LAN} reißen kann.
-Bspw. könnte über das \textit{Ethernet}-Kabel zu einer außen am Haus montierten Überwachungskamera auf das gesamte Heimnetzwerk zugegriffen und mitgelauscht werden.
+Bspw. könnte über das Ethernet-Kabel zu einer außen am Haus montierten Überwachungskamera auf das gesamte Heimnetzwerk zugegriffen und mitgelauscht werden.
 
 \subsubsection{MQTT}
 
-\ac{MQTT} ist ein, speziell auf das \ac{IoT} ausgerichtetes, Netzwerk-Protokoll.
+\ac{MQTT} ist ein speziell auf das \ac{IoT} ausgerichtetes Netzwerk-Protokoll.
 
 \begin{figure}[ht]
 	\centering
@@ -128,7 +130,7 @@ Bspw. könnte über das \textit{Ethernet}-Kabel zu einer außen am Haus montiert
 \end{figure}
 
 Anhand \autoref{fig:mqtt_example} lässt sich die Funktionsweise von \ac{MQTT} erklären.
-Es gibt einen zentralen Server, den sog. \textit{Broker}, über welchen diverse Geräte (die \textit{Clients}) kommunizieren.
+Es gibt einen zentralen Server, den sog. Broker, über welchen diverse Geräte (die Clients) kommunizieren.
 Dabei gibt es zwei Methoden:
 Ein Client kann Daten zum Broker zu einem angegeben Thema senden und ein Client kann einem Broker mitteilen zu einem Thema informiert werden zu wollen.
 Trifft eine Nachricht bei einem Broker ein schaut dieser nach, ob ihm zu dem entsprechenden Thema Abonennten bekannt sind und leitet ggf. die Nachricht weiter.
@@ -141,17 +143,111 @@ Ebenso kann garantiert werden, dass eine Nachricht nur ein einziges Mal den Empf
 Anwendung findet das \ac{MQTT} Protokoll vorallem bei Sensoren für Raumtemperatur, Lichteinfall oder Bewegung, da hier eine lediglich eine eindimensionale Kommunikation abgebildet werden muss.
 Da \ac{MQTT} ein offener und frei verfügbarer Standard ist, findet sich das Protokoll auch vermehrt in \ac{DIY}-Projekten wieder.\myfootcite[Vgl.][]{bruhautomation_esp_sensor}
 
-% The major advantages of MQTT are the publish-subscribe message queue and the many-to-many broadcast capabilities. Using a long-lived outgoing TCP connection to the MQTT broker, sending messages of limited bandwidth back and forth is simple and straightforward.
-
-% The downside of having an always-on connection is that it limits the amount of time the devices can be put to sleep. If the device mostly sleeps, then another MQTT protocol can be used: MQTT-S, which works with UDP instead of TCP.
-
-% Another disadvantage of MQTT is the lack of encryption in the base protocol. MQTT was designed to be a lightweight protocol, and incorporating encryption would add a significant amount of overhead to the connection. You can add custom security at the application level, but that may require a significant amount of work.
-
-\myfootcite[Vgl.][]{mqtt_pros_cons}
+Für die Nutzung von \ac{MQTT} spricht oft die Architektur des Protokolls, welche über den Broker das Senden von Nachrichten von vielen an viele ermöglicht.
+Andererseits muss abgewägt werden, dass \ac{MQTT} auf Protokollebene keine Verschlüsselung nutzt.
+Es können zwar auf höherer Ebene Sicherheitsfunktionen implementiert werden, jedoch würden diese die Geschwindigkeit des \ac{MQTT}-Protokolls signifikant verringern.\myfootcite[Vgl.][]{mqtt_pros_cons}
 
 \subsubsection{ZigBee}
+
+\begin{wrapfigure}{r}{0.4\textwidth}
+	\centering
+	\caption{ZigBee Stack}
+	\includegraphics[width=0.4\textwidth]{zigbee-stack}
+	\caption*{\footnotesize{Quelle: \mycite[Vgl.][]{figure_zigbee_stack}}}
+	\label{fig:zigbee_stack}
+\end{wrapfigure}
+
+ZigBee ist eine Komplettlösung für das \ac{IoT}.
+\autoref{fig:zigbee_stack} zeigt ZigBees Aufbau.
+Die unterste Ebene stellt den Standard IEEE 802.15.4 dar - ein Übertragungsprotokoll für die untersten Ebenen eines \ac{WPAN}.
+Auf dieser Ebene basiert die niedrigste Ebene ZigBees, die Netzwerkebene ZigBee PRO.
+Diese ist global nutzbar, da das 2,4 GHz Band nach IEEE 802.15.4 definiert genutzt wird.
+Die kennzeichnende Eigenschaft von ZigBee PRO ist jedoch die Vernetzung von Geräten, welche nicht nur schnell, sondern auch dezentral erfolgt.
+So wird eine Nachricht etwa von einer Glühbirne, zu einer Steckdose, über einen Kühlschrank hin zu dem sog. ZigBee Hub gesendet, welches die Schnittstelle zur Interaktion mit ZigBee Geräten darstellt und somit die Reichweite und Signalstärke des ZigBee Netzwerkes erhöht.
+Darüber hinaus implementiert ZigBee PRO Energiesparmechanismen, welche im Smart Home Sektor mit vielen Batterie betriebenen Geräten nützlich sind.
+Ebenso liefert ZigBee PRO \ac{MQTT}-ähnliche Übertragungsarten, sowie eine Verschlüsselung der Kommunikation nach \ac{AES}.
+Schließlich bietet die \ac{ZCL}, welche auf ZigBee PRO basiert, Entwicklern die Möglichkeit ZigBee einfach in eine beliebige Anwendung zu integrieren.
+Die ZigBee-Zertifizierung eines Geräts stellt abschließend sicher, dass weitere Geräte nach ZigBee Spezifikation mit dem Gerät interagieren können.\myfootcite[Vgl.][]{zigbee_faq}
+
+Der Beleuchtungssystemanbieter Signify nutzt ZigBee um Philips Hue Beleuchtungssyteme zuverlässig und kabellos zu installieren.
+Gerade bei Gebäuden mit vielen massiven Wänden kann es von Vorteil sein ein \ac{P2P} System zu verwenden um ein Netzwerk aufzubauen, da zentrale Router nicht unbedingt alle Ecken eines Gebäudes abdecken können.\myfootcite[Vgl.][]{how_hue_works}
+
+Für die Nutzung von ZigBee spricht vor allem die Interoperabilität zwischen verschiedenen ZigBee Geräten, welche durch die Zertifizierung und das global nutzbare 2,4GHz Band sichergestellt werden.
+Damit werden ZigBee Systeme nicht nur einfach zu programmieren, sondern für Konsumenten auch einfacher zu installieren.
+Die Möglichkeit \ac{P2P}-Netzwerke mit ZigBee Geräten zu bilden sorgt zudem für eine bessere Verbindung der einzelnen Geräte.
+Schließlich können zusätzlich Batterie betriebene Geräte von ZigBees geringem Stromverbrauch profitieren.\myfootcite[Vgl.][]{zigbee_faq}
+
+Es ist jedoch keine uneingeschränkte Empfehlung für ZigBee auszusprechen.
+ZigBee ist zwar ein offener Standard, jedoch nicht kompatibel mit u.a. der \ac{GPL}.
+Dies hat zur Folge, dass ZigBee nicht in freie Software implementiert werden kann.\myfootcite[Vgl.][]{iot_standard_war}
+Außerdem besteht die Hürde eines jährlich zu entrichtenden Mitgliedsbeitrags um Zugang zu den ZigBee Spezifikationen und Standards zu erhalten, was Hobby-Programmierer und Bastler fern von ZigBee hält.\myfootcite[Vgl.][]{zigbee_membership}
+Des Weiteren können herkömmliche Smartphones und Tablets nicht mit in ein ZigBee Netzwerk integriert werden, da diese nicht über den benötigten ZigBee Stack verfügen.
+So muss immer ein ZigBee Hub installiert werden, welches die Schnittstelle zu herkömmlichen Systemen wie \ac{LAN} und \ac{WLAN} bildet.
+Abschließend bleibt anzumerken, dass aufgrund der \ac{P2P}-Architektur ZigBees maximal Datenübertragungsraten von bis zu 250 kbit/s erreicht werden.\myfootcite[Vgl.][]{zigbee_faq}
+
 \subsubsection{Z-Wave}
-\subsubsection{RFID}
+
+Z-Wave lässt sich nahezu identisch wie ZigBee beschreiben.\myfootcite[Vgl.][]{zwave_faq}
+So wird auch eine \ac{P2P} Mesh Netzwerk-Topologie genutzt.
+
+\begin{figure}[ht]
+	\centering
+	\caption{Star- vs. Mesh-Netzwerk}
+	\includegraphics[scale=0.9]{star-vs-mesh-network}
+	\caption*{\footnotesize{Quelle: \mycite{figure_star_vs_mesh_network}}}
+	\label{fig:star_vs_mesh_network}
+\end{figure}
+
+\autoref{fig:star_vs_mesh_network} vergleicht die \ac{P2P} Mesh-Topologie mit der klassischen Stern-Topologie, wie sie z.B. bei einem \ac{WLAN} zu finden ist.
+Bei einer Stern-Topologie sind alle Geräte im Netzwerk mit einem zentralen sog. Router verbunden, welcher die Nachrichten der Geräte einander entsprechend weiterleitet.
+Bei einer Mesh-Topologie hingegen verbinden sich die Geräte mit allen Geräten in ihrer Reichweite.
+Eine Nachricht an ein bestimmtes Gerät wird nun von Gerät zu Gerät geschickt, bis das empfangende Geräte das Empfänger-Gerät ist.
+Hier müssen jedoch im Vergleich zur Stern-Topologie Abstriche bzgl. der Latzenz einer Nachricht gemacht werden, da eine Nachricht selten über eine direkte Verbindung gesendet werden kann.
+Andererseits kann ein Mesh-Netzwerk einfacher expandiert werden, da jedes Gerät im Netzwerk Teil des Netzwerks ist.
+
+Auch was den Energiebedarf eines Z-Wave Netzwerks anbelangt, kann kein Unterschied zu ZigBee festgestellt werden.
+Beide Systeme ermöglichen es Batterie betriebenen Geräten über mehrere Jahre Nachrichten zu senden und zu empfangen, ohne Batterie-Wechsel.\myfootcite[Vgl.][]{smartcave_zwave_vs_zigbee}
+
+\begin{wrapfigure}{r}{0.35\textwidth}
+	\centering
+	\caption{Z-Wave Chip}
+	\includegraphics[width=0.35\textwidth]{zwave-chip}
+	\caption*{\footnotesize{Quelle: \mycite{figure_zwave_chip}}}
+	\label{fig:zwave_chip}
+\end{wrapfigure}
+
+Im Gegensatz zu ZigBee ist Z-Wave kein offener Standard.
+So wird beim Bau eines Z-Wave kompatiblen Geräts ein proprietäres Bauteil benötigt.
+\autoref{fig:zwave_chip} zeigt einen Z-Wave Funksendeempfänger von Sigma Designs aus 2012.
+Dass die Hersteller von Z-Wave Geräten den Z-Wave Funksendeempfänger fremdbeziehen müssen bedeutet auf der einen Seite, dass Fehler im Z-Wave Funksendeempfänger nicht vom Hersteller korrigiert werden können und so evtl. Geräte zurückgerufen werden müssen, andererseits wird so sichergestellt, dass kein Hersteller das Herz eines jeden Z-Wave Geräts, die Kommunikationseinheit, verändert und somit die Interoperabilität aller Z-Wave Geräte nicht gefährden kann.\myfootcite[Vgl.][]{zwave_develop_a_product}
+
+\begin{table}[ht]
+	\caption{Z-Wave und ZigBee im Vergleich}
+	\centering
+	\begin{tabular}{| p{0.4\textwidth} | p{0.3\textwidth} | p{0.2\textwidth} |}
+		\hline
+		\textbf{Merkmal} 	& \textbf{Z-Wave} & \textbf{ZigBee} \\ \hline
+		Kompatible Geräte & 2400+ & 2500+ \\ \hline
+		Beteiligte Firmen & 418 & 322 \\ \hline
+		Anzahl verkaufter Produkte & 100+ Mio.& 300+ Mio.\\ \hline
+		Netzwerk-Topologie & Mesh & Mesh \\ \hline
+		Max. Anzahl an Geräten im Mesh & 232 & ca. 65000 \\ \hline
+		Genutzte Frequenzen & u.a. 868,4 MHz (EU); 908,4 MHz (US) & 2,4 GHz \\ \hline
+	\end{tabular}
+	\caption*{\footnotesize{Quellen: \mycite[Vgl.][]{zwave_product_count,zigbee_faq,zwave_member_count,safewise_zwave_vs_zigbee,zwave_faq,smartcave_zwave_vs_zigbee,zwave_frequencies,zigbee_member_count,zwave_products_sold}}}
+	\label{tab:zwave_vs_zigbee}
+\end{table}
+
+Noch kann nicht abgeschätzt werden, ob sich Z-Wave oder ZigBee oder ein dritter \ac{IoT}-Standard durchsetzen wird.
+Nach \autoref{tab:zwave_vs_zigbee} sind Z-Wave und ZigBee was beteiligte Firmen, kompatible Geräte und verkaufter Produkte angeht nahezu gleichauf.
+Auf technischer Ebene sind die Standards zwar ähnlich, nicht aber gleich.
+So kann mit ZigBee bspw. ein größeres Mesh-Netzwerk erstellt werden.
+Hauptsächlich relevant beim Z-Wave-ZigBee-Vergleich sind jedoch die genutzten Frequenzen.
+Da ZigBee das 2,4 GHz Band mit anderen Technologien wie z.B. \ac{WLAN} teilt, muss ZigBee mit Interferenzen operieren, während Z-Wave weitestgehend ungestört operieren kann.
+Außerdem kann Z-Wave durch die geringere Frequenzen eine höhere Signalreichweite erzielen.
+ZigBee hingegen erreicht durch die höhere Frequenz eine höhere Bandbreite.
+Schließlich kann ZigBee auch wegen der globalen Nutzung der 2,4 GHz Frequenz regional limitiert kompatible Produkte vermeiden.
+Z-Wave hingegen nicht.\myfootcite[Vgl.][]{zwave_faq}
 
 \subsection{Amazon Alexa}
 
@@ -160,7 +256,7 @@ Amazon Alexa ist die Software für einen intelligenten Sprachassistenten, besteh
 
 \begin{figure}[ht]
 	\centering
-	\caption{Alexa Devices}
+	\caption{Alexa Geräte}
 	\includegraphics[scale=.8]{alexa_devices}
 	\caption*{\footnotesize{Quelle: \mycite{figure_alexa_devices}}}
 	\label{fig:alexa_devices}
@@ -194,14 +290,6 @@ Smart Home Produkte werden über das Internet mit Alexa verbunden.
 Um diesen Prozess noch weiter zu vereinfachen können Hersteller die Zertifizierung \glqq Works with Alexa\grqq \ für ihre Produkte erlangen, wenn Spezifikationen bzgl. Installation des Produkts, sowie dessen Schnittstelle erfüllt werden.
 \autoref{fig:works_with_alexa} zeigt das Works with Alexa Siegel, welches bei erfolgreicher Zertifizierung benutzt werden darf.
 Für Besitzer von zertifizierten Geräten gibt es meist nur noch ein kurzen standardisierten Einrichtungsprozess zu überwinden.\myfootcite[Vgl.][]{workswithalexa}
-
-% \begin{figure}[ht]
-% 	\centering
-% 	\caption{Amazon Alexa Voice Control}
-% 	\includegraphics[scale=1]{echo_dot}
-% 	\caption*{\footnotesize{Quelle: \mycite{figure_alexa_echo_dot}}}
-% 	\label{fig:echo_dot}
-% \end{figure}
 
 \subsubsection{Vorteile}
 
@@ -237,15 +325,15 @@ So sind aktuell 1187 Smart Home Produkte über 46 Kategorien mit Home Assistant 
 Smart Home Produkte werden als Komponenten implementiert, welche mit dem Home Assistant Core interagieren.
 Der Home Assistant Core besteht aus vier Modulen:
 
-Das \textit{State Machine} Modul bildet den Status der verschiedenen Komponenten ab.
-Bemerkt ein Fenstersensor z.B. dass ein Fenster geöffnet wurde, aktualisiert die Komponente \textit{Fenstersensor} ihren Status im \textit{State Machine} Modul, indem sie eine Nachricht an das Modul schickt.
+Das State Machine Modul bildet den Status der verschiedenen Komponenten ab.
+Bemerkt ein Fenstersensor z.B. dass ein Fenster geöffnet wurde, aktualisiert die Komponente \textit{Fenstersensor} ihren Status im State Machine Modul, indem sie eine Nachricht an das Modul schickt.
 
-Für zeitbasierende Automatisierungen existiert das Modul \textit{Timer}, welches sekündlich ein Event emittiert.
+Für zeitbasierende Automatisierungen existiert das Modul Timer, welches sekündlich ein Event emittiert.
 Ein Event ist eine Nachricht, welche beim Auftreten von definierten Bedingungen automatsich verschickt wird.
 
-Über das \textit{Event Bus} Modul werden Events von den beiden bereits genannten Modulen empfangen von diesen ausgehend wiederum Events ausgelöst.
+Über das Event Bus Modul werden Events von den beiden bereits genannten Modulen empfangen von diesen ausgehend wiederum Events ausgelöst.
 
-Das \textit{Service Registry} Modul bietet Komponenten die Möglichkeit beim Gesamtsystem einen Service zu registrieren.
+Das Service Registry Modul bietet Komponenten die Möglichkeit beim Gesamtsystem einen Service zu registrieren.
 Das Gesamtsystem wiederum kann über das selbe Modul den Service einer Komponente in Anspruch nehmen.
 So kann eine Glühbirne z.B. den Service \textit{Glühbirne anschalten} registrieren, welcher dann von einer anderen Komponente, z.B. einem Lichtschalter, indirekt, über ein Event, aufgerufen werden kann.
 
@@ -255,7 +343,7 @@ Die Implementierung einer neuen Komponente ist ausführlich in der Home Assistan
 
 Veröffentlicht wird Home Assistant unter der Apache 2.0 Lizenz.\myfootcite[Vgl.][]{hass_license}
 Die Software ist also kommerziell und privat kostenlos nutzbar.
-Lediglich die Marke \textit{Home Assistant} wird geschützt, sowie die Haftung und die Garantie ausgeschlossen.
+Lediglich die Marke Home Assistant wird geschützt, sowie die Haftung und die Garantie ausgeschlossen.
 
 Für die Weiterentwicklung von Home Assistant wurden im September 2018 vier Grundsätze definiert\myfootcite[Vgl.][]{hass_vision}:
 
@@ -304,49 +392,52 @@ Zudem befindet sich Home Assistant noch in aktiver Entwicklung und so fordern ma
 
 Home Assistant kann im jetzigen Zustand nur von technisch Versierten genutzt werden.
 
-\subsection{Integrierte Lösung} % change title to actual product
+\subsection{\textbf{TODO} Integrierte Lösung} % change title to actual product
 
 % ein system, welches beim bau eines haus integriert wird.
 % also ein gesamtsystem aus einer hand von einem unternehmen.
 
-\subsubsection{Vorteile}
+\subsubsection{\textbf{TODO} Vorteile}
 
-\subsubsection{Nachteile}
+\subsubsection{\textbf{TODO} Nachteile}
 
-\subsection{Risiken}
+\subsection{\textbf{TODO} Risiken}
 
 % if used in combination with IoT: data breaches and loss of control
 % power loss = no function
 % smart home device with security flaw can be used to break into the local network
 
-\subsection{Geschäftsmodelle}
+\subsection{\textbf{TODO} Geschäftsmodelle}
+
+% for this headline: give some numbers (how large ist the market etc...)
 
 % foreach:
 % how does the business model work?
 % example product?
 % potential market?
 
-\subsubsection{Geräte verkaufen} % TODO better title
+\subsubsection{\textbf{TODO} Geräte verkaufen} % TODO better title
 
 % sell products like: philips lightning bulb
 
-\subsubsection{Cloud Erweiterung} % TODO better title
+\subsubsection{\textbf{TODO} Cloud Erweiterung} % TODO better title
 
 % see: home assistant cloud by nabu casa
 
-\subsubsection{Gesamtsystem} % TODO better title
+\subsubsection{\textbf{TODO} Gesamtsystem} % TODO better title
 
 % install a smart home integration in peoples homes who don't know how to do so themselves
 
-\subsubsection{Alexa Skills} % TODO better title
+\subsubsection{\textbf{TODO} Alexa Skills} % TODO better title
 
 % sell alexa skills
 % create a skill with payment option
 
 % https://developer.amazon.com/blogs/alexa/post/b8101123-f1b9-494c-8bbb-53e3850a1123/in-skill-purchasing-offers-jeff-bolton-s-voice-business-a-new-level-of-monetization
 
-\section{Fazit}
+\section{\textbf{TODO} Fazit}
 
 % trends --> closed source, iot :/, automations! :D
 % best business models
 % home assistant empfehlung :)
+% spielerei oder wirtschaftszweig?

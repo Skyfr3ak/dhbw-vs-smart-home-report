@@ -35,6 +35,12 @@
     "cSpell.language": "de,en",
     "cSpell.enabled": true,
     "cSpell.words": [
-        "schoutsen"
+        "alexa",
+        "beleuchtungssyteme",
+        "kbit",
+        "mqtt",
+        "schoutsen",
+        "xiaomi",
+        "yeelight"
     ],
 }
