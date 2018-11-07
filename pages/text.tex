@@ -48,7 +48,7 @@ Anschließend werden Auswahl an Geschäftsmodellen vorgestellt, welche vorhergeh
 
 % idk -> wikipedia?
 
-\subsection{Aufbau eines Smart Home Systems}
+\subsection{Aufbau eines Smart Home Systems}\label{sec:aufbau}
 
 Aschendorf beschreibt den Aufbau von Smart Home Systemen als stufenförmige Hierarchie.
 \autoref{fig:automatisierungspygramide} zeigt die drei Ebenen der Automatisierungspyramide nach Aschendorf:
@@ -403,9 +403,41 @@ Home Assistant kann im jetzigen Zustand nur von technisch Versierten genutzt wer
 
 \subsection{\textbf{TODO} Risiken}
 
-% if used in combination with IoT: data breaches and loss of control
-% power loss = no function
+Um Risiken beim Betrieb eines Smart Home Systems erkennen zu können, muss zunächst verstanden werden, auf welche Faktoren diese sich beziehen können.
+Zuerst sind hier die persönlichen Daten der Bewohner eines Smart Home Systems zu nennen.
+Durch jede Interaktion mit dem System fallen zwangsweise Daten an.
+So ist einem Smart Home System bspw. bekannt wann sich seine Bewohner in welchem Raum aufhalten, wann sie schlafen oder wann sie sich außer Haus aufhalten.
+Die restlichen drei von Risiken behafteten Faktoren ergeben sich aus dem Aufbau eines Smart Home Systems, wie in \autoref{sec:aufbau} beschrieben.
+Aus der Leitebene leitet sich der Faktor Kontrolle ab, aus der Automatisierungsebene Automatisierungen und schließlich grundlegende Funktionalität aus der Feldbusebene.
+
+Das primäre Risiko welches sich aus den vorhandenen Daten ableitet kann als nicht autorisierten Zugriff durch Dritte beschrieben werden.
+Bspw. sollten die üblichen Aufenthaltszeiträume der Bewohner eines Smart Home Systems nicht für potentielle Einbrecher abrufbar sein.
+
+% control
+
+% criminals can open the door
+
+% automations
+
+% cat dies because she wasn't given any food
+
+% basic functionality
+
+% can't unlock the door on power loss
+
+\subsubsection{Schwachstellen}
+
+% where is data lost? -> cloud (third party), hack, wrong config (if used with iot applications)
 % smart home device with security flaw can be used to break into the local network
+% device with vulnerability can be used to hack into the system from the internet
+
+\subsubsection{Risikoprävention}
+
+% devices on a seperate network
+% fallback devices
+% no third-party deps -> hass
+
+
 
 \subsection{\textbf{TODO} Geschäftsmodelle}
 
