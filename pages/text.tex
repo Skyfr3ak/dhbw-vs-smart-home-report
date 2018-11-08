@@ -426,12 +426,23 @@ Bei einem Stromausfall könnte so z.B. das Öffnen einer Türe nicht mehr mögli
 
 \subsubsection{Schwachstellen}
 
+Sollen Schwachstellen eines Smart Home Systems erkannt werden muss zunächst geklärt werden, ob es sich um ein Smart Home System mit \ac{IoT}-Funktionalitäten handelt.
+
+Wird ein Smart Home System lokal betrieben und die Fernsteuerung über einen eigenen \ac{VPN} realisiert können Angriffe aus dem Internet weitgehend ausgeschlossen werden.
+Die Schwachstellen eines lokalen Systems befinden sich primär an den von außerhalb des Gebäudes erreichbaren Geräten.
+So kann sich bspw. über eine außen am Gebäude angebrachte Überwachungskamera Zugang ins Heimnetzwerk verschafft werden, indem etwa das Netzwerkkabel, welches die Kamera mit dem Heimnetzwerk verbindet, direkt angezapft wird.
+Auch Sprachassistenten können von außen angesteuert werden, was einem Angreifer bspw. ermöglichen würde, sich mit dem lauten Rufen von \glqq Alexa, öffne die Haustüre!\grqq \ Zugang zum Gebäude zu verschaffen.
+Schließlich ist ein Smart Home System jeder Art abhängig von einer konstanten Stromversorgung.
+Bei einem Stromausfall kann ein Smart Home System an Funktionalität jeglicher Art verlieren.
+
+
 % where is data lost? -> cloud (third party), hack, wrong config (if used with iot applications)
 % smart home device with security flaw can be used to break into the local network
 % device with vulnerability can be used to hack into the system from the internet
 
 \subsubsection{Risikoprävention}
 
+% asr input only for not critical systems
 % devices on a seperate network
 % fallback devices
 % no third-party deps -> hass
