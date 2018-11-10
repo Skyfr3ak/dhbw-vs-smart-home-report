@@ -444,13 +444,23 @@ Darüber hinaus werden \ac{IoT}-Geräte dem Internet oft direkt ausgesetzt, was 
 
 \subsubsection{Risikoprävention}
 
-% asr input only for not critical systems
-% devices on a seperate network
-% fallback devices
-% no third-party deps -> hass
-% akku
+Präventive Maßnahmen leiten sich direkt aus den genannten Schwachstellen ab.
+Generell empfiehlt sich der Verzicht auf \ac{IoT}-Systeme, wie Amazon Alexa, was die Abhängigkeit von Dritten reduziert.
+Werden trotzdem \ac{IoT}-Komponenten eingesetzt, sollte deren Zugang ins Internet über eine Firewall möglichst beschränkt werden.
+Auch kann versucht werden die Komponenten lokal anzusprechen und den Zuganz zum Internet gänzlich zu sperren.
+Oft verfügen \ac{IoT}-Geräte über eine \ac{API}, welche direkt angesprochen werden kann.
+Xiaomi erlaubt z.B., dass ihre Yeelight Lampen über ein \ac{IoT}-System per App, aber auch direkt über das \ac{LAN} steuerbar sind.\myfootcite[Vgl.][]{yeelight_docs}
+
+Ein Stromausfall und somit ein genereller Systemausfall kann durch einen Heimspeicher für elektrische Energie kompensiert werden.
+Zusätzlich sollten kritische Funktionen, wie etwa die Verriegelung von Türen, auch ohne Strom und Internet nutzbar sein - es sollten also Rückfalleinrichtungen vorhanden sein.
+Die Bedeutung von Rückfalleinrichtungen wird bewusst, wenn z.B. der Ausfall von Lockstate Smart Home Türschlössern im August 2017 rekapituliert wird.
+Ca. 500 Kunden von Lockstate konnten ihre Türen nicht mehr öffnen, weil eine fehlerhafte Aktualisierung der Software der Schlösser deren Funktionalität deaktivierte.
+\myfootcite[Vgl.][]{iot_fail}
 
 
+% akku und fallback devices
+% asr non critical
+% second network for devices
 
 \subsection{\textbf{TODO} Geschäftsmodelle}
 
