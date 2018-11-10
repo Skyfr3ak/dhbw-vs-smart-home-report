@@ -401,7 +401,7 @@ Home Assistant kann im jetzigen Zustand nur von technisch Versierten genutzt wer
 
 \subsubsection{\textbf{TODO} Nachteile}
 
-\subsection{\textbf{TODO} Risiken}
+\subsection{Risiken}
 
 Um Risiken beim Betrieb eines Smart Home Systems erkennen zu können, muss zunächst verstanden werden, auf welche Faktoren diese sich beziehen können.
 Zuerst sind hier die persönlichen Daten der Bewohner eines Smart Home Systems zu nennen.
@@ -454,13 +454,12 @@ Xiaomi erlaubt z.B., dass ihre Yeelight Lampen über ein \ac{IoT}-System per App
 Ein Stromausfall und somit ein genereller Systemausfall kann durch einen Heimspeicher für elektrische Energie kompensiert werden.
 Zusätzlich sollten kritische Funktionen, wie etwa die Verriegelung von Türen, auch ohne Strom und Internet nutzbar sein - es sollten also Rückfalleinrichtungen vorhanden sein.
 Die Bedeutung von Rückfalleinrichtungen wird bewusst, wenn z.B. der Ausfall von Lockstate Smart Home Türschlössern im August 2017 rekapituliert wird.
-Ca. 500 Kunden von Lockstate konnten ihre Türen nicht mehr öffnen, weil eine fehlerhafte Aktualisierung der Software der Schlösser deren Funktionalität deaktivierte.
-\myfootcite[Vgl.][]{iot_fail}
+Ca. 500 Kunden von Lockstate konnten ihre Türen nicht mehr öffnen, weil eine fehlerhafte Aktualisierung der Software der Schlösser deren Funktionalität deaktivierte.\myfootcite[Vgl.][]{iot_fail}
 
+Die Risiken der Sprachsteuerungseinheiten können entschärft werden, indem man die Berechtigungen der Spracheingaben so definiert, dass lediglich nicht sicherheitsrelevante Aktion ausgeführt werden können.
+So kann man bspw. den Befehl \glqq Alex, schließe die Haustüre!\grqq \ erlauben, den Befehl \glqq Alex, öffne die Haustüre!\grqq \ aber verbieten.
 
-% akku und fallback devices
-% asr non critical
-% second network for devices
+Schließlich bleibt zu empfehlen alle von außen zu erreichende Geräte in einem separaten Netzwerk zu organisieren, damit nicht auf das interne Netzwerk von außen zugegriffen werden kann.
 
 \subsection{\textbf{TODO} Geschäftsmodelle}
 
