@@ -428,17 +428,19 @@ Bei einem Stromausfall könnte so z.B. das Öffnen einer Türe nicht mehr mögli
 
 Sollen Schwachstellen eines Smart Home Systems erkannt werden muss zunächst geklärt werden, ob es sich um ein Smart Home System mit \ac{IoT}-Funktionalitäten handelt.
 
-Wird ein Smart Home System lokal betrieben und die Fernsteuerung über einen eigenen \ac{VPN} realisiert können Angriffe aus dem Internet weitgehend ausgeschlossen werden.
+Wird ein Smart Home System lokal betrieben und die Fernsteuerung über ein \ac{VPN} realisiert können Angriffe aus dem Internet weitgehend ausgeschlossen werden.
 Die Schwachstellen eines lokalen Systems befinden sich primär an den von außerhalb des Gebäudes erreichbaren Geräten.
 So kann sich bspw. über eine außen am Gebäude angebrachte Überwachungskamera Zugang ins Heimnetzwerk verschafft werden, indem etwa das Netzwerkkabel, welches die Kamera mit dem Heimnetzwerk verbindet, direkt angezapft wird.
 Auch Sprachassistenten können von außen angesteuert werden, was einem Angreifer bspw. ermöglichen würde, sich mit dem lauten Rufen von \glqq Alexa, öffne die Haustüre!\grqq \ Zugang zum Gebäude zu verschaffen.
 Schließlich ist ein Smart Home System jeder Art abhängig von einer konstanten Stromversorgung.
 Bei einem Stromausfall kann ein Smart Home System an Funktionalität jeglicher Art verlieren.
 
-
-% where is data lost? -> cloud (third party), hack, wrong config (if used with iot applications)
-% smart home device with security flaw can be used to break into the local network
-% device with vulnerability can be used to hack into the system from the internet
+Ist ein Smart Home über ein Hub oder mehrere einzelne Geräte direkt mit dem Internet verbunden ergeben sich weitere Lücken.
+Zunächst sollte bewusst sein, dass die eigenen Daten sich nicht mehr unter eigener Kontrolle befinden, sobald \ac{IoT}-Komponenten genutzt werden, was bedeutet, dass Dritte verantwortlich für die Sicherheit der eigenen Daten sind.
+Meist wird nicht klar kommuniziert, wie die eigenen Daten verarbeitet und gespeichert werden.
+Auch wird es teilweise erst verzögert bekannt gegeben, wenn Daten abhanden gekommen sind, bzw. die Systeme Dritter offene Lücken hatten.
+So ergibt sich eine unvermeidbare und unkontrollierbare Schwachstelle beim Einsatz von \ac{IoT}-Geräten.
+Darüber hinaus werden \ac{IoT}-Geräte dem Internet oft direkt ausgesetzt, was zur Folge hat, dass Dritte sich über eben diese Geräte Zugriff auf ein Smart Home System verschaffen können, weil \ac{IoT}-Geräte oft nicht richtig konfiguriert sind, oder Sicherheitslücken aufweisen, welche nicht vom Hersteller geschlossen werden.\myfootcite[Vgl.][]{iot_software_problem}
 
 \subsubsection{Risikoprävention}
 
@@ -446,6 +448,7 @@ Bei einem Stromausfall kann ein Smart Home System an Funktionalität jeglicher A
 % devices on a seperate network
 % fallback devices
 % no third-party deps -> hass
+% akku
 
 
 
