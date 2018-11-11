@@ -271,6 +271,66 @@ ZigBee hingegen erreicht durch die höhere Frequenz eine höhere Bandbreite.
 Schließlich kann ZigBee auch wegen der globalen Nutzung der 2,4 GHz Frequenz regional limitiert kompatible Produkte vermeiden.
 Z-Wave hingegen nicht.\myfootcite[Vgl.][]{zwave_faq}
 
+\subsection{Risiken}
+
+Um Risiken beim Betrieb eines Smart Home Systems erkennen zu können, muss zunächst verstanden werden, auf welche Faktoren diese sich beziehen können.
+Zuerst sind hier die persönlichen Daten der Bewohner eines Smart Home Systems zu nennen.
+Durch jede Interaktion mit dem System fallen zwangsweise Daten an.
+So ist einem Smart Home System bspw. bekannt wann sich seine Bewohner in welchem Raum aufhalten, wann sie schlafen oder wann sie sich außer Haus aufhalten.
+Die restlichen drei von Risiken behafteten Faktoren ergeben sich aus dem Aufbau eines Smart Home Systems, wie in \autoref{sec:aufbau} beschrieben.
+Aus der Leitebene leitet sich der Faktor Kontrolle ab, aus der Automatisierungsebene Automatisierungen und schließlich grundlegende Vernetzung aus der Feldbusebene.
+
+Das primäre Risiko welches sich aus den vorhandenen Daten ableitet kann als unautorisierter Zugriff durch Dritte beschrieben werden.
+So sollten die üblichen Aufenthaltszeiträume der Bewohner eines Smart Home Systems nicht für potentielle Einbrecher abrufbar sein.
+Auch ist fraglich auf welche Daten die beteiligten Anbieter von Smart Home Komponenten zugreifen dürfen.
+
+Kontrollverlust oder ungewollte Kontrolle sind Ausprägungen des Risikofaktors Kontrolle.
+So ist sicher nicht gewollt, dass durch eine Systemstörung bei einem Anbieter einer Smart Home Komponente diese nicht mehr steuerbar wird.
+Ebenso sollten Dritte sicherheitsrelevante Komponenten, wie etwa Türen und Fenster, nicht kontrollieren dürfen.
+
+Auch leuchtet ein, dass Automatisierungen nicht ausfallen sollten.
+So könnte z.B. Energie verschwendet werden, wenn Temperatursensoren, Anwesenheitssensoren und die Heizungssteuerung sich nicht mehr automatisch abstimmen können.
+
+Schließlich bleibt zu klären, dass Störungen der grundlegenden Vernetzung der einzelnen Komponenten fatale Risiken mit sich bringen können.
+Bei einem Stromausfall könnte so z.B. das Öffnen einer Türe nicht mehr möglich sein, wenn die Vernetzung des Türschlosses und einem Anwesenheitssensor nicht mehr funktional ist.
+
+\subsubsection{Schwachstellen}
+
+Sollen Schwachstellen eines Smart Home Systems erkannt werden muss zunächst geklärt werden, ob es sich um ein Smart Home System mit \ac{IoT}-Funktionalitäten handelt.
+
+Wird ein Smart Home System lokal betrieben und die Fernsteuerung über ein \ac{VPN} realisiert können Angriffe aus dem Internet weitgehend ausgeschlossen werden.
+Die Schwachstellen eines lokalen Systems befinden sich primär an den von außerhalb des Gebäudes erreichbaren Geräten.
+So kann sich bspw. über eine außen am Gebäude angebrachte Überwachungskamera Zugang ins Heimnetzwerk verschafft werden, indem etwa das Netzwerkkabel, welches die Kamera mit dem Heimnetzwerk verbindet, direkt angezapft wird.
+Auch Sprachassistenten können von außen angesteuert werden, was einem Angreifer bspw. ermöglichen würde, sich mit dem lauten Rufen von \glqq Alexa, öffne die Haustüre!\grqq \ Zugang zum Gebäude zu verschaffen.
+Schließlich ist ein Smart Home System jeder Art abhängig von einer konstanten Stromversorgung.
+Bei einem Stromausfall kann ein Smart Home System an Funktionalität jeglicher Art verlieren.
+
+Ist ein Smart Home über ein Hub oder mehrere einzelne Geräte direkt mit dem Internet verbunden ergeben sich weitere Lücken.
+Zunächst sollte bewusst sein, dass die eigenen Daten sich nicht mehr unter eigener Kontrolle befinden, sobald \ac{IoT}-Komponenten genutzt werden, was bedeutet, dass Dritte verantwortlich für die Sicherheit der eigenen Daten sind.
+Meist wird nicht klar kommuniziert, wie die eigenen Daten verarbeitet und gespeichert werden.
+Auch wird es teilweise erst verzögert bekannt gegeben, wenn Daten abhanden gekommen sind, bzw. die Systeme Dritter offene Lücken hatten.
+So ergibt sich eine unvermeidbare und unkontrollierbare Schwachstelle beim Einsatz von \ac{IoT}-Geräten.
+Darüber hinaus werden \ac{IoT}-Geräte dem Internet oft direkt ausgesetzt, was zur Folge hat, dass Dritte sich über eben diese Geräte Zugriff auf ein Smart Home System verschaffen können, weil \ac{IoT}-Geräte oft nicht richtig konfiguriert sind, oder Sicherheitslücken aufweisen, welche nicht vom Hersteller geschlossen werden.\myfootcite[Vgl.][]{iot_software_problem}
+
+\subsubsection{Risikoprävention}
+
+Präventive Maßnahmen leiten sich direkt aus den genannten Schwachstellen ab.
+Generell empfiehlt sich der Verzicht auf \ac{IoT}-Systeme, wie Amazon Alexa, was die Abhängigkeit von Dritten reduziert.
+Werden trotzdem \ac{IoT}-Komponenten eingesetzt, sollte deren Zugang ins Internet über eine Firewall möglichst beschränkt werden.
+Auch kann versucht werden die Komponenten lokal anzusprechen und den Zuganz zum Internet gänzlich zu sperren.
+Oft verfügen \ac{IoT}-Geräte über eine \ac{API}, welche direkt angesprochen werden kann.
+Xiaomi erlaubt z.B., dass ihre Yeelight Lampen über ein \ac{IoT}-System per App, aber auch direkt über das \ac{LAN} steuerbar sind.\myfootcite[Vgl.][]{yeelight_docs}
+
+Ein Stromausfall und somit ein genereller Systemausfall kann durch einen Heimspeicher für elektrische Energie kompensiert werden.
+Zusätzlich sollten kritische Funktionen, wie etwa die Verriegelung von Türen, auch ohne Strom und Internet nutzbar sein - es sollten also Rückfalleinrichtungen vorhanden sein.
+Die Bedeutung von Rückfalleinrichtungen wird bewusst, wenn z.B. der Ausfall von Lockstate Smart Home Türschlössern im August 2017 rekapituliert wird.
+Ca. 500 Kunden von Lockstate konnten ihre Türen nicht mehr öffnen, weil eine fehlerhafte Aktualisierung der Software der Schlösser deren Funktionalität deaktivierte.\myfootcite[Vgl.][]{iot_fail}
+
+Die Risiken der Sprachsteuerungseinheiten können entschärft werden, indem man die Berechtigungen der Spracheingaben so definiert, dass lediglich nicht sicherheitsrelevante Aktion ausgeführt werden können.
+So kann man bspw. den Befehl \glqq Alex, schließe die Haustüre!\grqq \ erlauben, den Befehl \glqq Alex, öffne die Haustüre!\grqq \ aber verbieten.
+
+Schließlich bleibt zu empfehlen alle von außen zu erreichende Geräte in einem separaten Netzwerk zu organisieren, damit nicht auf das interne Netzwerk von außen zugegriffen werden kann.
+
 \subsection{Amazon Alexa}
 
 Amazon Alexa ist die Software für einen intelligenten Sprachassistenten, bestehend aus einem Lautsprecher, einem Mikrofon sowie einer Internetanbindung, welche seit 2014 in Alexa Geräten, wie in \autoref{fig:alexa_devices}, verbaut wird.\myfootcite[Vgl.][]{alexa_release}
@@ -422,66 +482,6 @@ Home Assistant kann im jetzigen Zustand nur von technisch Versierten genutzt wer
 \subsubsection{\textbf{TODO} Vorteile}
 
 \subsubsection{\textbf{TODO} Nachteile}
-
-\subsection{Risiken}
-
-Um Risiken beim Betrieb eines Smart Home Systems erkennen zu können, muss zunächst verstanden werden, auf welche Faktoren diese sich beziehen können.
-Zuerst sind hier die persönlichen Daten der Bewohner eines Smart Home Systems zu nennen.
-Durch jede Interaktion mit dem System fallen zwangsweise Daten an.
-So ist einem Smart Home System bspw. bekannt wann sich seine Bewohner in welchem Raum aufhalten, wann sie schlafen oder wann sie sich außer Haus aufhalten.
-Die restlichen drei von Risiken behafteten Faktoren ergeben sich aus dem Aufbau eines Smart Home Systems, wie in \autoref{sec:aufbau} beschrieben.
-Aus der Leitebene leitet sich der Faktor Kontrolle ab, aus der Automatisierungsebene Automatisierungen und schließlich grundlegende Vernetzung aus der Feldbusebene.
-
-Das primäre Risiko welches sich aus den vorhandenen Daten ableitet kann als unautorisierter Zugriff durch Dritte beschrieben werden.
-So sollten die üblichen Aufenthaltszeiträume der Bewohner eines Smart Home Systems nicht für potentielle Einbrecher abrufbar sein.
-Auch ist fraglich auf welche Daten die beteiligten Anbieter von Smart Home Komponenten zugreifen dürfen.
-
-Kontrollverlust oder ungewollte Kontrolle sind Ausprägungen des Risikofaktors Kontrolle.
-So ist sicher nicht gewollt, dass durch eine Systemstörung bei einem Anbieter einer Smart Home Komponente diese nicht mehr steuerbar wird.
-Ebenso sollten Dritte sicherheitsrelevante Komponenten, wie etwa Türen und Fenster, nicht kontrollieren dürfen.
-
-Auch leuchtet ein, dass Automatisierungen nicht ausfallen sollten.
-So könnte z.B. Energie verschwendet werden, wenn Temperatursensoren, Anwesenheitssensoren und die Heizungssteuerung sich nicht mehr automatisch abstimmen können.
-
-Schließlich bleibt zu klären, dass Störungen der grundlegenden Vernetzung der einzelnen Komponenten fatale Risiken mit sich bringen können.
-Bei einem Stromausfall könnte so z.B. das Öffnen einer Türe nicht mehr möglich sein, wenn die Vernetzung des Türschlosses und einem Anwesenheitssensor nicht mehr funktional ist.
-
-\subsubsection{Schwachstellen}
-
-Sollen Schwachstellen eines Smart Home Systems erkannt werden muss zunächst geklärt werden, ob es sich um ein Smart Home System mit \ac{IoT}-Funktionalitäten handelt.
-
-Wird ein Smart Home System lokal betrieben und die Fernsteuerung über ein \ac{VPN} realisiert können Angriffe aus dem Internet weitgehend ausgeschlossen werden.
-Die Schwachstellen eines lokalen Systems befinden sich primär an den von außerhalb des Gebäudes erreichbaren Geräten.
-So kann sich bspw. über eine außen am Gebäude angebrachte Überwachungskamera Zugang ins Heimnetzwerk verschafft werden, indem etwa das Netzwerkkabel, welches die Kamera mit dem Heimnetzwerk verbindet, direkt angezapft wird.
-Auch Sprachassistenten können von außen angesteuert werden, was einem Angreifer bspw. ermöglichen würde, sich mit dem lauten Rufen von \glqq Alexa, öffne die Haustüre!\grqq \ Zugang zum Gebäude zu verschaffen.
-Schließlich ist ein Smart Home System jeder Art abhängig von einer konstanten Stromversorgung.
-Bei einem Stromausfall kann ein Smart Home System an Funktionalität jeglicher Art verlieren.
-
-Ist ein Smart Home über ein Hub oder mehrere einzelne Geräte direkt mit dem Internet verbunden ergeben sich weitere Lücken.
-Zunächst sollte bewusst sein, dass die eigenen Daten sich nicht mehr unter eigener Kontrolle befinden, sobald \ac{IoT}-Komponenten genutzt werden, was bedeutet, dass Dritte verantwortlich für die Sicherheit der eigenen Daten sind.
-Meist wird nicht klar kommuniziert, wie die eigenen Daten verarbeitet und gespeichert werden.
-Auch wird es teilweise erst verzögert bekannt gegeben, wenn Daten abhanden gekommen sind, bzw. die Systeme Dritter offene Lücken hatten.
-So ergibt sich eine unvermeidbare und unkontrollierbare Schwachstelle beim Einsatz von \ac{IoT}-Geräten.
-Darüber hinaus werden \ac{IoT}-Geräte dem Internet oft direkt ausgesetzt, was zur Folge hat, dass Dritte sich über eben diese Geräte Zugriff auf ein Smart Home System verschaffen können, weil \ac{IoT}-Geräte oft nicht richtig konfiguriert sind, oder Sicherheitslücken aufweisen, welche nicht vom Hersteller geschlossen werden.\myfootcite[Vgl.][]{iot_software_problem}
-
-\subsubsection{Risikoprävention}
-
-Präventive Maßnahmen leiten sich direkt aus den genannten Schwachstellen ab.
-Generell empfiehlt sich der Verzicht auf \ac{IoT}-Systeme, wie Amazon Alexa, was die Abhängigkeit von Dritten reduziert.
-Werden trotzdem \ac{IoT}-Komponenten eingesetzt, sollte deren Zugang ins Internet über eine Firewall möglichst beschränkt werden.
-Auch kann versucht werden die Komponenten lokal anzusprechen und den Zuganz zum Internet gänzlich zu sperren.
-Oft verfügen \ac{IoT}-Geräte über eine \ac{API}, welche direkt angesprochen werden kann.
-Xiaomi erlaubt z.B., dass ihre Yeelight Lampen über ein \ac{IoT}-System per App, aber auch direkt über das \ac{LAN} steuerbar sind.\myfootcite[Vgl.][]{yeelight_docs}
-
-Ein Stromausfall und somit ein genereller Systemausfall kann durch einen Heimspeicher für elektrische Energie kompensiert werden.
-Zusätzlich sollten kritische Funktionen, wie etwa die Verriegelung von Türen, auch ohne Strom und Internet nutzbar sein - es sollten also Rückfalleinrichtungen vorhanden sein.
-Die Bedeutung von Rückfalleinrichtungen wird bewusst, wenn z.B. der Ausfall von Lockstate Smart Home Türschlössern im August 2017 rekapituliert wird.
-Ca. 500 Kunden von Lockstate konnten ihre Türen nicht mehr öffnen, weil eine fehlerhafte Aktualisierung der Software der Schlösser deren Funktionalität deaktivierte.\myfootcite[Vgl.][]{iot_fail}
-
-Die Risiken der Sprachsteuerungseinheiten können entschärft werden, indem man die Berechtigungen der Spracheingaben so definiert, dass lediglich nicht sicherheitsrelevante Aktion ausgeführt werden können.
-So kann man bspw. den Befehl \glqq Alex, schließe die Haustüre!\grqq \ erlauben, den Befehl \glqq Alex, öffne die Haustüre!\grqq \ aber verbieten.
-
-Schließlich bleibt zu empfehlen alle von außen zu erreichende Geräte in einem separaten Netzwerk zu organisieren, damit nicht auf das interne Netzwerk von außen zugegriffen werden kann.
 
 \subsection{\textbf{TODO} Geschäftsmodelle}
 
