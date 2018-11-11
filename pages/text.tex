@@ -331,7 +331,11 @@ So kann man bspw. den Befehl \glqq Alex, schließe die Haustüre!\grqq \ erlaube
 
 Schließlich bleibt zu empfehlen alle von außen zu erreichende Geräte in einem separaten Netzwerk zu organisieren, damit nicht auf das interne Netzwerk von außen zugegriffen werden kann.
 
-\subsection{Amazon Alexa}
+\subsection{Produkte}
+
+% TODO why did we choose those products?
+
+\subsubsection{Amazon Alexa}
 
 Amazon Alexa ist die Software für einen intelligenten Sprachassistenten, bestehend aus einem Lautsprecher, einem Mikrofon sowie einer Internetanbindung, welche seit 2014 in Alexa Geräten, wie in \autoref{fig:alexa_devices}, verbaut wird.\myfootcite[Vgl.][]{alexa_release}
 Über die Internetanbindung wird auf ein Amazon Rechenzentrum zugegriffen, in welchem Ressourcen für die Verarbeitung von Spracheingaben mit \ac{ASR} und \ac{NLU} bereitgestellt werden.
@@ -373,14 +377,10 @@ Um diesen Prozess noch weiter zu vereinfachen können Hersteller die Zertifizier
 \autoref{fig:works_with_alexa} zeigt das Works with Alexa Siegel, welches bei erfolgreicher Zertifizierung benutzt werden darf.
 Für Besitzer von zertifizierten Geräten gibt es meist nur noch ein kurzen standardisierten Einrichtungsprozess zu überwinden.\myfootcite[Vgl.][]{workswithalexa}
 
-\subsubsection{Vorteile}
-
 Amazon Alexa zeichnet sich primär durch die einfache Handhabung aus.
 Für die Nutzung und Einrichtung eines Amazon Alexa Systems sind lediglich technische Grundverständnisse bzgl. Smartphones und Computer notwendig.
 Dies wird vorallem durch ansprechende Benutzeroberflächen, die direkte sprachliche Kommunikation und zertifizierten Smart Home Produkten ermöglicht.
 Auch die Anschaffung eines Alexa Systems ist durch Amazons E-Commerce Plattform einfach.
-
-\subsubsection{Nachteile}
 
 Aufgrund der zentralen Architektur des Amazon Alexa Systems ergeben sich jedoch auch Probleme.
 Wird etwa die Verbindung zum Internet, miteinhergehend die Verbindung zu Amazons Rechenzentrum, unterbrochen kann das Smart Home nicht mehr gesteuert werden, Automatisierungen fallen aus und selbst die Verbindung der einzelnen Smart Home Produkte untereinander sind nicht mehr vorhanden.
@@ -389,7 +389,7 @@ So setzt man die eigenen Daten dem Internet aus.
 Ein lokales Speichern und Verarbeiten würde einem Angreifer zunächst die Herausforderung stellen das lokale Heimnetzwerk zu penetrieren.
 Dazu wird der Quelltext von Amazon Alexa nicht veröffentlicht und es kann somit nicht nachvollzogen werden, wie die eigenen Daten verarbeitet werden und welche Sicherheitslücken evtl. bestehen.
 
-\subsection{Home Assistant}
+\subsubsection{Home Assistant}
 
 Home Assistant ist eine Open-Source-Software für Heimautomatisierung.
 Durch den modularen Aufbau der Software können Entwickler einfach neue Smart Home Produkte implementieren.
@@ -440,8 +440,6 @@ Ebenso wurde Nabu Casa Inc., als Modell für die Finanzierung der Entwicklung vo
 Home Assistant Nutzer können ihre private Instanz mit Nabu Casa um die Home Assistant Cloud Komponente für 5 USD pro Monat erweitern, was Home Assistant \ac{IoT}-Charakter verleiht.
 Nabu Casa setzt dazu Software mit offenem Quelltext ein, verspricht keine Daten zu speichern und stellt dem Projekt Home Assistant Entwicklungkapazitäten zur Verfügung.\myfootcite[Vgl.][]{nabucasa}
 
-\subsubsection{Vorteile}
-
 Mit Home Assistant lassen sich hohe Kosten für zertifizierte Geräte sparen.
 Während andere Smart Home System Anbieter, wie z.B. Amazon Alexa, Geräteherstellern die Implementierung von geeigneten Schnittstellen vorschreiben, damit die Geräte mit der jeweiligen Plattform genutzt werden können\myfootcite[Vgl.][]{workswithalexa}, bietet Home Assistant viele verschiedene Wege ein Geräte zu verbinden.
 So sind über 1000 Schnittstellen bereits in Home Assistant implementiert\myfootcite[Vgl.][]{hass_components} und zusätzlich können neue oder eigen gebaute Geräte mit neuen Schnittstellen mit etwas Programmierkenntnissen selbst implementiert werden.\myfootcite[Vgl.][]{hass_implement_component}
@@ -464,8 +462,6 @@ Gleichzeitig bedeutet das auch, dass Dritte sich erst Zugriff zum eigenen Heimne
 
 Zusammenfassend bietet Home Assistant Privatsphäre, Unabhängigkeit gegenüber des Internets, sowie eine hohe Bandbreite an verfügbaren Geräten und nutzbaren Schnittstellen.
 
-\subsubsection{Nachteile}
-
 Home Assistant wird von einer \glqq worldwide community of tinkerers and DIY enthusiasts.\grqq{}\myfootcite{hass_github_organization} entwickelt.
 Gleichermaßen richtet sich Home Assistant als Produkt auch an Bastler und Tüftler.
 So müssen Englischkenntnisse und Erfahrung im Umgang mit Linux und Computernetzwerken für die Einrichtung von Home Assistant vorhanden sein.\myfootcite[Vgl.][]{hass_getting_started}
@@ -474,14 +470,11 @@ Zudem befindet sich Home Assistant noch in aktiver Entwicklung und so fordern ma
 
 Home Assistant kann im jetzigen Zustand nur von technisch Versierten genutzt werden.
 
-\subsection{\textbf{TODO} Integrierte Lösung} % change title to actual product
+\subsubsection{\textbf{TODO} Integrierte Lösung} % change title to actual product
 
 % ein system, welches beim bau eines haus integriert wird.
 % also ein gesamtsystem aus einer hand von einem unternehmen.
-
-\subsubsection{\textbf{TODO} Vorteile}
-
-\subsubsection{\textbf{TODO} Nachteile}
+% pros and cons
 
 \subsection{\textbf{TODO} Geschäftsmodelle}
 
