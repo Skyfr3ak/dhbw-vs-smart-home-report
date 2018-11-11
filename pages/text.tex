@@ -516,13 +516,30 @@ Außerdem ist die, auf aktuell ca. 80 Produkte limitierte, geringe Angebotsbreit
 
 % sell products like: philips lightning bulb
 
-\subsubsection{\textbf{TODO} Cloud Erweiterung} % TODO better title
+\subsubsection{Fernsteuerungs-Dienst} % TODO better title
 
-% see: home assistant cloud by nabu casa
+Aus Bedenken, wie dem Verlust der Kontrolle über die Steuerung eines Smart Home Systems, werden manche Smart Home Systeme bewusst nicht mit dem Internet verbunden.
+Unabhängig davon besteht aber weiterhin das Interesse an der Fernsteuerung des Smart Home Systems.
+Oft wird eine solche Fernsteuerung dann über einen \ac{VPN}-Zugang so realisiert, dass man sich mit dem Smartphone mit dem eigenen Heimnetzwerk verbindet und dann das Smart Home System über eine Web-Oberfläche steuert.
+Dabei muss jedoch ein kleiner Heimserver installiert werden, welcher den \ac{VPN}-Zugang hostet und einen dynamischen \ac{DNS}-Dienst anspricht um die aktuelle IP-Adresse des Smart Homes nach außen bekannt zu machen.
+Das Betreiben des Servers bringt ein Hardware- und Zeitinvestment, sowie laufende Kosten mit sich.
+Fernsteuerungs-Dienste minimieren den Einrichtungsprozess, verbessern das Benutzererlebnis und weisen meist auch geringere laufende Kosten auf, wofür der Smart Home Bewohner zahlungsbereit ist.
+
+Das Unternehmen Nabu Casa bietet bspw. unter dem Produktnamen \ac{HAC} einen Fernsteuerungs-Dienst für Home Assistant an.
+Monatlich werden hier 5 USD verlangt.
+Dafür wird nicht nur die eigene Home Assistant Instanz fernsteuerbar, sondern auch die Schnittstelle geboten um Home Assistant mit Amazon Alexa oder Google Assistant zu steuern.
+Dabei fungiert die \ac{HAC} als reiner Übertragungdienst.
+So übersetzt sie lediglich die Eingaben des Smart Home Bewohners, egal ob über App oder Sprachassistent, in ein für Home Assistant lesbares Format und schickt diese an die Home Assistant Instanz, welche fortfolgend die entsprechenden Aktoren ansteuert.
+Hier wird auch klar, dass die Nutzung von \ac{HAC} einen Gewinn an Sicherheit bedeutet, da nicht wie herkömmliche über einen \ac{VPN} Vollzugriff auf das eigene Heimnetzwerk vergeben werden muss.\myfootcite[Vgl.][]{nabucasa}
+
+Das Geschäftsmodell ist zwar wirtschaftlich, nicht aber von großer monetärer Relevanz.
+Zum Zeitpunkt dieser Arbeit existieren ca. 30.000 Home Assistant Instanzen (geschätzt unter Berücksichtigung der Anzahl an Sternen des Projekts auf GitHub).
+Auch bestehen neben Home Assistant keine relevanten Smart Home Systeme, welche ohne Internetzugang betrieben werden können.en
 
 \subsubsection{\textbf{TODO} Gesamtsystem} % TODO better title
 
 % install a smart home integration in peoples homes who don't know how to do so themselves
+% offer support
 
 \subsubsection{\textbf{TODO} Alexa Skills} % TODO better title
 
