@@ -162,7 +162,7 @@ Zusätzlich garantiert \ac{MQTT} die Übermittlung einer Nachricht.
 Bei Verbindungsabbruch oder Beschädigung der Nachricht wird die Nachricht weiter gesendet, bis das Senden erfolgreich verläuft.
 Ebenso kann garantiert werden, dass eine Nachricht nur ein einziges Mal den Empfänger erreicht.\myfootcite[Vgl.][1]{mqtt_docs}
 
-Anwendung findet das \ac{MQTT} Protokoll vorallem bei Sensoren für Raumtemperatur, Lichteinfall oder Bewegung, da hier eine lediglich eine eindimensionale Kommunikation abgebildet werden muss.
+Anwendung findet das \ac{MQTT} Protokoll vor allem bei Sensoren für Raumtemperatur, Lichteinfall oder Bewegung, da hier eine lediglich eine eindimensionale Kommunikation abgebildet werden muss.
 Da \ac{MQTT} ein offener und frei verfügbarer Standard ist, findet sich das Protokoll auch vermehrt in \ac{DIY}-Projekten wieder.\myfootcite[Vgl.][]{bruhautomation_esp_sensor}
 
 Für die Nutzung von \ac{MQTT} spricht oft die Architektur des Protokolls, welche über den Broker das Senden von Nachrichten von vielen an viele ermöglicht.
@@ -379,7 +379,7 @@ Für Besitzer von zertifizierten Geräten gibt es meist nur noch ein kurzen stan
 
 Amazon Alexa zeichnet sich primär durch die einfache Handhabung aus.
 Für die Nutzung und Einrichtung eines Amazon Alexa Systems sind lediglich technische Grundverständnisse bzgl. Smartphones und Computer notwendig.
-Dies wird vorallem durch ansprechende Benutzeroberflächen, die direkte sprachliche Kommunikation und zertifizierten Smart Home Produkten ermöglicht.
+Dies wird vor allem durch ansprechende Benutzeroberflächen, die direkte sprachliche Kommunikation und zertifizierten Smart Home Produkten ermöglicht.
 Auch die Anschaffung eines Alexa Systems ist durch Amazons E-Commerce Plattform einfach.
 
 Aufgrund der zentralen Architektur des Amazon Alexa Systems ergeben sich jedoch auch Probleme.
@@ -472,37 +472,36 @@ Home Assistant kann im jetzigen Zustand nur von technisch Versierten genutzt wer
 
 \subsubsection{HomeMatic IP}
 
-Unter der Marke HomeMatic IP vertreibt die deutsche Aktiengesellschaft eQ-3 eine Smart Home Komplettlösung, welche die Bereiche Heizung und Klima, Sicherheit und Alarm, Licht und Schatten, sowie Wetter und Umwelt bedient.\myfootcite[Vgl.][19f]{eq3_homematicip_docs}
+Unter der Marke HomeMatic IP vertreibt die deutsche Aktiengesellschaft eQ-3 eine Smart Home Komplettlösung, welche die Bereiche Heizung und Klima, Sicherheit und Alarm, Licht und Schatten, sowie Wetter und Umwelt bedient.
+\myfootcite[Vgl.][19f]{eq3_homematicip_docs}
+
+Über 100 eQ-3-Partner bieten deutschlandweit die Einrichtung oder Unterstützung bei der Einrichtung eines HomeMatic IP Systems, was die Barriere zum Smart Home für normale Konsumenten entfernt.\myfootcite[Vgl.][]{eq3_haendler}
+
+\begin{figure}[ht]
+	\centering
+	\caption{HomeMatic IP Geräte}
+	\includegraphics[width=0.9\textwidth]{homematic-star}
+	\caption*{\footnotesize{Quelle: \mycite{figure_homematicip}}}
+	\label{fig:homematic_star}
+\end{figure}
 
 Bei HomeMatic IP werden einzelne Smart Home Geräte direkt, wie in einer Stern-Netzwerk-Topologie, über das 868 MHz Band mit einem Hub - dem HomeMatic IP Access Point - verbunden.
-Der Hub wiederum wird über das Internet mit einer Cloud - der Homematic IP Cloud - verbunden, welche die Automatisierung und die Steuerung des Smart Home Systems übernimmt.
-Über die HomeMatic IP Smartphone App kann das Gesamtsystem auch manuell gesteuert werden.
+Der Hub wiederum wird über das Internet mit einer Cloud - der HomeMatic IP Cloud - verbunden, welche die Automatisierung und die Steuerung des Smart Home Systems übernimmt.
+Über die HomeMatic IP Smartphone App, aber auch Sprachassistenten von Google oder Amazon, kann das Gesamtsystem manuell gesteuert werden.
+\autoref{fig:homematic_star} zeigt HomeMatic IP Produkte, welche direkt mit dem HomeMatic IP Access Point verbunden werden müssen.
 Eine Internetverbindung ist bei der Installation des Systems zwingend notwendig.
-Ist das HomeMatic IP System eingerichtet kann teilweise auch auf eine Internetverbindung verzichtet werden, so werden direkte Verknüpfungen zwischen einzelnen Smart Home Geräten erkannt und lokal abgespeichert.
+Ist das HomeMatic IP System eingerichtet kann teilweise auch auf eine Internetverbindung verzichtet werden, so werden direkte Verknüpfungen zwischen einzelnen Smart Home Geräten erkannt und lokal abgespeichert.\myfootcite[Vgl.][22-25]{eq3_homematicip_docs}
 
+Soll ein Smart Home System mit \ac{IoT}-Charakter an Konsumenten mit durchschnittlichem technischen Verständnis empfohlen werden, dann überzeugt HomeMatic IP vor allem durch Datenschutz.
+eQ-3 gibt an Daten ausschließlich anonymisiert auf deutschen Servern abzuspeichern.
+Außerdem müssen bei der Einrichtung eines HomeMatic IP Systems keine persönlichen Daten angegeben werden.\myfootcite[Vgl.][24]{eq3_homematicip_docs}
+Auf technischer Ebene ist hervorzuheben, dass auf dem 868 MHz Band operiert wird, was eine Kommunikation frei von Interferenzen ermöglicht.\myfootcite[Vgl.][18]{eq3_homematicip_docs}
+Des Weiteren stellt eQ-3 durch automatische \ac{OTA}-Aktualisierungen sicher, dass die HomeMatic IP Geräte stets auf dem aktuellensten Sicherheitspatchlevel sind.
+Schließlich ist das HomeMatic IP Ökosystem auch für andere Gerätehersteller offen.\myfootcite[Vgl.][]{eq3_faq}
 
-\myfootcite[Vgl.][22-25]{eq3_homematicip_docs}
-
-%\glqq Für den Betrieb ist der Homematic IP Access Point in Verbindung mit der Homematic IP App [...], die Homematic Zentrale CCU2 oder eine geeignete Partnerlösung notwendig.\grqq \myfootcite[18]{eq3_homematicip_docs}
-
-% 868mhz p18
-%
-
-%\myfootcite[Vgl.][]{eq3_homematicip_docs}
-%\myfootcite[Vgl.][]{eq3_faq}
-
-% pros
-
-% 868 störfrei p21
-% claim: anonymous! deutscher datenschutz p18 p24
-% bidirektional p21
-
-% cons
-
-% no source code
-% no local mode
-% kein mesh
-
+Wie bei den meisten Smart Home Systemen ist anzumerken, dass eine Abhängigkeit zur Cloud besteht.
+Bei einem Internetausfall kann das Smart Home nicht mehr per Smartphone App gesteuert werden.
+Außerdem ist die, auf aktuell ca. 80 Produkte limitierte, geringe Angebotsbreite zu beachten.\myfootcite[Vgl.][]{eq3_product_count}
 
 \subsection{\textbf{TODO} Geschäftsmodelle}
 
