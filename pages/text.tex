@@ -614,16 +614,46 @@ In einem normalen Haushalt müssen regelmäßig Verbrauchsgüter wie Klopapier, 
 Durch die Integration sämtlicher Haushaltsgeräte in ein Smart Home System kann der Bedarf der verschiedenen Verbrauchsgüter leicht erfasst werden.
 So kann die Beschaffung der benötigten Verbrauchsgüter über automatisierte Bestellungen bei Plattformen wie z.B. Amazon vollständig automatisiert werden, was ökonomisch und ökologisch ungünstigere Einkäufe bei lokalen Supermarktketten erspart.
 Die Einrichtung solcher integrierter Einkäufe erfolgt über das Smart Home System, welchem auch die explizite Produktauswahl überlassen wird.
-So kann der Smart Home Anbieter die Nachfrage der Smart Home Nutzer an Verbrauchsgüterhersteller versteigern und dabei mit an dem Verbrauch der Smart Home Nutzer verdienen.
+So kann der Smart Home Anbieter die Nachfrage der Smart Home Nutzer an Verbrauchsgüterhersteller versteigern und dabei mit an dem Konsum der Smart Home Nutzer verdienen.
 
-Darüber hinaus können auch Softwarekomponenten verkauft werden, welche die vorhandenen Automatisierungen oder Steuerungen verbesseren.
+Darüber hinaus können auch Softwarekomponenten verkauft werden, welche die vorhandenen Automatisierungen oder Steuerungen ergänzen oder verbessern.
 So verkauft der Software Entwickler Jeff Bolton eine Premiumversion seines Alexa Skills \glqq Sleep and Relaxation Sounds\grqq{}, welche Nutzern beim Einschlafen und Entspannen hilft, mit einer Konversionsrate von 43\%, was eine hohe Zahlungsbereitschaft für bessere Integrationen, Automatisierungen und Dienstleistungen innerhalb des eigenen Smart Homes erkennen lässt.\myfootcite[Vgl.][]{alexa_inskill_purchase}
 
-Das Smart Home System Amazon Alexa bietet bereits die Möglichkeit die beschriebenen integrierten Einkäufe sogar über Sprachbefehle einzurichten, bzw. durchzuführen, was alle Amazon Alexa Nutzer zu potentiellen Kunden für integrierte Einkäufe macht.\myfootcite[Vgl.][]{alexa_making_money_with_skills}
+Das Smart Home System Amazon Alexa bietet bereits die Möglichkeit die beschriebenen integrierten Einkäufe sogar per Sprachbefehl einzurichten, bzw. durchzuführen, was alle Amazon Alexa Nutzer zu potentiellen Kunden für integrierte Einkäufe macht.\myfootcite[Vgl.][]{alexa_making_money_with_skills}
 
-\section{\textbf{TODO} Fazit}
+\section{Fazit}
 
-% trends --> closed source, iot :/, automations! :D
-% best business models
-% home assistant empfehlung :)
-% spielerei oder wirtschaftszweig?
+Nach über 50 Jahren Smart Home Spielereien sind in den letzten 10 Jahren, im Aufkommen des \ac{IoT}, Geschäftsmodelle und Produkte im Smart Home Bereich entstanden, welche erfolgreich einen stark wachsenden Smart Home Markt etabliert haben.
+Vor allem der Erfindung des Smartphones hat der heutige und zukünftige Smart Home Markt zu danken.
+Aufgrund der Vernetzung der Menschen durch Smartphones wurde der Mehrwert der Vernetzung von Maschinen erst greifbar.
+Spätestens mit der Markteinführung von Amazon Alexa in 2012 wurde der Smart Home Trend global ausgelöst.
+
+Heute versteht man unter einem Smart Home ein System, welches durch Automatisierungen das Leben in einem Gebäude einfacher macht, aber auch Möglichkeiten zur bequemen Steuerung und Überwachung des Gebäudes und dessen Geräte bietet.
+Dabei wird in nahezu jedem neu installierten Smart Home System dazu tendiert \ac{IoT}-Komponenten zu verbauen.
+Dies stellt ein Problem dar.
+Viele \ac{IoT}-Produkthersteller implementieren \ac{IoT}-Funktionalitäten in ihre Produkte ohne sich über die Sicherheit ihrer Produkte Gedanken zu machen und darüber hinaus liefern die wenigstens Hersteller Sicherheitsaktualisierungen aus, falls eine Sicherheitslücke in ihrem Produkt bekannt wird.
+Langfristig wird sich kein Hersteller mit einer solchen Einstellung halten können, was eine positive Veränderung bzgl. Sicherheit von \ac{IoT} und Smart Home Produkten impliziert.
+Bis diese Veränderung eintritt ruft der Twitter-Benutzer und \ac{IoT}-Kritiker \glqq Internet of Shit\grqq{} Konsumenten dazu auf, sich genau zu überlegen, welche \ac{IoT}-Produkte den Haushalt wirklich vereinfachen und nur diese zu kaufen, um nicht ohne Mehrwert eine potentielle Sicherheitslücke in Kauf zu nehmen.\myfootcite[Vgl.][]{internet_of_shit}
+Aus Datenschutzsicht wäre es sogar noch besser, wenn das hauseigene Smart Home System gar nicht, oder nur über genau eine kontrollierte Schnittstelle mit dem Internet kommunizieren würde.
+Gerade weil die meisten Hersteller von Smart Home Produkten den Quelltext der Software ihrer Produkte nicht veröffentlichen und somit nicht sichergestellt werden kann, was mit den eigenen Daten passiert und welche Abhängigkeiten bestehen, sollte eine offline Smart Home Lösung, wie z.B. Home Assistant immer vorgezogen werden.
+
+Aktuell ringen sich Smart Home Standards, wie ZigBee, Z-Wave und Amazon Alexa darum die einzige Plattform für Smart Homes zu werden.
+Noch ist unklar, welcher Standard sich durchsetzen wird.
+Nach dem Metcalfeschen Gesetz steigert sich der Nutzen eines Netzwerks quadratisch zur Anzahl der Nutzer des Netzwerks.\myfootcite[Vgl.][184]{informationrules}
+So wird auch der Standard mit dem größten Produktportfolio und den meisten Nutzern den aktuellen Standard-Krieg höchstwahrscheinlich gewinnen.
+Gibt es einen eindeutig vorherrschenden Smart Home Standard können sich Konsumenten einfach mit Smart Home Produkten ausstatten, ohne dass auf eine passende Plattformintegration geachtet werden muss, was den Nutzen von vernetzen Smart Home Geräten nach Metcalfe's Gesetz noch schneller steigern wird.
+
+\begin{figure}[ht]
+	\centering
+	\caption{Google Trends zu Künstliche Intelligenz}
+	\includegraphics[width=0.9\textwidth]{ai-google-trends}
+	\caption*{\footnotesize{Quelle: \mycite{google_trends_ai}}}
+	\label{fig:googletrends_ai}
+\end{figure}
+
+Des Weiteren ist denkbar, dass zukünftig die aktive Kontrolle über ein Smart Home in den Hintergrund rückt und an eine künstliche Intelligenz abgegeben wird, welche die Intentionen der Bewohner nicht nur über Sprachbefehle interpretiert, sondern auch Verhaltensmuster und persönliche Daten analysiert.
+\autoref{fig:googletrends_ai} zeigt dazu die steigende Relevanz von künstlicher Intelligenz.
+
+Auch die Versicherungsbranche könnte mit in Smart Homes involviert werden, indem z.B. Versicherungsprämien reduziert werden, beim Einsatz von mit dem Versicherer vernetzten Sicherheitssysteme.\myfootcite[Vgl.][]{smart_home_future}
+
+Letztendlich bleibt unklar wie sich der Alltag mit Smart Homes in Zukunft gestalten wird und es können nur Vermutungen angestellt werden, ähnlich wie bei der Entwicklung des Internets selbst.
