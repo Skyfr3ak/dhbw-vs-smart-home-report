@@ -12,7 +12,7 @@ Häufig wird unter Smart Home ein System verstanden, welches die Fähigkeit besi
 \begin{wrapfigure}{r}{0.5\textwidth}
 	\centering
 	\caption{Smart Home Komponenten}
-	\includegraphics[width=0.5\textwidth]{smart-home}
+	\includegraphics[width=0.45\textwidth]{smart-home}
 	\caption*{\footnotesize{Quelle: \mycite[Vgl.][]{figure_smart_home}}}
 	\label{fig:smart_home_devices}
 \end{wrapfigure}
@@ -70,6 +70,8 @@ Folgend wird das Smart Home von Grund auf durchdacht, die zugehörigen technisch
 Anhand dieser werden dann auch die Risiken beim Betreiben eines Smart Home Systems greifbar.
 Anschließend werden Auswahl an Geschäftsmodellen vorgestellt, welche vorhergehende Erläuterungen monetarisieren.
 
+\newpage
+
 \subsection{Aufbau eines Smart Home Systems}\label{sec:aufbau}
 
 Aschendorf beschreibt den Aufbau von Smart Home Systemen als stufenförmige Hierarchie.
@@ -114,7 +116,7 @@ Nachfolgend wird eine Auswahl der geläufigsten Systeme vorgestellt.
 
 \subsubsection{LAN und WLAN}
 
-2017 verfügten nach dem Statistischen Bundeamt 85,9\% aller deutschen Haushalte über einen stationären Internetzugang und damit einhergehend ein privates \ac{LAN} oder \ac{WLAN}.\myfootcite[Vgl.][]{haushalte}
+2017 verfügten nach dem Statistischen Bundesamt 85,9\% aller deutschen Haushalte über einen stationären Internetzugang und damit einhergehend ein privates \ac{LAN} oder \ac{WLAN}.\myfootcite[Vgl.][]{haushalte}
 Deshalb wird bei der nachträglichen Installation eines Smart Home Systems häufig auf \ac{LAN} oder \ac{WLAN} zurückgegriffen um Kosten und Installationsaufwand einzusparen.
 
 Ein \ac{LAN} wird durch einen oder mehrere sog. Switches über Ethernet-Kabel verbunden.
@@ -122,16 +124,16 @@ Alternativ kann auch ein Router anstelle der Switches verwendet werden.
 Dieser kann das \ac{LAN} sogar zusätzlich mit anderen \acp{LAN} verbinden, bspw. mit dem Internet.
 Beim \ac{WLAN} wird an Stelle der Ethernet-Kabel über das 2,4 oder 5 GHz Band gefunkt.\myfootcite[Vgl.][]{local_area_network}
 
-\begin{wrapfigure}{r}{0.35\textwidth}
+\autoref{fig:yeelight} zeigt die LED-Lampe \glqq Yeelight LED Bulb\grqq \ von Xiaomi, ein für Smart Home System Nachrüstungen gut geeignetes Produkt.
+Die LED-Lampe nutzt das \ac{WLAN} zur Kommunikation mit der Steuerungskomponente und die vorhandene E27 Fassung zur Stromversorgung.\myfootcite[Vgl.][]{yeelight_wifi_bulb}
+
+\begin{wrapfigure}{r}{0.4\textwidth}
 	\centering
 	\caption{Yeelight Glühbirne}
-	\includegraphics[scale=.5]{yeelight-bulb}
+	\includegraphics[scale=.45]{yeelight-bulb}
 	\caption*{\footnotesize{Quelle: \mycite{figure_yeelight}}}
 	\label{fig:yeelight}
 \end{wrapfigure}
-
-\autoref{fig:yeelight} zeigt die LED-Lampe \glqq Yeelight LED Bulb\grqq \ von Xiaomi, ein für Smart Home System Nachrüstungen gut geeignetes Produkt.
-Die LED-Lampe nutzt das \ac{WLAN} zur Kommunikation mit der Steuerungskomponente und die vorhandene E27 Fassung zur Stromversorgung.\myfootcite[Vgl.][]{yeelight_wifi_bulb}
 
 Der Einsatz von einem \ac{LAN} als Kommunikationssystem für Smart Home Anwendungen ist jedoch nicht uneingeschränkt zu empfehlen.
 So sollte bedacht werden, dass die Integration eines beliebigen Smart Home Produkts Sicherheitslücken mit in das private \ac{LAN} reißen kann.
@@ -169,10 +171,10 @@ Es können zwar auf höherer Ebene Sicherheitsfunktionen implementiert werden, j
 
 \subsubsection{ZigBee}
 
-\begin{wrapfigure}{r}{0.4\textwidth}
+\begin{wrapfigure}{r}{0.35\textwidth}
 	\centering
 	\caption{ZigBee Stack}
-	\includegraphics[width=0.4\textwidth]{zigbee-stack}
+	\includegraphics[width=0.35\textwidth]{zigbee-stack}
 	\caption*{\footnotesize{Quelle: \mycite[Vgl.][]{figure_zigbee_stack}}}
 	\label{fig:zigbee_stack}
 \end{wrapfigure}
@@ -225,16 +227,16 @@ Eine Nachricht an ein bestimmtes Gerät wird nun von Gerät zu Gerät geschickt,
 Hier müssen jedoch im Vergleich zur Stern-Topologie Abstriche bzgl. der Latzenz einer Nachricht gemacht werden, da eine Nachricht selten über eine direkte Verbindung gesendet werden kann.
 Andererseits kann ein Mesh-Netzwerk einfacher expandiert werden, da jedes Gerät im Netzwerk Teil des Netzwerks ist.
 
-Auch was den Energiebedarf eines Z-Wave Netzwerks anbelangt, kann kein Unterschied zu ZigBee festgestellt werden.
-Beide Systeme ermöglichen es Batterie betriebenen Geräten über mehrere Jahre Nachrichten zu senden und zu empfangen, ohne Batterie-Wechsel.\myfootcite[Vgl.][]{smartcave_zwave_vs_zigbee}
-
 \begin{wrapfigure}{r}{0.35\textwidth}
 	\centering
 	\caption{Z-Wave Chip}
-	\includegraphics[width=0.35\textwidth]{zwave-chip}
+	\includegraphics[width=0.2\textwidth]{zwave-chip}
 	\caption*{\footnotesize{Quelle: \mycite{figure_zwave_chip}}}
 	\label{fig:zwave_chip}
 \end{wrapfigure}
+
+Auch was den Energiebedarf eines Z-Wave Netzwerks anbelangt, kann kein Unterschied zu ZigBee festgestellt werden.
+Beide Systeme ermöglichen es Batterie betriebenen Geräten über mehrere Jahre Nachrichten zu senden und zu empfangen, ohne Batterie-Wechsel.\myfootcite[Vgl.][]{smartcave_zwave_vs_zigbee}
 
 Im Gegensatz zu ZigBee ist Z-Wave kein offener Standard.
 So wird beim Bau eines Z-Wave kompatiblen Geräts ein proprietäres Bauteil benötigt.
@@ -336,16 +338,16 @@ Amazon Alexa repräsentiert die Nachrüstungslösung, welche auch mit wenig tech
 
 \subsubsection{Amazon Alexa}
 
-Amazon Alexa ist die Software für einen intelligenten Sprachassistenten, bestehend aus einem Lautsprecher, einem Mikrofon sowie einer Internetanbindung, welche seit 2014 in Alexa Geräten, wie in \autoref{fig:alexa_devices}, verbaut wird.\myfootcite[Vgl.][]{alexa_release}
-Über die Internetanbindung wird auf ein Amazon Rechenzentrum zugegriffen, in welchem Ressourcen für die Verarbeitung von Spracheingaben mit \ac{ASR} und \ac{NLU} bereitgestellt werden.
-
 \begin{figure}[ht]
 	\centering
 	\caption{Alexa Geräte}
-	\includegraphics[scale=.8]{alexa_devices}
+	\includegraphics[width=.8\textwidth]{alexa_devices}
 	\caption*{\footnotesize{Quelle: \mycite{figure_alexa_devices}}}
 	\label{fig:alexa_devices}
 \end{figure}
+
+Amazon Alexa ist die Software für einen intelligenten Sprachassistenten, bestehend aus einem Lautsprecher, einem Mikrofon sowie einer Internetanbindung, welche seit 2014 in Alexa Geräten, wie in \autoref{fig:alexa_devices}, verbaut wird.\myfootcite[Vgl.][]{alexa_release}
+Über die Internetanbindung wird auf ein Amazon Rechenzentrum zugegriffen, in welchem Ressourcen für die Verarbeitung von Spracheingaben mit \ac{ASR} und \ac{NLU} bereitgestellt werden.
 
 Unter \ac{ASR} versteht man die Umwandlung von menschlicher Sprache in Text.
 Die Auslagerung der Rechenleistung in die Cloud sorgt für eine Beschleunigung der \ac{ASR}, sodass nahezu keine Latenz zu bemerken ist.\myfootcite[Vgl.][]{alexa_asr}
@@ -355,18 +357,19 @@ Bei Erkennung des Stichworts werden nachfolgende Spracheingaben in Echtzeit an d
 Dort wird zunächst durch \ac{ASR} die Spracheingabe in Text konvertiert.
 Anschließend wird durch \ac{NLU} über Mustererkennung die Bedeutung der Worte identifiziert. \myfootcite[Vgl.][]{alexa_nlu}
 
-So können Befehle an ein Alexa Gerät weitergeben werden, welche über \ac{AWS}, Amazons Cloud, mit beliebigen Aktion verknüpft werden können.
-Bspw. kann der Befehl \glqq Alexa, mach mir einen Kaffee.\grqq \ über \ac{AWS} mit der \ac{IoT}-Steuerung einer Kaffeemaschine so verknüpft werden, dass diese dann einen Kaffee produziert.
-Die Verknüpfung von Befehl und Aktion über Alexa wird als \glqq Alexa Skill\grqq bezeichnet.
-Zusätzlich gibt es \glqq Alexa Routines\grqq, welche keine Benutzereingaben entgegennehmen, also Automatisierungen darstellen können.
-
 \begin{figure}[ht]
 	\centering
-	\caption{Alexa EPK}
+	\caption{Ereignisgesteuerte Prozesskette eines Alexa Sprachbefehls}
 	\includegraphics[scale=1]{alexa-epc}
 	\caption*{\footnotesize{Quelle: Eigene Darstellung.}}
 	\label{fig:alexa_epc}
 \end{figure}
+
+So können Befehle an ein Alexa Gerät weitergeben werden, welche über \ac{AWS}, Amazons Cloud, mit beliebigen Aktion verknüpft werden können.
+Bspw. kann der Befehl \glqq Alexa, mach mir einen Kaffee.\grqq \ über \ac{AWS} mit der \ac{IoT}-Steuerung einer Kaffeemaschine so verknüpft werden, dass diese dann einen Kaffee produziert.
+\autoref{fig:alexa_epc} zeigt die ereignisgesteuerte Prozesskette eines Alexa Sprachbefehls.
+Die Verknüpfung von Befehl und Aktion über Alexa wird als \glqq Alexa Skill\grqq bezeichnet.
+Zusätzlich gibt es \glqq Alexa Routines\grqq, welche keine Benutzereingaben entgegennehmen, also Automatisierungen darstellen können.
 
 Mit Alexa Skills und Routines können Steuerungsebene, aber auch Automatisierungsebene eines Smart Home Systems realisiert werden.\myfootcite[Vgl.][]{alexa_skills_kit}
 
@@ -454,7 +457,7 @@ So sind über 1000 Schnittstellen bereits in Home Assistant implementiert\myfoot
 \begin{wrapfigure}{r}{0.4\textwidth}
 	\centering
 	\caption{ESP8266 Board}
-	\includegraphics[scale=.1]{esp8266}
+	\includegraphics[width=0.4\textwidth]{esp8266}
 	\caption*{\footnotesize{Quelle: \mycite{esp8266}}}
 	\label{fig:esp8266}
 \end{wrapfigure}
