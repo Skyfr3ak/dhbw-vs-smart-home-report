@@ -12,7 +12,7 @@ Häufig wird unter Smart Home ein System verstanden, welches die Fähigkeit besi
 \begin{wrapfigure}{r}{0.5\textwidth}
 	\centering
 	\caption{Smart Home Komponenten}
-	\includegraphics[width=0.5\textwidth]{smart-home}
+	\includegraphics[width=0.45\textwidth]{smart-home}
 	\caption*{\footnotesize{Quelle: \mycite[Vgl.][]{figure_smart_home}}}
 	\label{fig:smart_home_devices}
 \end{wrapfigure}
@@ -25,6 +25,32 @@ Aschendorf erkennt in jedem Smart Home verallgemeinernd die Verbindung von Gerä
 
 Des Weiteren ist sogar der Begriff \glqq Smart Home\grqq \ nicht überall in Gebrauch. Im englischsprachigen Raum ist der Begriff \glqq Home automation\grqq \ (zu Deutsch \glqq Heimautomatisierung\grqq ) geläufig.
 Auch \glqq Domotics\grqq \ (vom lateinischen Wort \glqq domus\grqq \ für \glqq Haus\grqq ) kann synonym genutzt werden.\myfootcite[Vgl.][]{smart_home_def_hill}
+
+\subsection{Geschichte}
+
+Als zu Beginn des 20. Jahrhunderts erste Haushaltsgeräte wie Kühlschrank oder Staubsauger erfunden wurden entstand gleichzeitig der Wunsch, dass die Geräte ihre Aufgaben auch autonom und in Absprache erledigen könnten.\myfootcite[Vgl.][]{smart_home_history_iotevolutionworld}
+
+Erst 1966 hat Jim Sutherland dann den ersten Smart Home Prototypen im heutigen Sinne entworfen und in Betrieb genommen - den \ac{ECHO} IV.
+Der \ac{ECHO} IV fungierte damals als Wecker, Fernbedienung für den Fernseher und die Musikanlage und als Uhr.
+Sutherland plante auch mit dem \ac{ECHO} IV die hauseigene Beleuchtung zu steuern.\myfootcite[Vgl.][]{smart_home_history_echoiv}
+
+Nachdem 1970 die ersten Mikrocomputer von Pico entwickelt wurden, beschäftigte sich Pico unter dem Projekt X10 mit der Idee Beleuchtung und andere Haushaltsgeräte über deren Stromkabel anzusteuern.
+1978 wurde das Projekt unter dem Produktnamen X10 (später X10 Powerhouse).
+Weitere Iterationen des Smart Home Systems wurden bis heute vertrieben.\myfootcite[Vgl.][]{smart_home_history_x10}
+
+\begin{figure}[ht]
+	\centering
+	\caption{Google Trends zu Smart Home}
+	\includegraphics[width=0.9\textwidth]{smart-home-google-trends}
+	\caption*{\footnotesize{Quelle: \mycite{google_trends_smart_home}}}
+	\label{fig:googletrendssmarthome}
+\end{figure}
+
+Ohne einen stärkeren Trend verzeichnen zu können wurden einzelne Haushaltsgeräte immer weiter optimiert und digitalisiert.
+2012 veröffentlichte ABI Research, dass im besagten Jahr 1,5 Millionen Smart Home Systeme in den USA installiert wurden - 50\% mehr als im Jahr zuvor.\myfootcite[Vgl.][]{smart_home_history_market2012}
+Dieser Trend setzte sich bis heute fort, auch weil im selben Jahr Amazon Alexa vorgestellt wurde, was das Thema Smart Home normalen Konsumenten näher brachte.\myfootcite[Vgl.][]{alexa_release}
+\autoref{fig:googletrendssmarthome} zeigt die Popularität des Trends Smart Home seit 2004, gemessen anhand Google-Suchanfragen.
+Je höher der Wert auf der Y-Achse, desto populären war der Trend, relativ im Vergleich du allen anderen Suchanfragen.\myfootcite[Vgl.][]{google_trends_docs}
 
 \subsection{Internet of Things}
 
@@ -44,11 +70,9 @@ Folgend wird das Smart Home von Grund auf durchdacht, die zugehörigen technisch
 Anhand dieser werden dann auch die Risiken beim Betreiben eines Smart Home Systems greifbar.
 Anschließend werden Auswahl an Geschäftsmodellen vorgestellt, welche vorhergehende Erläuterungen monetarisieren.
 
-\subsection{\textbf{TODO} Geschichte}
+\newpage
 
-% idk -> wikipedia?
-
-\subsection{Aufbau eines Smart Home Systems}
+\subsection{Aufbau eines Smart Home Systems}\label{sec:aufbau}
 
 Aschendorf beschreibt den Aufbau von Smart Home Systemen als stufenförmige Hierarchie.
 \autoref{fig:automatisierungspygramide} zeigt die drei Ebenen der Automatisierungspyramide nach Aschendorf:
@@ -83,8 +107,6 @@ Zu den Eingaben zählen Befehle, die z.B. über Steuerungs-Apps gesendet werden 
 Ausgaben werden etwa über digitale Dashboards auf diversen Displays angezeigt.
 Über dieselben werden meist auch Fehlerdiagnosemeldungen angezeigt.\myfootcite[Vgl.][68-70]{aschendorf14}
 
-% here we can use one of the required methods! (e.g. SSA)
-
 \subsection{Verbindungssysteme}
 
 In einem Smart Home System kommen Produkte verschiedener Art zum Einsatz.
@@ -94,7 +116,7 @@ Nachfolgend wird eine Auswahl der geläufigsten Systeme vorgestellt.
 
 \subsubsection{LAN und WLAN}
 
-2017 verfügten nach dem Statistischen Bundeamt 85,9\% aller deutschen Haushalte über einen stationären Internetzugang und damit einhergehend ein privates \ac{LAN} oder \ac{WLAN}.\myfootcite[Vgl.][]{haushalte}
+2017 verfügten nach dem Statistischen Bundesamt 85,9\% aller deutschen Haushalte über einen stationären Internetzugang und damit einhergehend ein privates \ac{LAN} oder \ac{WLAN}.\myfootcite[Vgl.][]{haushalte}
 Deshalb wird bei der nachträglichen Installation eines Smart Home Systems häufig auf \ac{LAN} oder \ac{WLAN} zurückgegriffen um Kosten und Installationsaufwand einzusparen.
 
 Ein \ac{LAN} wird durch einen oder mehrere sog. Switches über Ethernet-Kabel verbunden.
@@ -102,16 +124,16 @@ Alternativ kann auch ein Router anstelle der Switches verwendet werden.
 Dieser kann das \ac{LAN} sogar zusätzlich mit anderen \acp{LAN} verbinden, bspw. mit dem Internet.
 Beim \ac{WLAN} wird an Stelle der Ethernet-Kabel über das 2,4 oder 5 GHz Band gefunkt.\myfootcite[Vgl.][]{local_area_network}
 
-\begin{wrapfigure}{r}{0.35\textwidth}
+\autoref{fig:yeelight} zeigt die LED-Lampe \glqq Yeelight LED Bulb\grqq \ von Xiaomi, ein für Smart Home System Nachrüstungen gut geeignetes Produkt.
+Die LED-Lampe nutzt das \ac{WLAN} zur Kommunikation mit der Steuerungskomponente und die vorhandene E27 Fassung zur Stromversorgung.\myfootcite[Vgl.][]{yeelight_wifi_bulb}
+
+\begin{wrapfigure}{r}{0.4\textwidth}
 	\centering
 	\caption{Yeelight Glühbirne}
-	\includegraphics[scale=.5]{yeelight-bulb}
+	\includegraphics[scale=.45]{yeelight-bulb}
 	\caption*{\footnotesize{Quelle: \mycite{figure_yeelight}}}
 	\label{fig:yeelight}
 \end{wrapfigure}
-
-\autoref{fig:yeelight} zeigt die LED-Lampe \glqq Yeelight LED Bulb\grqq \ von Xiaomi, ein für Smart Home System Nachrüstungen gut geeignetes Produkt.
-Die LED-Lampe nutzt das \ac{WLAN} zur Kommunikation mit der Steuerungskomponente und die vorhandene E27 Fassung zur Stromversorgung.\myfootcite[Vgl.][]{yeelight_wifi_bulb}
 
 Der Einsatz von einem \ac{LAN} als Kommunikationssystem für Smart Home Anwendungen ist jedoch nicht uneingeschränkt zu empfehlen.
 So sollte bedacht werden, dass die Integration eines beliebigen Smart Home Produkts Sicherheitslücken mit in das private \ac{LAN} reißen kann.
@@ -140,7 +162,7 @@ Zusätzlich garantiert \ac{MQTT} die Übermittlung einer Nachricht.
 Bei Verbindungsabbruch oder Beschädigung der Nachricht wird die Nachricht weiter gesendet, bis das Senden erfolgreich verläuft.
 Ebenso kann garantiert werden, dass eine Nachricht nur ein einziges Mal den Empfänger erreicht.\myfootcite[Vgl.][1]{mqtt_docs}
 
-Anwendung findet das \ac{MQTT} Protokoll vorallem bei Sensoren für Raumtemperatur, Lichteinfall oder Bewegung, da hier eine lediglich eine eindimensionale Kommunikation abgebildet werden muss.
+Anwendung findet das \ac{MQTT} Protokoll vor allem bei Sensoren für Raumtemperatur, Lichteinfall oder Bewegung, da hier eine lediglich eine eindimensionale Kommunikation abgebildet werden muss.
 Da \ac{MQTT} ein offener und frei verfügbarer Standard ist, findet sich das Protokoll auch vermehrt in \ac{DIY}-Projekten wieder.\myfootcite[Vgl.][]{bruhautomation_esp_sensor}
 
 Für die Nutzung von \ac{MQTT} spricht oft die Architektur des Protokolls, welche über den Broker das Senden von Nachrichten von vielen an viele ermöglicht.
@@ -149,10 +171,10 @@ Es können zwar auf höherer Ebene Sicherheitsfunktionen implementiert werden, j
 
 \subsubsection{ZigBee}
 
-\begin{wrapfigure}{r}{0.4\textwidth}
+\begin{wrapfigure}{r}{0.35\textwidth}
 	\centering
 	\caption{ZigBee Stack}
-	\includegraphics[width=0.4\textwidth]{zigbee-stack}
+	\includegraphics[width=0.35\textwidth]{zigbee-stack}
 	\caption*{\footnotesize{Quelle: \mycite[Vgl.][]{figure_zigbee_stack}}}
 	\label{fig:zigbee_stack}
 \end{wrapfigure}
@@ -205,16 +227,16 @@ Eine Nachricht an ein bestimmtes Gerät wird nun von Gerät zu Gerät geschickt,
 Hier müssen jedoch im Vergleich zur Stern-Topologie Abstriche bzgl. der Latzenz einer Nachricht gemacht werden, da eine Nachricht selten über eine direkte Verbindung gesendet werden kann.
 Andererseits kann ein Mesh-Netzwerk einfacher expandiert werden, da jedes Gerät im Netzwerk Teil des Netzwerks ist.
 
-Auch was den Energiebedarf eines Z-Wave Netzwerks anbelangt, kann kein Unterschied zu ZigBee festgestellt werden.
-Beide Systeme ermöglichen es Batterie betriebenen Geräten über mehrere Jahre Nachrichten zu senden und zu empfangen, ohne Batterie-Wechsel.\myfootcite[Vgl.][]{smartcave_zwave_vs_zigbee}
-
 \begin{wrapfigure}{r}{0.35\textwidth}
 	\centering
 	\caption{Z-Wave Chip}
-	\includegraphics[width=0.35\textwidth]{zwave-chip}
+	\includegraphics[width=0.2\textwidth]{zwave-chip}
 	\caption*{\footnotesize{Quelle: \mycite{figure_zwave_chip}}}
 	\label{fig:zwave_chip}
 \end{wrapfigure}
+
+Auch was den Energiebedarf eines Z-Wave Netzwerks anbelangt, kann kein Unterschied zu ZigBee festgestellt werden.
+Beide Systeme ermöglichen es Batterie betriebenen Geräten über mehrere Jahre Nachrichten zu senden und zu empfangen, ohne Batterie-Wechsel.\myfootcite[Vgl.][]{smartcave_zwave_vs_zigbee}
 
 Im Gegensatz zu ZigBee ist Z-Wave kein offener Standard.
 So wird beim Bau eines Z-Wave kompatiblen Geräts ein proprietäres Bauteil benötigt.
@@ -249,18 +271,83 @@ ZigBee hingegen erreicht durch die höhere Frequenz eine höhere Bandbreite.
 Schließlich kann ZigBee auch wegen der globalen Nutzung der 2,4 GHz Frequenz regional limitiert kompatible Produkte vermeiden.
 Z-Wave hingegen nicht.\myfootcite[Vgl.][]{zwave_faq}
 
-\subsection{Amazon Alexa}
+\subsection{Risiken}
 
-Amazon Alexa ist die Software für einen intelligenten Sprachassistenten, bestehend aus einem Lautsprecher, einem Mikrofon sowie einer Internetanbindung, welche seit 2014 in Alexa Geräten, wie in \autoref{fig:alexa_devices}, verbaut wird.\myfootcite[Vgl.][]{alexa_release}
-Über die Internetanbindung wird auf ein Amazon Rechenzentrum zugegriffen, in welchem Ressourcen für die Verarbeitung von Spracheingaben mit \ac{ASR} und \ac{NLU} bereitgestellt werden.
+Um Risiken beim Betrieb eines Smart Home Systems erkennen zu können, muss zunächst verstanden werden, auf welche Faktoren diese sich beziehen können.
+Zuerst sind hier die persönlichen Daten der Bewohner eines Smart Home Systems zu nennen.
+Durch jede Interaktion mit dem System fallen zwangsweise Daten an.
+So ist einem Smart Home System bspw. bekannt wann sich seine Bewohner in welchem Raum aufhalten, wann sie schlafen oder wann sie sich außer Haus aufhalten.
+Die restlichen drei von Risiken behafteten Faktoren ergeben sich aus dem Aufbau eines Smart Home Systems, wie in \autoref{sec:aufbau} beschrieben.
+Aus der Leitebene leitet sich der Faktor Kontrolle ab, aus der Automatisierungsebene Automatisierungen und schließlich grundlegende Vernetzung aus der Feldbusebene.
+
+Das primäre Risiko welches sich aus den vorhandenen Daten ableitet kann als unautorisierter Zugriff durch Dritte beschrieben werden.
+So sollten die üblichen Aufenthaltszeiträume der Bewohner eines Smart Home Systems nicht für potentielle Einbrecher abrufbar sein.
+Auch ist fraglich auf welche Daten die beteiligten Anbieter von Smart Home Komponenten zugreifen dürfen.
+
+Kontrollverlust oder ungewollte Kontrolle sind Ausprägungen des Risikofaktors Kontrolle.
+So ist sicher nicht gewollt, dass durch eine Systemstörung bei einem Anbieter einer Smart Home Komponente diese nicht mehr steuerbar wird.
+Ebenso sollten Dritte sicherheitsrelevante Komponenten, wie etwa Türen und Fenster, nicht kontrollieren dürfen.
+
+Auch leuchtet ein, dass Automatisierungen nicht ausfallen sollten.
+So könnte z.B. Energie verschwendet werden, wenn Temperatursensoren, Anwesenheitssensoren und die Heizungssteuerung sich nicht mehr automatisch abstimmen können.
+
+Schließlich bleibt zu klären, dass Störungen der grundlegenden Vernetzung der einzelnen Komponenten fatale Risiken mit sich bringen können.
+Bei einem Stromausfall könnte so z.B. das Öffnen einer Türe nicht mehr möglich sein, wenn die Vernetzung des Türschlosses und einem Anwesenheitssensor nicht mehr funktional ist.
+
+\subsubsection{Schwachstellen}
+
+Sollen Schwachstellen eines Smart Home Systems erkannt werden muss zunächst geklärt werden, ob es sich um ein Smart Home System mit \ac{IoT}-Funktionalitäten handelt.
+
+Wird ein Smart Home System lokal betrieben und die Fernsteuerung über ein \ac{VPN} realisiert können Angriffe aus dem Internet weitgehend ausgeschlossen werden.
+Die Schwachstellen eines lokalen Systems befinden sich primär an den von außerhalb des Gebäudes erreichbaren Geräten.
+So kann sich bspw. über eine außen am Gebäude angebrachte Überwachungskamera Zugang ins Heimnetzwerk verschafft werden, indem etwa das Netzwerkkabel, welches die Kamera mit dem Heimnetzwerk verbindet, direkt angezapft wird.
+Auch Sprachassistenten können von außen angesteuert werden, was einem Angreifer bspw. ermöglichen würde, sich mit dem lauten Rufen von \glqq Alexa, öffne die Haustüre!\grqq \ Zugang zum Gebäude zu verschaffen.
+Schließlich ist ein Smart Home System jeder Art abhängig von einer konstanten Stromversorgung.
+Bei einem Stromausfall kann ein Smart Home System an Funktionalität jeglicher Art verlieren.
+
+Ist ein Smart Home über ein Hub oder mehrere einzelne Geräte direkt mit dem Internet verbunden ergeben sich weitere Lücken.
+Zunächst sollte bewusst sein, dass die eigenen Daten sich nicht mehr unter eigener Kontrolle befinden, sobald \ac{IoT}-Komponenten genutzt werden, was bedeutet, dass Dritte verantwortlich für die Sicherheit der eigenen Daten sind.
+Meist wird nicht klar kommuniziert, wie die eigenen Daten verarbeitet und gespeichert werden.
+Auch wird es teilweise erst verzögert bekannt gegeben, wenn Daten abhanden gekommen sind, bzw. die Systeme Dritter offene Lücken hatten.
+So ergibt sich eine unvermeidbare und unkontrollierbare Schwachstelle beim Einsatz von \ac{IoT}-Geräten.
+Darüber hinaus werden \ac{IoT}-Geräte dem Internet oft direkt ausgesetzt, was zur Folge hat, dass Dritte sich über eben diese Geräte Zugriff auf ein Smart Home System verschaffen können, weil \ac{IoT}-Geräte oft nicht richtig konfiguriert sind, oder Sicherheitslücken aufweisen, welche nicht vom Hersteller geschlossen werden.\myfootcite[Vgl.][]{iot_software_problem}
+
+\subsubsection{Risikoprävention}
+
+Präventive Maßnahmen leiten sich direkt aus den genannten Schwachstellen ab.
+Generell empfiehlt sich der Verzicht auf \ac{IoT}-Systeme, wie Amazon Alexa, was die Abhängigkeit von Dritten reduziert.
+Werden trotzdem \ac{IoT}-Komponenten eingesetzt, sollte deren Zugang ins Internet über eine Firewall möglichst beschränkt werden.
+Auch kann versucht werden die Komponenten lokal anzusprechen und den Zuganz zum Internet gänzlich zu sperren.
+Oft verfügen \ac{IoT}-Geräte über eine \ac{API}, welche direkt angesprochen werden kann.
+Xiaomi erlaubt z.B., dass ihre Yeelight Lampen über ein \ac{IoT}-System per App, aber auch direkt über das \ac{LAN} steuerbar sind.\myfootcite[Vgl.][]{yeelight_docs}
+
+Ein Stromausfall und somit ein genereller Systemausfall kann durch einen Heimspeicher für elektrische Energie kompensiert werden.
+Zusätzlich sollten kritische Funktionen, wie etwa die Verriegelung von Türen, auch ohne Strom und Internet nutzbar sein - es sollten also Rückfalleinrichtungen vorhanden sein.
+Die Bedeutung von Rückfalleinrichtungen wird bewusst, wenn z.B. der Ausfall von Lockstate Smart Home Türschlössern im August 2017 rekapituliert wird.
+Ca. 500 Kunden von Lockstate konnten ihre Türen nicht mehr öffnen, weil eine fehlerhafte Aktualisierung der Software der Schlösser deren Funktionalität deaktivierte.\myfootcite[Vgl.][]{iot_fail}
+
+Die Risiken der Sprachsteuerungseinheiten können entschärft werden, indem man die Berechtigungen der Spracheingaben so definiert, dass lediglich nicht sicherheitsrelevante Aktion ausgeführt werden können.
+So kann man bspw. den Befehl \glqq Alex, schließe die Haustüre!\grqq \ erlauben, den Befehl \glqq Alex, öffne die Haustüre!\grqq \ aber verbieten.
+
+Schließlich bleibt zu empfehlen alle von außen zu erreichende Geräte in einem separaten Netzwerk zu organisieren, damit nicht auf das interne Netzwerk von außen zugegriffen werden kann.
+
+\subsection{Produkte}
+
+Folgend wird eine repräsentative Auswahl an Smart Home Systemen vorgestellt und eingeordnet.
+Amazon Alexa repräsentiert die Nachrüstungslösung, welche auch mit wenig technischem Verständnis installiert werden kann, das Open Source Projekt Home Assistant die universale Bastlerlösung und schließlich HomeMatic IP das Smart Home Komplettsystem mit Option zur professionellen Unterstützung.
+
+\subsubsection{Amazon Alexa}
 
 \begin{figure}[ht]
 	\centering
 	\caption{Alexa Geräte}
-	\includegraphics[scale=.8]{alexa_devices}
+	\includegraphics[width=.8\textwidth]{alexa_devices}
 	\caption*{\footnotesize{Quelle: \mycite{figure_alexa_devices}}}
 	\label{fig:alexa_devices}
 \end{figure}
+
+Amazon Alexa ist die Software für einen intelligenten Sprachassistenten, bestehend aus einem Lautsprecher, einem Mikrofon sowie einer Internetanbindung, welche seit 2014 in Alexa Geräten, wie in \autoref{fig:alexa_devices}, verbaut wird.\myfootcite[Vgl.][]{alexa_release}
+Über die Internetanbindung wird auf ein Amazon Rechenzentrum zugegriffen, in welchem Ressourcen für die Verarbeitung von Spracheingaben mit \ac{ASR} und \ac{NLU} bereitgestellt werden.
 
 Unter \ac{ASR} versteht man die Umwandlung von menschlicher Sprache in Text.
 Die Auslagerung der Rechenleistung in die Cloud sorgt für eine Beschleunigung der \ac{ASR}, sodass nahezu keine Latenz zu bemerken ist.\myfootcite[Vgl.][]{alexa_asr}
@@ -270,8 +357,17 @@ Bei Erkennung des Stichworts werden nachfolgende Spracheingaben in Echtzeit an d
 Dort wird zunächst durch \ac{ASR} die Spracheingabe in Text konvertiert.
 Anschließend wird durch \ac{NLU} über Mustererkennung die Bedeutung der Worte identifiziert. \myfootcite[Vgl.][]{alexa_nlu}
 
+\begin{figure}[ht]
+	\centering
+	\caption{Ereignisgesteuerte Prozesskette eines Alexa Sprachbefehls}
+	\includegraphics[scale=1]{alexa-epc}
+	\caption*{\footnotesize{Quelle: Eigene Darstellung.}}
+	\label{fig:alexa_epc}
+\end{figure}
+
 So können Befehle an ein Alexa Gerät weitergeben werden, welche über \ac{AWS}, Amazons Cloud, mit beliebigen Aktion verknüpft werden können.
 Bspw. kann der Befehl \glqq Alexa, mach mir einen Kaffee.\grqq \ über \ac{AWS} mit der \ac{IoT}-Steuerung einer Kaffeemaschine so verknüpft werden, dass diese dann einen Kaffee produziert.
+\autoref{fig:alexa_epc} zeigt die ereignisgesteuerte Prozesskette eines Alexa Sprachbefehls.
 Die Verknüpfung von Befehl und Aktion über Alexa wird als \glqq Alexa Skill\grqq bezeichnet.
 Zusätzlich gibt es \glqq Alexa Routines\grqq, welche keine Benutzereingaben entgegennehmen, also Automatisierungen darstellen können.
 
@@ -291,14 +387,10 @@ Um diesen Prozess noch weiter zu vereinfachen können Hersteller die Zertifizier
 \autoref{fig:works_with_alexa} zeigt das Works with Alexa Siegel, welches bei erfolgreicher Zertifizierung benutzt werden darf.
 Für Besitzer von zertifizierten Geräten gibt es meist nur noch ein kurzen standardisierten Einrichtungsprozess zu überwinden.\myfootcite[Vgl.][]{workswithalexa}
 
-\subsubsection{Vorteile}
-
 Amazon Alexa zeichnet sich primär durch die einfache Handhabung aus.
 Für die Nutzung und Einrichtung eines Amazon Alexa Systems sind lediglich technische Grundverständnisse bzgl. Smartphones und Computer notwendig.
-Dies wird vorallem durch ansprechende Benutzeroberflächen, die direkte sprachliche Kommunikation und zertifizierten Smart Home Produkten ermöglicht.
+Dies wird vor allem durch ansprechende Benutzeroberflächen, die direkte sprachliche Kommunikation und zertifizierten Smart Home Produkten ermöglicht.
 Auch die Anschaffung eines Alexa Systems ist durch Amazons E-Commerce Plattform einfach.
-
-\subsubsection{Nachteile}
 
 Aufgrund der zentralen Architektur des Amazon Alexa Systems ergeben sich jedoch auch Probleme.
 Wird etwa die Verbindung zum Internet, miteinhergehend die Verbindung zu Amazons Rechenzentrum, unterbrochen kann das Smart Home nicht mehr gesteuert werden, Automatisierungen fallen aus und selbst die Verbindung der einzelnen Smart Home Produkte untereinander sind nicht mehr vorhanden.
@@ -307,7 +399,7 @@ So setzt man die eigenen Daten dem Internet aus.
 Ein lokales Speichern und Verarbeiten würde einem Angreifer zunächst die Herausforderung stellen das lokale Heimnetzwerk zu penetrieren.
 Dazu wird der Quelltext von Amazon Alexa nicht veröffentlicht und es kann somit nicht nachvollzogen werden, wie die eigenen Daten verarbeitet werden und welche Sicherheitslücken evtl. bestehen.
 
-\subsection{Home Assistant}
+\subsubsection{Home Assistant}
 
 Home Assistant ist eine Open-Source-Software für Heimautomatisierung.
 Durch den modularen Aufbau der Software können Entwickler einfach neue Smart Home Produkte implementieren.
@@ -358,8 +450,6 @@ Ebenso wurde Nabu Casa Inc., als Modell für die Finanzierung der Entwicklung vo
 Home Assistant Nutzer können ihre private Instanz mit Nabu Casa um die Home Assistant Cloud Komponente für 5 USD pro Monat erweitern, was Home Assistant \ac{IoT}-Charakter verleiht.
 Nabu Casa setzt dazu Software mit offenem Quelltext ein, verspricht keine Daten zu speichern und stellt dem Projekt Home Assistant Entwicklungkapazitäten zur Verfügung.\myfootcite[Vgl.][]{nabucasa}
 
-\subsubsection{Vorteile}
-
 Mit Home Assistant lassen sich hohe Kosten für zertifizierte Geräte sparen.
 Während andere Smart Home System Anbieter, wie z.B. Amazon Alexa, Geräteherstellern die Implementierung von geeigneten Schnittstellen vorschreiben, damit die Geräte mit der jeweiligen Plattform genutzt werden können\myfootcite[Vgl.][]{workswithalexa}, bietet Home Assistant viele verschiedene Wege ein Geräte zu verbinden.
 So sind über 1000 Schnittstellen bereits in Home Assistant implementiert\myfootcite[Vgl.][]{hass_components} und zusätzlich können neue oder eigen gebaute Geräte mit neuen Schnittstellen mit etwas Programmierkenntnissen selbst implementiert werden.\myfootcite[Vgl.][]{hass_implement_component}
@@ -367,7 +457,7 @@ So sind über 1000 Schnittstellen bereits in Home Assistant implementiert\myfoot
 \begin{wrapfigure}{r}{0.4\textwidth}
 	\centering
 	\caption{ESP8266 Board}
-	\includegraphics[scale=.1]{esp8266}
+	\includegraphics[width=0.4\textwidth]{esp8266}
 	\caption*{\footnotesize{Quelle: \mycite{esp8266}}}
 	\label{fig:esp8266}
 \end{wrapfigure}
@@ -382,8 +472,6 @@ Gleichzeitig bedeutet das auch, dass Dritte sich erst Zugriff zum eigenen Heimne
 
 Zusammenfassend bietet Home Assistant Privatsphäre, Unabhängigkeit gegenüber des Internets, sowie eine hohe Bandbreite an verfügbaren Geräten und nutzbaren Schnittstellen.
 
-\subsubsection{Nachteile}
-
 Home Assistant wird von einer \glqq worldwide community of tinkerers and DIY enthusiasts.\grqq{}\myfootcite{hass_github_organization} entwickelt.
 Gleichermaßen richtet sich Home Assistant als Produkt auch an Bastler und Tüftler.
 So müssen Englischkenntnisse und Erfahrung im Umgang mit Linux und Computernetzwerken für die Einrichtung von Home Assistant vorhanden sein.\myfootcite[Vgl.][]{hass_getting_started}
@@ -392,52 +480,191 @@ Zudem befindet sich Home Assistant noch in aktiver Entwicklung und so fordern ma
 
 Home Assistant kann im jetzigen Zustand nur von technisch Versierten genutzt werden.
 
-\subsection{\textbf{TODO} Integrierte Lösung} % change title to actual product
+\subsubsection{HomeMatic IP}
 
-% ein system, welches beim bau eines haus integriert wird.
-% also ein gesamtsystem aus einer hand von einem unternehmen.
+Unter der Marke HomeMatic IP vertreibt die deutsche Aktiengesellschaft eQ-3 eine Smart Home Komplettlösung, welche die Bereiche Heizung und Klima, Sicherheit und Alarm, Licht und Schatten, sowie Wetter und Umwelt bedient.
+\myfootcite[Vgl.][19f]{eq3_homematicip_docs}
 
-\subsubsection{\textbf{TODO} Vorteile}
+\begin{figure}[ht]
+	\centering
+	\caption{HomeMatic IP Geräte}
+	\includegraphics[width=0.9\textwidth]{homematic-star}
+	\caption*{\footnotesize{Quelle: \mycite{figure_homematicip}}}
+	\label{fig:homematic_star}
+\end{figure}
 
-\subsubsection{\textbf{TODO} Nachteile}
+Bei HomeMatic IP werden einzelne Smart Home Geräte direkt, wie in einer Stern-Netzwerk-Topologie, über das 868 MHz Band mit einem Hub - dem HomeMatic IP Access Point - verbunden.
+Der Hub wiederum wird über das Internet mit einer Cloud - der HomeMatic IP Cloud - verbunden, welche die Automatisierung und die Steuerung des Smart Home Systems übernimmt.
+Über die HomeMatic IP Smartphone App, aber auch Sprachassistenten von Google oder Amazon, kann das Gesamtsystem manuell gesteuert werden.
+\autoref{fig:homematic_star} zeigt HomeMatic IP Produkte, welche direkt mit dem HomeMatic IP Access Point verbunden werden müssen.
+Eine Internetverbindung ist bei der Installation des Systems zwingend notwendig.
+Ist das HomeMatic IP System eingerichtet kann teilweise auch auf eine Internetverbindung verzichtet werden, so werden direkte Verknüpfungen zwischen einzelnen Smart Home Geräten erkannt und lokal abgespeichert.\myfootcite[Vgl.][22-25]{eq3_homematicip_docs}
 
-\subsection{\textbf{TODO} Risiken}
+Soll ein Smart Home System mit \ac{IoT}-Charakter an Konsumenten mit durchschnittlichem technischen Verständnis empfohlen werden, dann überzeugt HomeMatic IP vor allem durch Datenschutz.
+eQ-3 gibt an Daten ausschließlich anonymisiert auf deutschen Servern abzuspeichern.
+Außerdem müssen bei der Einrichtung eines HomeMatic IP Systems keine persönlichen Daten angegeben werden.\myfootcite[Vgl.][24]{eq3_homematicip_docs}
+Auf technischer Ebene ist hervorzuheben, dass auf dem 868 MHz Band operiert wird, was eine Kommunikation frei von Interferenzen ermöglicht.\myfootcite[Vgl.][18]{eq3_homematicip_docs}
+Des Weiteren stellt eQ-3 durch automatische \ac{OTA}-Aktualisierungen sicher, dass die HomeMatic IP Geräte stets auf dem aktuellensten Sicherheitspatchlevel sind.
+Schließlich ist das HomeMatic IP Ökosystem auch für andere Gerätehersteller offen.\myfootcite[Vgl.][]{eq3_faq}
+Zudem bieten über 100 eQ-3-Partner deutschlandweit die professionelle Einrichtung oder Unterstützung bei der Einrichtung eines HomeMatic IP Systems an, was die Barriere auf dem Weg zum Smart Home System für normale Konsumenten herabsetzt.\myfootcite[Vgl.][]{eq3_haendler}
 
-% if used in combination with IoT: data breaches and loss of control
-% power loss = no function
-% smart home device with security flaw can be used to break into the local network
+Wie bei den meisten Smart Home Systemen ist jedoch anzumerken, dass eine Abhängigkeit zur Cloud besteht.
+Bei einem Internetausfall kann das Smart Home nicht mehr per Smartphone App gesteuert werden.
+Außerdem ist die, auf aktuell ca. 80 Produkte limitierte, geringe Angebotsbreite zu beachten.\myfootcite[Vgl.][]{eq3_product_count}
 
-\subsection{\textbf{TODO} Geschäftsmodelle}
+\subsection{Geschäftsmodelle}
 
-% for this headline: give some numbers (how large ist the market etc...)
+Die Smart Home Industrie wird sich mit rasantem Wachstum konfrontiert sehen.
+\autoref{tab:smarthome_market_predictions} zeigt verschiedene Vorhersagen für zukünftige Marktvolumina.
+Bei Betrachtung des geschätzten Marktvolumens von 39,68 Mrd. USD nach Mordor Intelligence \myfootcite[Vgl.][]{market_mi} in 2017, ist eine klar optimistische Tendenz zu erkennen.
 
-% foreach:
-% how does the business model work?
-% example product?
-% potential market?
+\begin{table}[ht]
+	\caption{Smart Home Marktvolumen Vorhersagen}
+	\centering
+	\begin{tabular}{| p{0.3\textwidth} | p{0.2\textwidth} | p{0.3\textwidth} |}
+		\hline
+		\textbf{Institut} 	& \textbf{Jahr} & \textbf{Marktvolumen} \\ \hline
+		Ironpaper & 2020 & 58,58 Mrd. USD \\ \hline
+		Zion Market Research & 2022 & 53,45 Mrd. USD \\ \hline
+		Market Research Future & 2023 & 137,95 Mrd. USD \\ \hline
+		Mordor Intelligence & 2023 & 159,68 Mrd. USD \\ \hline
+	\end{tabular}
+	\caption*{\footnotesize{Quellen: \mycite[Vgl.][]{market_ironpaper,market_mrf,market_zmr,market_mi}}}
+	\label{tab:smarthome_market_predictions}
+\end{table}
 
-\subsubsection{\textbf{TODO} Geräte verkaufen} % TODO better title
+Nachfolgend werden beispielhaft Geschäftsmodelle erklärt, welche dem erkannten Trend beitragen und beitragen werden.
 
-% sell products like: philips lightning bulb
+\subsubsection{Smart Home Geräte}
 
-\subsubsection{\textbf{TODO} Cloud Erweiterung} % TODO better title
+Bei Betrachtung der Schätzungen in \autoref{tab:smarthome_market_predictions} ist die Idee des Verkaufs von \ac{IoT}-Geräte für Smart Homes so naheliegend, wie Schaufeln während eines Goldrausches zu verkaufen.
+Schenkt man den Zahlen von Mordor Intelligence Glauben kann von einem Marktwachstum von ca. 300\% über die nächsten sechs Jahre ausgegangen werden, was einer jährlichen Wachstumsrate von ca. 20\% entspricht.
 
-% see: home assistant cloud by nabu casa
+Beim Verkauf von \ac{IoT}-Geräte für Smart Homes können verschiedene Ansätze gewählt werden.
+Es kann sich dafür entschieden werden das zu verkaufende Produkt zertifizieren zu lassen.
+Standards wie ZigBee, Z-Wave oder Works with Alexa ermöglichen es das Produkt einfacher zu vermarkten, da potentielle Kunden die einfachere Interoperabilität schätzen.
+Nicht zu unterschlagen ist jedoch, dass eine solche Zertifizierung, je nach Marke, mit Kosten verbunden ist, in Form von Entwicklungskosten und Kosten für die Zertifizierung.
+Die Zertifizierung eines ZigBee Produktes kostet z.B. 1000 USD.\myfootcite[Vgl.][]{zigbee_certification}
+Alternativ kann das Produkt unter einer Eigenmarke vertrieben werden um genannte Kosten zu minimieren, was jedoch erhöhte Marketingkosten bedingt.
+Zudem ist zusätzlich eine Cloud-Infrastruktur zu unterhalten, über welche die Kunden ihr Produkt steuern.
+Bei einer Zertifizierung, bzw. der Integration in ein bereits vorhandenes Ökosystem fallen diese Kosten weg.
+Schließlich bleibt noch die Option das Produkt mit offener \ac{API} und einer Dokumentation für Bastler, bzw. offline Smart Homes zu verkaufen, für welche eine Integration in ein \ac{IoT}-Smart Home System überflüssig wäre.
 
-\subsubsection{\textbf{TODO} Gesamtsystem} % TODO better title
+Nach Splendid Research interessierten sich in 2017 76,1\% der Deutschen für das Thema Smart Home.\myfootcite[Vgl.][]{smart_home_2017_de}
+Bei ca. 42 Millionen Wohnungen in Deutschland  wären also mindestens ca. 32 Millionen Wohnende in Deutschland an Smart Home Produkten interessiert.\myfootcite[Vgl.][]{destatis_wohnungen_in_de_2017}
 
-% install a smart home integration in peoples homes who don't know how to do so themselves
+\subsubsection{Systemanbieter}
 
-\subsubsection{\textbf{TODO} Alexa Skills} % TODO better title
+Die Installation von Smart Home Systemen ist aufgrund der verschiedenen Standards und Schnittstellen von Smart Home Geräten nicht trivial.
+Zudem kommt erschwerend hinzu, dass meist ein individuelles System installiert werden muss,  von verschiedenen Bewohnerpräferenzen und Architekturgegebenheiten.
+Außerdem besteht Bedarf an grundlegendem technischen Verständnis.
+So erscheint es logisch \glqq Smart-Home-as-a-Service\grqq \ anzubieten.
+Dabei erstreckt sich die Dienstleistung von der Konzeption eines Smart Home Systems, egal ob bei Neu- oder Altbau, über die eigentliche Installation des Systems, bis hin zur Wartung und Aktualisierung des installierten Systems.
 
-% sell alexa skills
-% create a skill with payment option
+\begin{table}[ht]
+	\caption{Smartest Home Produktkatalog}
+	\centering
+	\begin{tabular}{| p{0.3\textwidth} | p{0.3\textwidth} |}
+		\hline
+		\textbf{Produkt} & \textbf{Preis} \\ \hline
+		Basic & ab 15.000 Euro/CHF \\ \hline
+		Komfort & ab 30.000 Euro/CHF \\ \hline
+		Premium & ab 60.000 Euro/CHF \\ \hline
+		High-End & ab 150.000 Euro/CHF \\ \hline
+		Luxus & auf Anfrage \\ \hline
+		Nachrüstung & auf Anfrage \\ \hline
+	\end{tabular}
+	\caption*{\footnotesize{Quellen: \mycite[Vgl.][]{smartesthome_website}}}
+	\label{tab:smartesthome_products}
+\end{table}
 
-% https://developer.amazon.com/blogs/alexa/post/b8101123-f1b9-494c-8bbb-53e3850a1123/in-skill-purchasing-offers-jeff-bolton-s-voice-business-a-new-level-of-monetization
+\autoref{tab:smartesthome_products} zeigt den Produktkatalog von Smartest Home, einem Smart Home Systemanbieter.
+Smartest Home verspricht für die Preise in \autoref{tab:smartesthome_products} \glqq die gesamte Konzeption und Planung, [zu] helfen bei der Produkteauswahl und [...] einzusetzende Schaltschränke fixfertig für den Elektriker [zu programmieren].\grqq{} \myfootcite{smartesthome_yoursmarthome}
 
-\section{\textbf{TODO} Fazit}
+Da hier Wissen verkauft wird, was der Systemanbieter sich nur einmal aneignen muss entsteht bei einem Neuauftrag nur ein minimaler Aufwand.
+So kann von einer hohen Marge ausgegangen werden.
+Nach Splendid Research nutzten ca. 36\% der Deutschen in 2017 bereits Smart Home Systeme und weitere 40\% interessierten sich für Smart Home Systeme.\myfootcite[Vgl.][]{smart_home_2017_de}
+Überträgt man dies auf die ca. 200.000 jährlich neu gebauten Wohnungen in Deutschland, werden etwa 72.000 Smart Home Systeme allein in Deutschland jährlich installiert.\myfootcite[Vgl.][]{baufertigstellungen}
+Außerdem würden sich weitere 80.000 Wohnungsbesitzer für Smart Home Systeme interessieren.
+Würden nur 1\% der jährlich vorgenommen Smart Home Installationen durch professionelle Systemanbieter durchgeführt werden blieben immer noch 720 Smart Home Installationen pro Jahr.
 
-% trends --> closed source, iot :/, automations! :D
-% best business models
-% home assistant empfehlung :)
-% spielerei oder wirtschaftszweig?
+\subsubsection{Fernsteuerungs-Dienst}
+
+Aus Bedenken, wie dem Verlust der Kontrolle über die Steuerung eines Smart Home Systems, werden manche Smart Home Systeme bewusst nicht mit dem Internet verbunden.
+Unabhängig davon besteht aber weiterhin das Interesse an der Fernsteuerung des Smart Home Systems.
+Oft wird eine solche Fernsteuerung dann über einen \ac{VPN}-Zugang so realisiert, dass man sich mit dem Smartphone mit dem eigenen Heimnetzwerk verbindet und dann das Smart Home System über eine Web-Oberfläche steuert.
+Dabei muss jedoch ein kleiner Heimserver installiert werden, welcher den \ac{VPN}-Zugang hostet und einen dynamischen \ac{DNS}-Dienst anspricht um die aktuelle IP-Adresse des Smart Homes nach außen bekannt zu machen.
+Das Betreiben des Servers bringt ein Hardware- und Zeitinvestment, sowie laufende Kosten mit sich.
+Fernsteuerungs-Dienste minimieren den Einrichtungsprozess, verbessern das Benutzererlebnis und weisen meist auch geringere laufende Kosten auf, wofür der Smart Home Bewohner zahlungsbereit ist.
+
+Das Unternehmen Nabu Casa bietet bspw. unter dem Produktnamen \ac{HAC} einen Fernsteuerungs-Dienst für Home Assistant an.
+Monatlich werden hier 5 USD verlangt.
+Dafür wird nicht nur die eigene Home Assistant Instanz fernsteuerbar, sondern auch die Schnittstelle geboten um Home Assistant mit Amazon Alexa oder Google Assistant zu steuern.
+Dabei fungiert die \ac{HAC} als reiner Übertragungdienst.
+So übersetzt sie lediglich die Eingaben des Smart Home Bewohners, egal ob über App oder Sprachassistent, in ein für Home Assistant lesbares Format und schickt diese an die Home Assistant Instanz, welche fortfolgend die entsprechenden Aktoren ansteuert.
+Hier wird auch klar, dass die Nutzung von \ac{HAC} einen Gewinn an Sicherheit bedeutet, da nicht wie herkömmliche über einen \ac{VPN} Vollzugriff auf das eigene Heimnetzwerk vergeben werden muss.\myfootcite[Vgl.][]{nabucasa}
+
+Das Geschäftsmodell ist zwar wirtschaftlich, nicht aber von großer monetärer Relevanz.
+Zum Zeitpunkt dieser Arbeit existieren ca. 30.000 Home Assistant Instanzen (geschätzt unter Berücksichtigung der Anzahl an Sternen des Projekts auf GitHub).
+Auch bestehen neben Home Assistant keine relevanten Smart Home Systeme, welche ohne Internetzugang betrieben werden können.
+
+\subsubsection{Standard}
+
+Eine weitere Möglichkeit den Smart Home Markt zu monetarisieren besteht in der Etablierung eines Standards.
+Bei der Entwicklung von Smart Home Produkten ist die Interoperabilität und die Schnittstellendefinition kritisch für die Adaption des Produkts.
+So erleichtert sich die Kaufentscheidung für ein Smart Home Produkt bspw., wenn ein Amazon Alexa Logo die Kompatibilität mit den bereits daheim installieren Alexa Produkten garantiert.
+Außerdem minimiert die Nutzung eines Standards bei der Implementierung eines Kommunikationssystems in ein Smart Home Produkt die geforderte technische Kompetenz auf die Fähigkeit einem Implementierungshandbuch Folge leisten zu können.
+
+So überrascht es nicht, dass bereits über 94 Millionen Z-Wave Geräte\myfootcite[Vgl.][]{zwave_products_sold}, über 500 Millionen ZigBee Geräte\myfootcite[Vgl.][]{zigbee_devices_sold} und über 10 Millionen Amazon Alexa Geräte\myfootcite[Vgl.][]{alexa_devices_sold} verkauft wurden.
+
+Über den Verkauf des Zugangs zu Implementierungsunterlagen, die Zertifizierung von neuen Produkten oder über Gebühren für die generelle Li­zen­zie­rung des jeweiligen Standards konnten die bereits existierenden Anbieter von Smart Home Standards bereits profitieren.
+
+\subsubsection{Integrierte Einkäufe}
+
+In einem normalen Haushalt müssen regelmäßig Verbrauchsgüter wie Klopapier, Waschmittel oder Lebensmittel eingekauft werden.
+Durch die Integration sämtlicher Haushaltsgeräte in ein Smart Home System kann der Bedarf der verschiedenen Verbrauchsgüter leicht erfasst werden.
+So kann die Beschaffung der benötigten Verbrauchsgüter über automatisierte Bestellungen bei Plattformen wie z.B. Amazon vollständig automatisiert werden, was ökonomisch und ökologisch ungünstigere Einkäufe bei lokalen Supermarktketten erspart.
+Die Einrichtung solcher integrierter Einkäufe erfolgt über das Smart Home System, welchem auch die explizite Produktauswahl überlassen wird.
+So kann der Smart Home Anbieter die Nachfrage der Smart Home Nutzer an Verbrauchsgüterhersteller versteigern und dabei mit an dem Konsum der Smart Home Nutzer verdienen.
+
+Darüber hinaus können auch Softwarekomponenten verkauft werden, welche die vorhandenen Automatisierungen oder Steuerungen ergänzen oder verbessern.
+So verkauft der Software Entwickler Jeff Bolton eine Premiumversion seines Alexa Skills \glqq Sleep and Relaxation Sounds\grqq{}, welche Nutzern beim Einschlafen und Entspannen hilft, mit einer Konversionsrate von 43\%, was eine hohe Zahlungsbereitschaft für bessere Integrationen, Automatisierungen und Dienstleistungen innerhalb des eigenen Smart Homes erkennen lässt.\myfootcite[Vgl.][]{alexa_inskill_purchase}
+
+Das Smart Home System Amazon Alexa bietet bereits die Möglichkeit die beschriebenen integrierten Einkäufe sogar per Sprachbefehl einzurichten, bzw. durchzuführen, was alle Amazon Alexa Nutzer zu potentiellen Kunden für integrierte Einkäufe macht.\myfootcite[Vgl.][]{alexa_making_money_with_skills}
+
+\section{Fazit}
+
+Nach über 50 Jahren Smart Home Spielereien sind in den letzten 10 Jahren, im Aufkommen des \ac{IoT}, Geschäftsmodelle und Produkte im Smart Home Bereich entstanden, welche erfolgreich einen stark wachsenden Smart Home Markt etabliert haben.
+Vor allem der Erfindung des Smartphones hat der heutige und zukünftige Smart Home Markt zu danken.
+Aufgrund der Vernetzung der Menschen durch Smartphones wurde der Mehrwert der Vernetzung von Maschinen erst greifbar.
+Spätestens mit der Markteinführung von Amazon Alexa in 2012 wurde der Smart Home Trend global ausgelöst.
+
+Heute versteht man unter einem Smart Home ein System, welches durch Automatisierungen das Leben in einem Gebäude einfacher macht, aber auch Möglichkeiten zur bequemen Steuerung und Überwachung des Gebäudes und dessen Geräte bietet.
+Dabei wird in nahezu jedem neu installierten Smart Home System dazu tendiert \ac{IoT}-Komponenten zu verbauen.
+Dies stellt ein Problem dar.
+Viele \ac{IoT}-Produkthersteller implementieren \ac{IoT}-Funktionalitäten in ihre Produkte ohne sich über die Sicherheit ihrer Produkte Gedanken zu machen und darüber hinaus liefern die wenigstens Hersteller Sicherheitsaktualisierungen aus, falls eine Sicherheitslücke in ihrem Produkt bekannt wird.
+Langfristig wird sich kein Hersteller mit einer solchen Einstellung halten können, was eine positive Veränderung bzgl. Sicherheit von \ac{IoT} und Smart Home Produkten impliziert.
+Bis diese Veränderung eintritt ruft der Twitter-Benutzer und \ac{IoT}-Kritiker \glqq Internet of Shit\grqq{} Konsumenten dazu auf, sich genau zu überlegen, welche \ac{IoT}-Produkte den Haushalt wirklich vereinfachen und nur diese zu kaufen, um nicht ohne Mehrwert eine potentielle Sicherheitslücke in Kauf zu nehmen.\myfootcite[Vgl.][]{internet_of_shit}
+Aus Datenschutzsicht wäre es sogar noch besser, wenn das hauseigene Smart Home System gar nicht, oder nur über genau eine kontrollierte Schnittstelle mit dem Internet kommunizieren würde.
+Gerade weil die meisten Hersteller von Smart Home Produkten den Quelltext der Software ihrer Produkte nicht veröffentlichen und somit nicht sichergestellt werden kann, was mit den eigenen Daten passiert und welche Abhängigkeiten bestehen, sollte eine offline Smart Home Lösung, wie z.B. Home Assistant immer vorgezogen werden.
+
+Aktuell ringen sich Smart Home Standards, wie ZigBee, Z-Wave und Amazon Alexa darum die einzige Plattform für Smart Homes zu werden.
+Noch ist unklar, welcher Standard sich durchsetzen wird.
+Nach dem Metcalfeschen Gesetz steigert sich der Nutzen eines Netzwerks quadratisch zur Anzahl der Nutzer des Netzwerks.\myfootcite[Vgl.][184]{informationrules}
+So wird auch der Standard mit dem größten Produktportfolio und den meisten Nutzern den aktuellen Standard-Krieg höchstwahrscheinlich gewinnen.
+Gibt es einen eindeutig vorherrschenden Smart Home Standard können sich Konsumenten einfach mit Smart Home Produkten ausstatten, ohne dass auf eine passende Plattformintegration geachtet werden muss, was den Nutzen von vernetzen Smart Home Geräten nach Metcalfe's Gesetz noch schneller steigern wird.
+
+\begin{figure}[ht]
+	\centering
+	\caption{Google Trends zu Künstliche Intelligenz}
+	\includegraphics[width=0.9\textwidth]{ai-google-trends}
+	\caption*{\footnotesize{Quelle: \mycite{google_trends_ai}}}
+	\label{fig:googletrends_ai}
+\end{figure}
+
+Des Weiteren ist denkbar, dass zukünftig die aktive Kontrolle über ein Smart Home in den Hintergrund rückt und an eine künstliche Intelligenz abgegeben wird, welche die Intentionen der Bewohner nicht nur über Sprachbefehle interpretiert, sondern auch Verhaltensmuster und persönliche Daten analysiert.
+\autoref{fig:googletrends_ai} zeigt dazu die steigende Relevanz von künstlicher Intelligenz.
+
+Auch die Versicherungsbranche könnte mit in Smart Homes involviert werden, indem z.B. Versicherungsprämien reduziert werden, beim Einsatz von mit dem Versicherer vernetzten Sicherheitssysteme.\myfootcite[Vgl.][]{smart_home_future}
+
+Letztendlich bleibt unklar wie sich der Alltag mit Smart Homes in Zukunft gestalten wird und es können nur Vermutungen angestellt werden, ähnlich wie bei der Entwicklung des Internets selbst.
