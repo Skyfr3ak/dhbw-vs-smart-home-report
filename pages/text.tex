@@ -155,8 +155,8 @@ Anhand \autoref{fig:mqtt_example} lässt sich die Funktionsweise von \ac{MQTT} e
 Es gibt einen zentralen Server, den sog. Broker, über welchen diverse Geräte (die Clients) kommunizieren.
 Dabei gibt es zwei Methoden:
 Ein Client kann Daten zum Broker zu einem angegeben Thema senden und ein Client kann einem Broker mitteilen zu einem Thema informiert werden zu wollen.
-Trifft eine Nachricht bei einem Broker ein schaut dieser nach, ob ihm zu dem entsprechenden Thema Abonennten bekannt sind und leitet ggf. die Nachricht weiter.
-Kommunikation in \ac{MQTT} also nach dem Push-Prinzip statt, d.h. ein Client sendet keine Anfragen sondern erhält bei einem Ereignis eine Benachrichtigung.
+Trifft eine Nachricht bei einem Broker ein schaut dieser nach, ob ihm zu dem entsprechenden Thema Abonnenten bekannt sind und leitet ggf. die Nachricht weiter.
+Kommunikation in \ac{MQTT} also nach dem Push-Prinzip statt, d.h. ein Client sendet keine Anfragen, sondern erhält bei einem Ereignis eine Benachrichtigung.
 Umgekehrt verfährt z.B. das \ac{HTTP}.
 Zusätzlich garantiert \ac{MQTT} die Übermittlung einer Nachricht.
 Bei Verbindungsabbruch oder Beschädigung der Nachricht wird die Nachricht weiter gesendet, bis das Senden erfolgreich verläuft.
@@ -266,7 +266,7 @@ Auf technischer Ebene sind die Standards zwar ähnlich, nicht aber gleich.
 So kann mit ZigBee bspw. ein größeres Mesh-Netzwerk erstellt werden.
 Hauptsächlich relevant beim Z-Wave-ZigBee-Vergleich sind jedoch die genutzten Frequenzen.
 Da ZigBee das 2,4 GHz Band mit anderen Technologien wie z.B. \ac{WLAN} teilt, muss ZigBee mit Interferenzen operieren, während Z-Wave weitestgehend ungestört operieren kann.
-Außerdem kann Z-Wave durch die geringere Frequenzen eine höhere Signalreichweite erzielen.
+Außerdem kann Z-Wave durch die geringeren Frequenzen eine höhere Signalreichweite erzielen.
 ZigBee hingegen erreicht durch die höhere Frequenz eine höhere Bandbreite.
 Schließlich kann ZigBee auch wegen der globalen Nutzung der 2,4 GHz Frequenz regional limitiert kompatible Produkte vermeiden.
 Z-Wave hingegen nicht.\myfootcite[Vgl.][]{zwave_faq}
@@ -317,7 +317,7 @@ Darüber hinaus werden \ac{IoT}-Geräte dem Internet oft direkt ausgesetzt, was 
 Präventive Maßnahmen leiten sich direkt aus den genannten Schwachstellen ab.
 Generell empfiehlt sich der Verzicht auf \ac{IoT}-Systeme, wie Amazon Alexa, was die Abhängigkeit von Dritten reduziert.
 Werden trotzdem \ac{IoT}-Komponenten eingesetzt, sollte deren Zugang ins Internet über eine Firewall möglichst beschränkt werden.
-Auch kann versucht werden die Komponenten lokal anzusprechen und den Zuganz zum Internet gänzlich zu sperren.
+Auch kann versucht werden die Komponenten lokal anzusprechen und den Zugang zum Internet gänzlich zu sperren.
 Oft verfügen \ac{IoT}-Geräte über eine \ac{API}, welche direkt angesprochen werden kann.
 Xiaomi erlaubt z.B., dass ihre Yeelight Lampen über ein \ac{IoT}-System per App, aber auch direkt über das \ac{LAN} steuerbar sind.\myfootcite[Vgl.][]{yeelight_docs}
 
@@ -385,7 +385,7 @@ Smart Home Produkte werden über das Internet mit Alexa verbunden.
 Über Skills oder manuelle Programmierung kann ein Gerät, sofern es über ein öffentliches \ac{API} verfügt, angebunden werden.
 Um diesen Prozess noch weiter zu vereinfachen können Hersteller die Zertifizierung \glqq Works with Alexa\grqq \ für ihre Produkte erlangen, wenn Spezifikationen bzgl. Installation des Produkts, sowie dessen Schnittstelle erfüllt werden.
 \autoref{fig:works_with_alexa} zeigt das Works with Alexa Siegel, welches bei erfolgreicher Zertifizierung benutzt werden darf.
-Für Besitzer von zertifizierten Geräten gibt es meist nur noch ein kurzen standardisierten Einrichtungsprozess zu überwinden.\myfootcite[Vgl.][]{workswithalexa}
+Für Besitzer von zertifizierten Geräten gibt es meist nur noch einen kurzen standardisierten Einrichtungsprozess zu überwinden.\myfootcite[Vgl.][]{workswithalexa}
 
 Amazon Alexa zeichnet sich primär durch die einfache Handhabung aus.
 Für die Nutzung und Einrichtung eines Amazon Alexa Systems sind lediglich technische Grundverständnisse bzgl. Smartphones und Computer notwendig.
@@ -421,7 +421,7 @@ Das State Machine Modul bildet den Status der verschiedenen Komponenten ab.
 Bemerkt ein Fenstersensor z.B. dass ein Fenster geöffnet wurde, aktualisiert die Komponente \textit{Fenstersensor} ihren Status im State Machine Modul, indem sie eine Nachricht an das Modul schickt.
 
 Für zeitbasierende Automatisierungen existiert das Modul Timer, welches sekündlich ein Event emittiert.
-Ein Event ist eine Nachricht, welche beim Auftreten von definierten Bedingungen automatsich verschickt wird.
+Ein Event ist eine Nachricht, welche beim Auftreten von definierten Bedingungen automatisch verschickt wird.
 
 Über das Event Bus Modul werden Events von den beiden bereits genannten Modulen empfangen von diesen ausgehend wiederum Events ausgelöst.
 
@@ -443,15 +443,15 @@ Für die Weiterentwicklung von Home Assistant wurden im September 2018 vier Grun
 	\item Privatsphäre - alle Daten werden lokal verarbeitet und gespeichert.
 	\item Lokale Kontrolle - es ist kein Internetanschluss notwendig.
 	\item Offener Quelltext - die Funktionsweise kann jederzeit nachvollzogen werden.
-	\item Interoperabilität - es soll einfach sein Apps mit Home Assistant zu verbinden
+	\item Interoperabilität - Apps sollen einfach mit Home Assistant zu verbinden sein.
 \end{itemize}
 
-Ebenso wurde Nabu Casa Inc., als Modell für die Finanzierung der Entwicklung von Home Assistant, vorgestellt.
+Ebenso wurde Nabu Casa Inc. als Modell für die Finanzierung der Entwicklung von Home Assistant vorgestellt.
 Home Assistant Nutzer können ihre private Instanz mit Nabu Casa um die Home Assistant Cloud Komponente für 5 USD pro Monat erweitern, was Home Assistant \ac{IoT}-Charakter verleiht.
-Nabu Casa setzt dazu Software mit offenem Quelltext ein, verspricht keine Daten zu speichern und stellt dem Projekt Home Assistant Entwicklungkapazitäten zur Verfügung.\myfootcite[Vgl.][]{nabucasa}
+Nabu Casa setzt dazu Software mit offenem Quelltext ein, verspricht keine Daten zu speichern und stellt dem Projekt Home Assistant Entwicklungskapazitäten zur Verfügung.\myfootcite[Vgl.][]{nabucasa}
 
 Mit Home Assistant lassen sich hohe Kosten für zertifizierte Geräte sparen.
-Während andere Smart Home System Anbieter, wie z.B. Amazon Alexa, Geräteherstellern die Implementierung von geeigneten Schnittstellen vorschreiben, damit die Geräte mit der jeweiligen Plattform genutzt werden können\myfootcite[Vgl.][]{workswithalexa}, bietet Home Assistant viele verschiedene Wege ein Geräte zu verbinden.
+Während andere Smart Home System Anbieter, wie z.B. Amazon Alexa, Geräteherstellern die Implementierung von geeigneten Schnittstellen vorschreiben, damit die Geräte mit der jeweiligen Plattform genutzt werden können\myfootcite[Vgl.][]{workswithalexa}, bietet Home Assistant viele verschiedene Wege Geräte zu verbinden.
 So sind über 1000 Schnittstellen bereits in Home Assistant implementiert\myfootcite[Vgl.][]{hass_components} und zusätzlich können neue oder eigen gebaute Geräte mit neuen Schnittstellen mit etwas Programmierkenntnissen selbst implementiert werden.\myfootcite[Vgl.][]{hass_implement_component}
 
 \begin{wrapfigure}{r}{0.4\textwidth}
@@ -504,7 +504,7 @@ Soll ein Smart Home System mit \ac{IoT}-Charakter an Konsumenten mit durchschnit
 eQ-3 gibt an Daten ausschließlich anonymisiert auf deutschen Servern abzuspeichern.
 Außerdem müssen bei der Einrichtung eines HomeMatic IP Systems keine persönlichen Daten angegeben werden.\myfootcite[Vgl.][24]{eq3_homematicip_docs}
 Auf technischer Ebene ist hervorzuheben, dass auf dem 868 MHz Band operiert wird, was eine Kommunikation frei von Interferenzen ermöglicht.\myfootcite[Vgl.][18]{eq3_homematicip_docs}
-Des Weiteren stellt eQ-3 durch automatische \ac{OTA}-Aktualisierungen sicher, dass die HomeMatic IP Geräte stets auf dem aktuellensten Sicherheitspatchlevel sind.
+Des Weiteren stellt eQ-3 durch automatische \ac{OTA}-Aktualisierungen sicher, dass die HomeMatic IP Geräte stets auf dem aktuellsten Sicherheitspatchlevel sind.
 Schließlich ist das HomeMatic IP Ökosystem auch für andere Gerätehersteller offen.\myfootcite[Vgl.][]{eq3_faq}
 Zudem bieten über 100 eQ-3-Partner deutschlandweit die professionelle Einrichtung oder Unterstützung bei der Einrichtung eines HomeMatic IP Systems an, was die Barriere auf dem Weg zum Smart Home System für normale Konsumenten herabsetzt.\myfootcite[Vgl.][]{eq3_haendler}
 
