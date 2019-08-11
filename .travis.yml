@@ -1,5 +1,5 @@
-env:
- - REPO_NAME="dhbw-vs-smart-home-report"
+# env:
+#  - REPO_NAME="dhbw-vs-smart-home-report"
 sudo: required
 language: generic
 services: docker
