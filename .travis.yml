@@ -3,10 +3,10 @@ env:
 sudo: required
 language: generic
 services: docker
-script:
-- docker run --mount src=$TRAVIS_BUILD_DIR,target=/usr/src/tex,type=bind dxjoke/tectonic-docker
-  /bin/sh -c "tectonic --keep-intermediates --reruns 0 root.tex; biber root; tectonic
-  root.tex"
+# script:
+# - docker run --mount src=$TRAVIS_BUILD_DIR,target=/usr/src/tex,type=bind dxjoke/tectonic-docker
+#   /bin/sh -c "tectonic --keep-intermediates --reruns 0 root.tex; biber root; tectonic
+#   root.tex"
 before_deploy:
 - zip -r ${REPO_NAME}-${TRAVIS_TAG}-${TRAVIS_BUILD_NUMBER} assets figures
 - pwd
@@ -19,3 +19,5 @@ deploy:
   skip_cleanup: true
   on:
     tags: false
+    branch: develop
+W
