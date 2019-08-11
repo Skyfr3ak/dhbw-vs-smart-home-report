@@ -1,6 +1,15 @@
 sudo: required
 language: generic
 services: docker
-
 script:
-  - docker run --mount src=$TRAVIS_BUILD_DIR,target=/usr/src/tex,type=bind dxjoke/tectonic-docker /bin/sh -c "tectonic --keep-intermediates --reruns 0 root.tex; biber root; tectonic root.tex"
+- docker run --mount src=$TRAVIS_BUILD_DIR,target=/usr/src/tex,type=bind dxjoke/tectonic-docker
+  /bin/sh -c "tectonic --keep-intermediates --reruns 0 root.tex; biber root; tectonic
+  root.tex"
+deploy:
+  provider: releases
+  api_key:
+    secure: ryZB1Gsy2I21nBp7UKTC41n9WsfF4X+tvaMtCTBcATqUaCP4Hqoxc8pVJXvnYKFthQyd/Ba15aiWpejFVWizvX/K+qfVZdnn+2fOJbQ5L10R8Y0xRUEwmpPI9i1OKso5Y4GPbo8R+HKkO1Tul+IUstADcqjJlevNv95Oo3rHsHqAmPVKLF3ijq7E6iCfvQz8pN5oiDJzSUIl7UVfNi2edhBWtIJx94DsMi7B7TkNuOe6KYjSyunVI2wVL4E4czJ82OkJ71P2dj78VNV7F3r9X4UX0/rfsSJD/w27QMMUc3vnnWSm2BMylEbFGLYbzuynZHTl7AqwzzuXpNN8tZaGJcbWvhQc7G3iFq39Rfc7/0ATkxZomm53OxkWXVpSdL5ItQTs3LWof1kc3107ymhSLxBRDrknG0907MXN58Hz5vSNe3Rqsk7fKh/SpsF5n2apATUNpxsrU3prk2cgINFNd4vVpzs4zQ/FgyXdZe/QiuueTu6Ua/HNrbl56sRObkVTwLqQgitlECH/xqGtLml33fEQGyPh8/j3ETmjKOrO6BpFBESrFfnVloSKmQOzbPcoollt3Uw6NBYS+b3+TsLFLQFdXKvl0iI+WXsgJFoCGW7L/KocZaNS2fAb7zlo5yS+udzMRoCgHkjk0kvnOl7OhCslVKd5rtLm9R3+fZgs/MI=
+  file: root.pdf
+  on:
+    repo: skyfrk/dhbw-vs-smart-home-report
+    branch: develop
