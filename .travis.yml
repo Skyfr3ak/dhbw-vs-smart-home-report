@@ -1,5 +1,5 @@
 env:
- - REPO_NAME=dhbw-vs-smart-home-report
+ - REPO_NAME="dhbw-vs-smart-home-report"
 sudo: required
 language: generic
 services: docker
@@ -8,7 +8,7 @@ script:
   /bin/sh -c "tectonic --keep-intermediates --reruns 0 root.tex; biber root; tectonic
   root.tex"
 before_deploy:
-- zip -r ${TRAVIS_TAG}-${TRAVIS_BUILD_NUMBER} assets figures
+- zip -r ${REPO_NAME}-${TRAVIS_TAG}-${TRAVIS_BUILD_NUMBER} assets figures
 deploy:
   provider: releases
   api_key:
