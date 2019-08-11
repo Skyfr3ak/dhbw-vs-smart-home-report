@@ -9,6 +9,8 @@ script:
   root.tex"
 before_deploy:
 - zip -r ${REPO_NAME}-${TRAVIS_TAG}-${TRAVIS_BUILD_NUMBER} assets figures
+- pwd
+- ls -la
 deploy:
   provider: releases
   api_key:
@@ -16,4 +18,4 @@ deploy:
   file: ./**/${REPO_NAME}-${TRAVIS_TAG}-${TRAVIS_BUILD_NUMBER}.zip
   skip_cleanup: true
   on:
-    tags: true
+    tags: false
