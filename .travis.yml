@@ -21,4 +21,3 @@ deploy:
   on:
     tags: false
     branch: develop
-W
