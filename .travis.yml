@@ -8,9 +8,9 @@ cache:
 services: docker
 script:
 - mkdir -p $MIKTEX_CACHE_DIR
-- docker run --rm -ti -v $TRAVIS_BUILD_DIR:/miktex/work -v $MIKTEX_CACHE_DIR:/miktex/.miktex skyfrk/docker-miktex pdflatex root.tex
-- docker run --rm -ti -v $TRAVIS_BUILD_DIR:/miktex/work -v $MIKTEX_CACHE_DIR:/miktex/.miktex skyfrk/docker-miktex biber root
-- docker run --rm -ti -v $TRAVIS_BUILD_DIR:/miktex/work -v $MIKTEX_CACHE_DIR:/miktex/.miktex skyfrk/docker-miktex pdflatex root.tex
+- docker run --rm -ti -v $TRAVIS_BUILD_DIR:/miktex/work -v $MIKTEX_CACHE_DIR:/miktex/.miktex skyfreak/docker-miktex pdflatex root.tex
+- docker run --rm -ti -v $TRAVIS_BUILD_DIR:/miktex/work -v $MIKTEX_CACHE_DIR:/miktex/.miktex skyfreak/docker-miktex biber root
+- docker run --rm -ti -v $TRAVIS_BUILD_DIR:/miktex/work -v $MIKTEX_CACHE_DIR:/miktex/.miktex skyfreak/docker-miktex pdflatex root.tex
 deploy:
   provider: releases
   api_key:
