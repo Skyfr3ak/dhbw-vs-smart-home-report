@@ -1,14 +1,21 @@
 env:
   - REPO_NAME="dhbw-vs-smart-home-report" MIKTEX_CACHE_DIR="miktex-cache"
+
 sudo: required
+
 language: generic
+
 cache:
   directories:
   - $MIKTEX_CACHE_DIR
+
 services: docker
+
 script:
 - mkdir -p $MIKTEX_CACHE_DIR
+# using my own docker image because of https://github.com/MiKTeX/docker-miktex/issues/13 - to be changed to "miktex/miktex" again!
 - docker run --rm -ti -v $TRAVIS_BUILD_DIR:/miktex/work -v $MIKTEX_CACHE_DIR:/miktex/.miktex skyfreak/docker-miktex /bin/bash -c "pdflatex root.tex; biber root; pdflatex root.tex"
+
 deploy:
   provider: releases
   api_key:
