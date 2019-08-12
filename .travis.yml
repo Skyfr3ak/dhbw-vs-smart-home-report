@@ -1,6 +1,5 @@
 env:
-  - REPO_NAME="dhbw-vs-smart-home-report"
-  - MIKTEX_CACHE_DIR=".miktex-cache"
+  - REPO_NAME="dhbw-vs-smart-home-report" MIKTEX_CACHE_DIR=".miktex-cache"
 sudo: required
 language: generic
 cache:
